@@ -13,4 +13,4 @@
   * [Python](ConfigurationGuide/Python.md)
   * [DBX](ConfigurationGuide/DBX.md)
   * [Infra](ConfigurationGuide/Infra.md)
-* [사용자 가이드](UserGuide.md)
+* [사용자 가이드](UserGuide/README.md)
