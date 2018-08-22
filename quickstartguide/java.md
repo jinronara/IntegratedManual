@@ -366,6 +366,10 @@ WhaTap Node Agent version 0.1.26, 20170626
 
 본 가이드는 사용자가 와탭 PHP 모니터링 서비스를 사용 중인 PHP 애플리케이션 서버에 설치하고 확인하는 내용을 다룹니다. 별도의 세부적인 설정을 필요로 하는 프레임워크/옵션을 사용하는 경우 설치 가이드를 참고해주시기 바랍니다.[![90](https://github.com/jinronara/IntegratedManual/raw/master/images/90.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/90.png)
 
+
+
+![](../.gitbook/assets/80.png) 
+
 PHP 모니터링 서비스를 사용하기 위해서는 모니터링 대상 애플리케이션에 모니터링 에이전트를 설치해야 합니다.
 
 * 와탭 저장소\(Repository\)를 설치합니다.
