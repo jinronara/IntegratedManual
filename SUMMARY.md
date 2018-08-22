@@ -7,6 +7,8 @@
 * [퀵스타트 가이드](quickstartguide/README.md)
   * [Java](quickstartguide/java.md)
   * [PHP](quickstartguide/php.md)
+  * [NodeJs](quickstartguide/nodejs.md)
+  * [Python](quickstartguide/python.md)
   * [Infra](quickstartguide/infra.md)
   * [DB](quickstartguide/db.md)
 * [설치 가이드](installationguide/README.md)
