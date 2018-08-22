@@ -12,13 +12,13 @@
 
 **프로젝트 생성**
 
-[![20](https://github.com/jinronara/deleteme_2/raw/master/images/20.png)](https://github.com/jinronara/deleteme_2/blob/master/images/20.png)
+[![20](https://github.com/jinronara/IntegratedManual/raw/master/images/20.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/20.png)
 
-서버를 등록하기 위해 우선 프로젝트를 생성합니다. 추가 버튼을 선택하면 아래와 같이 프로젝트 생성 창이 나타납니다. INFRA 아이콘을 선택한 뒤, 희망하는 프로젝트명과 데이터 서버 지역\(Region\), 소속하게 될 그룹을 선택한 뒤 프로젝트를 생성합니다.[![160](https://github.com/jinronara/deleteme_2/raw/master/images/160.png)](https://github.com/jinronara/deleteme_2/blob/master/images/160.png)
+서버를 등록하기 위해 우선 프로젝트를 생성합니다. 추가 버튼을 선택하면 아래와 같이 프로젝트 생성 창이 나타납니다. INFRA 아이콘을 선택한 뒤, 희망하는 프로젝트명과 데이터 서버 지역\(Region\), 소속하게 될 그룹을 선택한 뒤 프로젝트를 생성합니다.[![160](https://github.com/jinronara/IntegratedManual/raw/master/images/160.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/160.png)
 
 **라이선스 발급**
 
-[![170](https://github.com/jinronara/deleteme_2/raw/master/images/170.png)](https://github.com/jinronara/deleteme_2/blob/master/images/170.png)
+[![170](https://github.com/jinronara/IntegratedManual/raw/master/images/170.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/170.png)
 
 프로젝트 관리화면에서는 우선적으로 라이선스를 발급 받습니다. 라이선스 키는 프로젝트별로 귀속되기 때문에, 유출되거나 배포되어서는 안됩니다. 반드시 본인 프로젝트에 서버를 등록할 때에만 이용하시기 바랍니다.
 
@@ -89,7 +89,7 @@ sudo service whatap-infra restart
 
 **모니터링 확인**
 
-[![180](https://github.com/jinronara/deleteme_2/raw/master/images/180.png)](https://github.com/jinronara/deleteme_2/blob/master/images/180.png)
+[![180](https://github.com/jinronara/IntegratedManual/raw/master/images/180.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/180.png)
 
 에이전트가 정상적으로 등록되면 서버 메뉴에서 등록된 에이전트를 확인할 수 있습니다.
 

@@ -21,7 +21,7 @@
 
 * 애플리케이션 서버 재기동에 민감한 환경에 APM 모니터링을 적용할 경우 유용한 방식이며, 애플리케이션 서버 재기동 이후에는 와탭의 권장 방식으로 모니터링이 수행되는 방식입니다.
 
-[![200](https://github.com/jinronara/deleteme_2/raw/master/images/200.png)](https://github.com/jinronara/deleteme_2/blob/master/images/200.png)
+[![200](https://github.com/jinronara/IntegratedManual/raw/master/images/200.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/200.png)
 
 * javaagent + onetime attach 적용법
   * 애플리케이션 서버 실행 스크립트에 JVM 옵션으로 -javaagent 옵션에 Tracer의 파일 경로를 추가합니다.
@@ -29,7 +29,7 @@
 
 **javaagent 방식**
 
-애플리케이션 서버 부팅 시에 성능 데이터 수집을 위한 모듈을 주입하는 방식입니다.[![210](https://github.com/jinronara/deleteme_2/raw/master/images/210.png)](https://github.com/jinronara/deleteme_2/blob/master/images/210.png)
+애플리케이션 서버 부팅 시에 성능 데이터 수집을 위한 모듈을 주입하는 방식입니다.[![210](https://github.com/jinronara/IntegratedManual/raw/master/images/210.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/210.png)
 
 javaagent 적용법
 
@@ -83,19 +83,19 @@ javaagent 적용법
 
 **프로젝트 생성**
 
-[![220](https://github.com/jinronara/deleteme_2/raw/master/images/220.png)](https://github.com/jinronara/deleteme_2/blob/master/images/220.png)
+[![220](https://github.com/jinronara/IntegratedManual/raw/master/images/220.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/220.png)
 
-서버를 등록하기 위해 우선 프로젝트를 생성합니다. 추가 버튼을 선택하면 아래와 같이 프로젝트 생성 창이 나타납니다. PHP 아이콘을 선택한 뒤, 희망하는 프로젝트명과 데이터 서버 지역\(Region\), 소속하게 될 그룹을 선택한 뒤 프로젝트를 생성합니다.[![230](https://github.com/jinronara/deleteme_2/raw/master/images/230.png)](https://github.com/jinronara/deleteme_2/blob/master/images/230.png)
+서버를 등록하기 위해 우선 프로젝트를 생성합니다. 추가 버튼을 선택하면 아래와 같이 프로젝트 생성 창이 나타납니다. PHP 아이콘을 선택한 뒤, 희망하는 프로젝트명과 데이터 서버 지역\(Region\), 소속하게 될 그룹을 선택한 뒤 프로젝트를 생성합니다.[![230](https://github.com/jinronara/IntegratedManual/raw/master/images/230.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/230.png)
 
 **라이선스 발급**
 
-[![240](https://github.com/jinronara/deleteme_2/raw/master/images/240.png)](https://github.com/jinronara/deleteme_2/blob/master/images/240.png)
+[![240](https://github.com/jinronara/IntegratedManual/raw/master/images/240.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/240.png)
 
 프로젝트 관리화면에서는 우선적으로 라이선스를 발급 받습니다. 라이선스 키는 프로젝트별로 귀속되기 때문에, 유출되거나 배포되어서는 안됩니다. 반드시 본인 프로젝트에 서버를 등록할 때에만 이용하시기 바랍니다.
 
 **에이전트 다운로드**
 
-[![250](https://github.com/jinronara/deleteme_2/raw/master/images/250.png)](https://github.com/jinronara/deleteme_2/blob/master/images/250.png)
+[![250](https://github.com/jinronara/IntegratedManual/raw/master/images/250.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/250.png)
 
 라이선스를 발급 받은 후에는 ‘에이전트 파일 다운로드’ 버튼이 활성화 되었음을 확인할 수 있습니다. 해당 버튼을 눌러 와탭 에이전트 파일을 다운로드 받습니다.
 
@@ -270,7 +270,7 @@ Just Tap, Always Monitoring
 WhaTap Agent version 0.3.9 20161115
 ```
 
-서버에서 정상적으로 로그가 올라온 것을 확인한 뒤, 콘솔에 정상적으로 등록되어 있는 여부를 확인하기 위해 해당 프로젝트의 ‘서버’ 메뉴에 올라온 해당 애플리케이션 서버의 명칭을 확인합니다.[![260](https://github.com/jinronara/deleteme_2/raw/master/images/260.png)](https://github.com/jinronara/deleteme_2/blob/master/images/260.png)
+서버에서 정상적으로 로그가 올라온 것을 확인한 뒤, 콘솔에 정상적으로 등록되어 있는 여부를 확인하기 위해 해당 프로젝트의 ‘서버’ 메뉴에 올라온 해당 애플리케이션 서버의 명칭을 확인합니다.[![260](https://github.com/jinronara/IntegratedManual/raw/master/images/260.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/260.png)
 
 * 애플리케이션명은 {type}-{ip2}-{ip3}-{port\] 의 형태의 식별ID가 부여됩니다. 마지막 요소가 {port}가 아닌 {pid}인 경우 애플리케이션 서버의 서비스 포트가 인식되지 않은 것으로 애플리케이션의 마지막 항목에 표시되는 PID\(프로세스 ID\)를 참조하여 설치 문제에 대응합니다.
 
@@ -325,7 +325,7 @@ Windows 계열 OS에 binary로 설치하여 SYSTEM 계정으로 실행한 경우
 
 * “Configure Tomcat” 프로그램을 실행하여 Java 탭 선택 &gt; Java Options에 -javaagent 옵션을 지정합니다.
 
-[![270](https://github.com/jinronara/deleteme_2/raw/master/images/270.png)](https://github.com/jinronara/deleteme_2/blob/master/images/270.png)
+[![270](https://github.com/jinronara/IntegratedManual/raw/master/images/270.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/270.png)
 
 **JBoss**
 
@@ -405,7 +405,7 @@ $WEBLOGIC\_HOME/user\_projects/domains/사용자도메인/bin/startWebLogic.sh\(
 * javaagent 프로퍼티 설정을 추가합니다.
   * $WEBLOGIC\_HOME은 WebLogic 설치 경로를 가리킵니다.
 
-[![280](https://github.com/jinronara/deleteme_2/raw/master/images/280.png)](https://github.com/jinronara/deleteme_2/blob/master/images/280.png)Figure 1. 예시
+[![280](https://github.com/jinronara/IntegratedManual/raw/master/images/280.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/280.png)Figure 1. 예시
 
 **WebSphere**
 
@@ -413,27 +413,27 @@ $WEBLOGIC\_HOME/user\_projects/domains/사용자도메인/bin/startWebLogic.sh\(
 
 1. 먼저 웹브라우저를 통해 admin console에 로그인 합니다.
 
-[![290](https://github.com/jinronara/deleteme_2/raw/master/images/290.png)](https://github.com/jinronara/deleteme_2/blob/master/images/290.png)
+[![290](https://github.com/jinronara/IntegratedManual/raw/master/images/290.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/290.png)
 
 1. Servers &gt; Server Type &gt; WebSphere application servers 메뉴를 통해 에이전트를 설치할 서버를 선택합니다.
 
-[![300](https://github.com/jinronara/deleteme_2/raw/master/images/300.png)](https://github.com/jinronara/deleteme_2/blob/master/images/300.png)
+[![300](https://github.com/jinronara/IntegratedManual/raw/master/images/300.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/300.png)
 
 1. 선택된 서버 Configuration 탭에 Server Infrastructure의 Java and Process Management &gt; Process definition 메뉴를 선택합니다.
 
-[![310](https://github.com/jinronara/deleteme_2/raw/master/images/310.png)](https://github.com/jinronara/deleteme_2/blob/master/images/310.png)
+[![310](https://github.com/jinronara/IntegratedManual/raw/master/images/310.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/310.png)
 
 1. Additional Properties의 Java Virtual Machine 메뉴를 선택합니다.
 
-[![320](https://github.com/jinronara/deleteme_2/raw/master/images/320.png)](https://github.com/jinronara/deleteme_2/blob/master/images/320.png)
+[![320](https://github.com/jinronara/IntegratedManual/raw/master/images/320.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/320.png)
 
 1. WEBSHERE의 서비스 포트를 확인합니다.
 
-[![330](https://github.com/jinronara/deleteme_2/raw/master/images/330.png)](https://github.com/jinronara/deleteme_2/blob/master/images/330.png)
+[![330](https://github.com/jinronara/IntegratedManual/raw/master/images/330.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/330.png)
 
 1. Configuration 탭의 Generic JVM arguments에 -javaagent와 -Dwhatap.port를 추가합니다.
 
-[![340](https://github.com/jinronara/deleteme_2/raw/master/images/340.png)](https://github.com/jinronara/deleteme_2/blob/master/images/340.png)리눅스 계열
+[![340](https://github.com/jinronara/IntegratedManual/raw/master/images/340.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/340.png)리눅스 계열
 
 -javaagent:/home/wasadmin/whatap/whatap.agent.tracer-\#.\#.\#.jar -Dwhatap.port=9443윈도우 계열
 
@@ -470,11 +470,11 @@ Jeus 7 예시
 </domain>
 ```
 
-[![350](https://github.com/jinronara/deleteme_2/raw/master/images/350.png)](https://github.com/jinronara/deleteme_2/blob/master/images/350.png)Figure 2. Jeus 6 예시
+[![350](https://github.com/jinronara/IntegratedManual/raw/master/images/350.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/350.png)Figure 2. Jeus 6 예시
 
 1. 애플리케이션 서버를 재기동 시킵니다.
 
-[![360](https://github.com/jinronara/deleteme_2/raw/master/images/360.png)](https://github.com/jinronara/deleteme_2/blob/master/images/360.png)
+[![360](https://github.com/jinronara/IntegratedManual/raw/master/images/360.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/360.png)
 
 1. 애플리케이션 서버 로그와 에이전트 로그를 통해 에이전트가 정상적으로 기동하였는지, 에러가 발생하지 않았는지 확인합니다.
 
@@ -486,13 +486,13 @@ Jeus 7 예시
 
 JEUS7 예시
 
-\($JEUS\_HOME/domains/$HOST\_NAME/servers/$NODE\_NAME/logs/JeusServer.log\)[![370](https://github.com/jinronara/deleteme_2/raw/master/images/370.png)](https://github.com/jinronara/deleteme_2/blob/master/images/370.png)
+\($JEUS\_HOME/domains/$HOST\_NAME/servers/$NODE\_NAME/logs/JeusServer.log\)[![370](https://github.com/jinronara/IntegratedManual/raw/master/images/370.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/370.png)
 
 1. 에이전트가 애플리케이션 서버의 종류와 애플리케이션 서버의 서비스 container명을 인식했는지 확인합니다.
 
 와탭 사이트에서 whatap.name과 whatap.type을 확인합니다. whatap.io 사이트에 로그인 &gt; “APM” 제품 선택 &gt; 프로젝트의 Application Servers 메뉴 선택 &gt; 설치한 JEUS 서버 &gt; Boot Environment 메뉴 선택을 통해 확인합니다.
 
-whatap.type에는 애플리케이션 서버의 종류가 명시되어야 하며, whatap.name의 마지막 요소가 container이름 이어야 합니다.[![380](https://github.com/jinronara/deleteme_2/raw/master/images/380.png)](https://github.com/jinronara/deleteme_2/blob/master/images/380.png)
+whatap.type에는 애플리케이션 서버의 종류가 명시되어야 하며, whatap.name의 마지막 요소가 container이름 이어야 합니다.[![380](https://github.com/jinronara/IntegratedManual/raw/master/images/380.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/380.png)
 
 **Jetty**
 
@@ -503,7 +503,7 @@ Jetty 실행 스크립트
 * $JETTY\_HOME/bin/jetty.sh 파일에 JVM 파일 옵션을 추가합니다.
   * 이후 본 문서에서 $JETTY\_HOME은 Jetty 설치 경로를 가리킵니다.
 
-[![390](https://github.com/jinronara/deleteme_2/raw/master/images/390.png)](https://github.com/jinronara/deleteme_2/blob/master/images/390.png)
+[![390](https://github.com/jinronara/IntegratedManual/raw/master/images/390.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/390.png)
 
 * java 실행 옵션에 설정
   * $JETTY\_HOME/bin 경로로 이동 후, 하기 옵션을 적용하여 Jetty를 기동합니다.
@@ -570,7 +570,7 @@ Escape character is '^]'.
 
 * 해당 프로젝트의 서버 메뉴 &gt; 해당 서버의 More 버튼 &gt; Boot Environment 선택
 
-[![400](https://github.com/jinronara/deleteme_2/raw/master/images/400.png)](https://github.com/jinronara/deleteme_2/blob/master/images/400.png)Figure 3. Tomcat 예시
+[![400](https://github.com/jinronara/IntegratedManual/raw/master/images/400.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/400.png)Figure 3. Tomcat 예시
 
 이런 경우 아래와 같이 애플리케이션 서버 실행스크립트에 명시된 JVM 옵션에 whatap.port 시스템 프로퍼티를 추가한 후 애플리케이션 서버를 재기동합니다.
 
@@ -588,7 +588,7 @@ JAVA_OPTS="${JAVA_OPTS} -Dwhatap.port=8080 "
 
 **JBoss AS 7.0이상, JBoss EAP 6.0 이상**
 
-$JBOSS\_HOME/bin/standalone.conf\(domain.conf\)파일에 prefix를 등록합니다.[![410](https://github.com/jinronara/deleteme_2/raw/master/images/410.png)](https://github.com/jinronara/deleteme_2/blob/master/images/410.png)Figure 4. JBOSS .EAP 7.0 예시
+$JBOSS\_HOME/bin/standalone.conf\(domain.conf\)파일에 prefix를 등록합니다.[![410](https://github.com/jinronara/IntegratedManual/raw/master/images/410.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/410.png)Figure 4. JBOSS .EAP 7.0 예시
 
 **WebSphere**
 
@@ -632,7 +632,7 @@ $WHATAP\_HOME/logs/whatap-{SERVER\_NAME}-{DATE}.log 파일의 whatap.error에 �
 * -Djava.util.logging.manager에 LogManager package명 설정
 * -Xbootclassloader에 JBoss log manager JAR file 설정
 
-[![420](https://github.com/jinronara/deleteme_2/raw/master/images/420.png)](https://github.com/jinronara/deleteme_2/blob/master/images/420.png)Figure 5. 설정 추가 예
+[![420](https://github.com/jinronara/IntegratedManual/raw/master/images/420.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/420.png)Figure 5. 설정 추가 예
 
 **MBeanServerBuilder 에러가 발생하는 경우**
 
@@ -642,7 +642,7 @@ $WHATAP\_HOME/logs/whatap-{SERVER\_NAME}-{DATE}.log 파일의 whatap.error에 �
 
 * -Djboss.platform.mbeanserver를 true로 설정합니다.
 
-[![430](https://github.com/jinronara/deleteme_2/raw/master/images/430.png)](https://github.com/jinronara/deleteme_2/blob/master/images/430.png)Figure 6. 설정 추가 예
+[![430](https://github.com/jinronara/IntegratedManual/raw/master/images/430.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/430.png)Figure 6. 설정 추가 예
 
 **permission 오류가 발생하는 경우**
 
@@ -660,7 +660,7 @@ grant {
 
 **java.io.FilePermission 오류가 발생하는 경우**
 
-[![440](https://github.com/jinronara/deleteme_2/raw/master/images/440.png)](https://github.com/jinronara/deleteme_2/blob/master/images/440.png)
+[![440](https://github.com/jinronara/IntegratedManual/raw/master/images/440.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/440.png)
 
 $JAVA\_HOME/jre/lib/security/java.policy 파일에 하기의 설정을 추가합니다.
 
@@ -692,7 +692,7 @@ $WHATAP\_HOME/lib1/\*.so 파일에 실행 권한이 부여되어 있는지 확�
 $ sudo chmod +x *.so
 ```
 
-[![440](https://github.com/jinronara/deleteme_2/raw/master/images/440.png)](https://github.com/jinronara/deleteme_2/blob/master/images/440.png)
+[![440](https://github.com/jinronara/IntegratedManual/raw/master/images/440.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/440.png)
 
 AIX 7에서 $WHATAP\_HOME/lib1 하위에 libsigar-ppc64-aix-7.so 파일이 존재하지 않아 오류가 발생한 경우, sigar-ppc64-aix-5.so 파일을 복제하여 sigar-ppc64-aix-7.so 파일로 복제하여 주시기 바랍니다.
 
@@ -726,7 +726,7 @@ AIX 7에서 $WHATAP\_HOME/lib1 하위에 libsigar-ppc64-aix-7.so 파일이 존�
 
 Jetty 예시
 
-JVM 옵션에 -Dwhatap.name=sale1-192-168-111 를 지정한 예시입니다.[![460](https://github.com/jinronara/deleteme_2/raw/master/images/460.png)](https://github.com/jinronara/deleteme_2/blob/master/images/460.png)Figure 7. 예시
+JVM 옵션에 -Dwhatap.name=sale1-192-168-111 를 지정한 예시입니다.[![460](https://github.com/jinronara/IntegratedManual/raw/master/images/460.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/460.png)Figure 7. 예시
 
 Jetty 및 에이전트 실행 후, 와탭 사이트의 하기 경로에서 등록한 이름으로 서버가 등록된 것을 확인할 수 있습니다.
 
@@ -800,11 +800,11 @@ WhaTap Agent version 0.4.5 20161207
 
 * 대시보드
 
-가상의 액티브 트랜잭션 수가 30으로 나타납니다.[![470](https://github.com/jinronara/deleteme_2/raw/master/images/470.png)](https://github.com/jinronara/deleteme_2/blob/master/images/470.png)
+가상의 액티브 트랜잭션 수가 30으로 나타납니다.[![470](https://github.com/jinronara/IntegratedManual/raw/master/images/470.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/470.png)
 
 * 애플리케이션 서버
 
-서버로 데이터를 송신중인 가상의 에이전트가 NET-PING-{PID}의 애플리케이션 명으로 등록되어 있는 것을 확인할 수 있습니다.[![480](https://github.com/jinronara/deleteme_2/raw/master/images/480.png)](https://github.com/jinronara/deleteme_2/blob/master/images/480.png)
+서버로 데이터를 송신중인 가상의 에이전트가 NET-PING-{PID}의 애플리케이션 명으로 등록되어 있는 것을 확인할 수 있습니다.[![480](https://github.com/jinronara/IntegratedManual/raw/master/images/480.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/480.png)
 
 #### 제약 사항 {#user-content-제약-사항}
 

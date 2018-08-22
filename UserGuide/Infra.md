@@ -2,13 +2,13 @@
 
 #### 관리 {#user-content-관리-1}
 
-와탭 Infra 모니터링 서비스는 다수의 서버를 프로젝트로 그룹화 하여 관리합니다.[![1170](https://github.com/jinronara/deleteme_2/raw/master/images/1170.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1170.png)
+와탭 Infra 모니터링 서비스는 다수의 서버를 프로젝트로 그룹화 하여 관리합니다.[![1170](https://github.com/jinronara/IntegratedManual/raw/master/images/1170.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1170.png)
 
 **에이전트 설치**
 
-[![1180](https://github.com/jinronara/deleteme_2/raw/master/images/1180.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1180.png)
+[![1180](https://github.com/jinronara/IntegratedManual/raw/master/images/1180.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1180.png)
 
-와탭 콘솔의 프로젝트 그룹에서 추가 버튼을 누릅니다.[![1190](https://github.com/jinronara/deleteme_2/raw/master/images/1190.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1190.png)
+와탭 콘솔의 프로젝트 그룹에서 추가 버튼을 누릅니다.[![1190](https://github.com/jinronara/IntegratedManual/raw/master/images/1190.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1190.png)
 
 INFRA STRUCTURE 아이콘 선택 후 각 입력란에 해당하는 정보를 입력하고 전송 버튼을 눌러 프로젝트를 추가합니다.
 
@@ -18,7 +18,7 @@ INFRA STRUCTURE 아이콘 선택 후 각 입력란에 해당하는 정보를 입
 
 * 해당 화면은 프로젝트 관리 → 에이전트 설치 부분에서 확인 가능합니다.
 
-[![1200](https://github.com/jinronara/deleteme_2/raw/master/images/1200.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1200.png)
+[![1200](https://github.com/jinronara/IntegratedManual/raw/master/images/1200.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1200.png)
 
 **패키지 저장소\(Repository\) 추가**
 
@@ -74,7 +74,7 @@ $ sudo service whatap-infra restart
 
 * 해당 화면은 프로젝트 관리 → 에이전트 설치 부분에서 확인 가능합니다.
 
-[![1210](https://github.com/jinronara/deleteme_2/raw/master/images/1210.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1210.png)
+[![1210](https://github.com/jinronara/IntegratedManual/raw/master/images/1210.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1210.png)
 
 **에이전트 파일 다운로드**
 
@@ -89,15 +89,15 @@ $ sudo service whatap-infra restart
 
 **라이선스 발급**
 
-설치 페이지에서 라이선스 키와 IP를 발급받습니다.[![1220](https://github.com/jinronara/deleteme_2/raw/master/images/1220.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1220.png)
+설치 페이지에서 라이선스 키와 IP를 발급받습니다.[![1220](https://github.com/jinronara/IntegratedManual/raw/master/images/1220.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1220.png)
 
 **에이전트 설치**
 
 서버에서 업로드 받은 인프라 에이전트 설치파일을 실행합니다.
 
-실행 시 다음과 같은 화면을 볼 수 있습니다. 입력란에 발급받은 라이선스 키와 IP를 입력하고 진행합니다.[![1230](https://github.com/jinronara/deleteme_2/raw/master/images/1230.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1230.png)
+실행 시 다음과 같은 화면을 볼 수 있습니다. 입력란에 발급받은 라이선스 키와 IP를 입력하고 진행합니다.[![1230](https://github.com/jinronara/IntegratedManual/raw/master/images/1230.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1230.png)
 
-정상적으로 설치가 완료된 경우 다음과 같은 화면을 볼 수 있으며, 에이전트가 자동적으로 모니터링을 시작합니다. 완료 버튼을 눌러 설치를 완료합니다.[![1240](https://github.com/jinronara/deleteme_2/raw/master/images/1240.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1240.png)
+정상적으로 설치가 완료된 경우 다음과 같은 화면을 볼 수 있으며, 에이전트가 자동적으로 모니터링을 시작합니다. 완료 버튼을 눌러 설치를 완료합니다.[![1240](https://github.com/jinronara/IntegratedManual/raw/master/images/1240.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1240.png)
 
 * 데이터 전송을 위하여 6600 PORT가 열려 있어야 합니다. \(TCP 아웃바운드\)
 
@@ -105,7 +105,7 @@ $ sudo service whatap-infra restart
 
 **사용자 관리**
 
-프로젝트를 생성하였거나 SuperAdmin 권한을 이전 받았을 경우 프로젝트 설정에서 해당 프로젝트의 기본 정보\(이름, 알림 표시 시간대, API토큰\) 입력/수정 및 사용자 초대를 통하여 서버 모니터링 현황을 공유할 수 있습니다.[![1250](https://github.com/jinronara/deleteme_2/raw/master/images/1250.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1250.png)
+프로젝트를 생성하였거나 SuperAdmin 권한을 이전 받았을 경우 프로젝트 설정에서 해당 프로젝트의 기본 정보\(이름, 알림 표시 시간대, API토큰\) 입력/수정 및 사용자 초대를 통하여 서버 모니터링 현황을 공유할 수 있습니다.[![1250](https://github.com/jinronara/IntegratedManual/raw/master/images/1250.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1250.png)
 
 | 이름 | 설명 |
 | :--- | :--- |
@@ -122,7 +122,7 @@ $ sudo service whatap-infra restart
 
 **알림 설정 개요**
 
-서버 임계 상황에서 알림이 발생 시 Email / SMS / Mobile App으로 알림을 수신할 수 있게 됩니다. 알림 메시지 언어 설정 및 미디어 별 수신 여부 / 수신 시간 / 수신 요일 등을 설정할 수 있습니다.[![1260](https://github.com/jinronara/deleteme_2/raw/master/images/1260.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1260.png)
+서버 임계 상황에서 알림이 발생 시 Email / SMS / Mobile App으로 알림을 수신할 수 있게 됩니다. 알림 메시지 언어 설정 및 미디어 별 수신 여부 / 수신 시간 / 수신 요일 등을 설정할 수 있습니다.[![1260](https://github.com/jinronara/IntegratedManual/raw/master/images/1260.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1260.png)
 
 | 이름 | 설명 |
 | :--- | :--- |
@@ -146,17 +146,17 @@ $ sudo service whatap-infra restart
 
 **모바일 앱 설치**
 
-Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![1270](https://github.com/jinronara/deleteme_2/raw/master/images/1270.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1270.png)
+Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![1270](https://github.com/jinronara/IntegratedManual/raw/master/images/1270.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1270.png)
 
 **모바일 앱 활용**
 
-[![1280](https://github.com/jinronara/deleteme_2/raw/master/images/1280.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1280.png)[![1290](https://github.com/jinronara/deleteme_2/raw/master/images/1290.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1290.png)[![1300](https://github.com/jinronara/deleteme_2/raw/master/images/1300.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1300.png)
+[![1280](https://github.com/jinronara/IntegratedManual/raw/master/images/1280.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1280.png)[![1290](https://github.com/jinronara/IntegratedManual/raw/master/images/1290.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1290.png)[![1300](https://github.com/jinronara/IntegratedManual/raw/master/images/1300.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1300.png)
 
 **다운 체크 설정**
 
 **다운 체크 개요**
 
-같은 내부 네트워크에 존재하는 서버들이 서로의 포트 작동 여부를 확인하여 수집 서버로 전송합니다. 해당 방식은 가용성 기능을 사용할 때 모니터링 서버와 수집 서버간 네트워크 문제로 인하여 발생하는 오탐을 줄이기 위하여 내부 서버 서로 감시를 하여 서버의 다운 여부를 확인하여 수집 서버로 전송합니다.[![1310](https://github.com/jinronara/deleteme_2/raw/master/images/1310.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1310.png)
+같은 내부 네트워크에 존재하는 서버들이 서로의 포트 작동 여부를 확인하여 수집 서버로 전송합니다. 해당 방식은 가용성 기능을 사용할 때 모니터링 서버와 수집 서버간 네트워크 문제로 인하여 발생하는 오탐을 줄이기 위하여 내부 서버 서로 감시를 하여 서버의 다운 여부를 확인하여 수집 서버로 전송합니다.[![1310](https://github.com/jinronara/IntegratedManual/raw/master/images/1310.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1310.png)
 
 * 탐지 역할을 하는 서버를 선택할 수 있습니다. 클릭 시 드롭다운 메뉴가 나와 현재 서버 목록을 보여줍니다.
 * 탐지할 서버를 추가할 수 있습니다.
@@ -165,7 +165,7 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![127
 
 **다운 체크 설정**
 
-다운 체크 설정 화면에서 추가 혹은 EDIT 버튼을 클릭 시 설정창이 발생합니다.[![1320](https://github.com/jinronara/deleteme_2/raw/master/images/1320.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1320.png)
+다운 체크 설정 화면에서 추가 혹은 EDIT 버튼을 클릭 시 설정창이 발생합니다.[![1320](https://github.com/jinronara/IntegratedManual/raw/master/images/1320.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1320.png)
 
 | 이름 | 설명 |
 | :--- | :--- |
@@ -178,7 +178,7 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![127
 
 **서버 목록**
 
-[![1330](https://github.com/jinronara/deleteme_2/raw/master/images/1330.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1330.png)
+[![1330](https://github.com/jinronara/IntegratedManual/raw/master/images/1330.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1330.png)
 
 1. 등록된 전체 서버들의 상태를 한 눈에 볼 수 있습니다.
 2. 일시정지 / 재개 / 해지 하거나 비교하기 위해 서버\(들\)를 선택할 수 있습니다.
@@ -221,7 +221,7 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![127
 
 **상세 정보 개요**
 
-[![1340](https://github.com/jinronara/deleteme_2/raw/master/images/1340.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1340.png)
+[![1340](https://github.com/jinronara/IntegratedManual/raw/master/images/1340.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1340.png)
 
 | 번호 | 이름 | 설명 |
 | :--- | :--- | :--- |
@@ -249,7 +249,7 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![127
 
 **CPU 상세 정보**
 
-서버 상세 정보의 CPU Usage 우측 See Details를 통하여 상세 페이지로 들어올 수 있습니다.[![1350](https://github.com/jinronara/deleteme_2/raw/master/images/1350.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1350.png)
+서버 상세 정보의 CPU Usage 우측 See Details를 통하여 상세 페이지로 들어올 수 있습니다.[![1350](https://github.com/jinronara/IntegratedManual/raw/master/images/1350.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1350.png)
 
 | 이름 | 설명 | 단위 |
 | :--- | :--- | :--- |
@@ -263,7 +263,7 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![127
 
 **메모리 상세 정보**
 
-서버 상세 정보의 Memory Usage 우측 See Details를 통해 상세 페이지로 들어올 수 있습니다.[![1360](https://github.com/jinronara/deleteme_2/raw/master/images/1360.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1360.png)
+서버 상세 정보의 Memory Usage 우측 See Details를 통해 상세 페이지로 들어올 수 있습니다.[![1360](https://github.com/jinronara/IntegratedManual/raw/master/images/1360.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1360.png)
 
 | 이름 | 설명 | 단위 |
 | :--- | :--- | :--- |
@@ -275,7 +275,7 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![127
 
 **네트워크 상세 정보**
 
-서버 상세 정보의 Network 우측 See Details를 통해 상세 페이지로 들어올 수 있습니다.[![1370](https://github.com/jinronara/deleteme_2/raw/master/images/1370.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1370.png)
+서버 상세 정보의 Network 우측 See Details를 통해 상세 페이지로 들어올 수 있습니다.[![1370](https://github.com/jinronara/IntegratedManual/raw/master/images/1370.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1370.png)
 
 | 번호 | 이름 | 설명 | 단위 |
 | :--- | :--- | :--- | :--- |
@@ -287,7 +287,7 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![127
 
 **디스크 상세 정보**
 
-서버 상세 정보의 Disk I/O 우측 See Details를 통해 상세 페이지로 들어올 수 있습니다.[![1380](https://github.com/jinronara/deleteme_2/raw/master/images/1380.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1380.png)
+서버 상세 정보의 Disk I/O 우측 See Details를 통해 상세 페이지로 들어올 수 있습니다.[![1380](https://github.com/jinronara/IntegratedManual/raw/master/images/1380.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1380.png)
 
 | 번호 | 이름 | 설명 | 단위 |
 | :--- | :--- | :--- | :--- |
@@ -299,11 +299,11 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![127
 | 6 | Free Space | 사용할 수 있는 파일 시스템 용량 | %, Byte |
 | 7 | Queue Length | 대기중인 I/O 요청 수 | 개수 |
 
-7.2.2.2.6. 프로세스 상세 정보[![1390](https://github.com/jinronara/deleteme_2/raw/master/images/1390.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1390.png)
+7.2.2.2.6. 프로세스 상세 정보[![1390](https://github.com/jinronara/IntegratedManual/raw/master/images/1390.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1390.png)
 
 1. 정렬 기준: 프로세스들의 정렬 기준 및 개수를 결정할 수 있습니다. CPU / Memory / Name / IO / Count를 기준으로 정렬할 수 있습니다.
 
-[![1400](https://github.com/jinronara/deleteme_2/raw/master/images/1400.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1400.png)
+[![1400](https://github.com/jinronara/IntegratedManual/raw/master/images/1400.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1400.png)
 
 1. 알림 정책 설정: 개별 프로세스에 대해 Alert 정책을 설정할 수 있습니다. 자세한 내용은 프로세스 알림 정책을 참고하시길 바랍니다.
 2. 프로세스 세부 정보: 해당 프로세스 클릭 시 프로세스에 대한 세부정보를 볼 수 있습니다. 자세한 내용은 개별 프로세스 정보를 참고하시길 바랍니다.
@@ -311,7 +311,7 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![127
 
 **개별 프로세스 정보**
 
-각각의 프로세스를 클릭할 경우 개별 프로세스 정보를 확인할 수 있습니다.[![1410](https://github.com/jinronara/deleteme_2/raw/master/images/1410.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1410.png)
+각각의 프로세스를 클릭할 경우 개별 프로세스 정보를 확인할 수 있습니다.[![1410](https://github.com/jinronara/IntegratedManual/raw/master/images/1410.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1410.png)
 
 | 번호 | 이름 | 설명 | 단위 |
 | :--- | :--- | :--- | :--- |
@@ -328,7 +328,7 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![127
 
 **Compound Eye 개요**
 
-Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서버들을 빈틈없이 볼 수 있게 해줍니다.[![1420](https://github.com/jinronara/deleteme_2/raw/master/images/1420.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1420.png)[![1430](https://github.com/jinronara/deleteme_2/raw/master/images/1430.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1430.png)
+Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서버들을 빈틈없이 볼 수 있게 해줍니다.[![1420](https://github.com/jinronara/IntegratedManual/raw/master/images/1420.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1420.png)[![1430](https://github.com/jinronara/IntegratedManual/raw/master/images/1430.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1430.png)
 
 하나의 눈\(Eye\) 입니다. 총 5가지의 정보를 제공합니다.
 
@@ -339,7 +339,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 * 네트워크의 Tx \(송신량\)
   * 특히 네트워크 사용량에서 Rx/Tx 를 추가함으로 DDoS와 같이 외부 공격이 여러 서버에서 일제히 발생하는지 확인할 수 있습니다.
 
-[![1440](https://github.com/jinronara/deleteme_2/raw/master/images/1440.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1440.png)
+[![1440](https://github.com/jinronara/IntegratedManual/raw/master/images/1440.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1440.png)
 
 서버에 이상 현상이 발생한 경우 개별 아이\(Eye, 눈\)는 색상으로 그 상태를 표현합니다.
 
@@ -351,11 +351,11 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 **Traffic Max Value 옵션**
 
-네트워크 환경에 따라 트래픽 양이 변화할 수 있기 때문에 트래픽의 최대값을 조정할 수 있습니다. 희망하는 트래픽 최대값을 설정하면 값에 따라 Rx/Tx 그래프가 변경됩니다.[![1450](https://github.com/jinronara/deleteme_2/raw/master/images/1450.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1450.png)
+네트워크 환경에 따라 트래픽 양이 변화할 수 있기 때문에 트래픽의 최대값을 조정할 수 있습니다. 희망하는 트래픽 최대값을 설정하면 값에 따라 Rx/Tx 그래프가 변경됩니다.[![1450](https://github.com/jinronara/IntegratedManual/raw/master/images/1450.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1450.png)
 
 **가용성**
 
-가용성 기능은 여러 서버들의 서버 상태 기록을 그래프로 보여 한눈에 파악할 수 있도록 합니다.[![1460](https://github.com/jinronara/deleteme_2/raw/master/images/1460.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1460.png)
+가용성 기능은 여러 서버들의 서버 상태 기록을 그래프로 보여 한눈에 파악할 수 있도록 합니다.[![1460](https://github.com/jinronara/IntegratedManual/raw/master/images/1460.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1460.png)
 
 가용성 차트는 다운 체크에서 추가한 IP들의 가용성 차트를 표시합니다. 기본으로 오늘 날짜의 00:00부터 현재까지의 가용성 차트를 표시합니다. 1일, 7일, 30일 등 범위를 지정할 수 있으며 화살표 클릭으로 차트의 날짜를 변경할 수 있습니다.
 
@@ -365,7 +365,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 **알림 정책 개요**
 
-서버 및 프로세스 알림 정책을 생성, 수정, 삭제할 수 있습니다.[![1470](https://github.com/jinronara/deleteme_2/raw/master/images/1470.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1470.png)
+서버 및 프로세스 알림 정책을 생성, 수정, 삭제할 수 있습니다.[![1470](https://github.com/jinronara/IntegratedManual/raw/master/images/1470.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1470.png)
 
 | 이름 | 설명 |
 | :--- | :--- |
@@ -377,7 +377,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 **모니터링 알림 정책**
 
-서버의 재시작 여부, 에이전트의 통신 장애 지속시간, 자원 사용량에 따라 알림 발생 여부를 설정할 수 있습니다.[![1480](https://github.com/jinronara/deleteme_2/raw/master/images/1480.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1480.png)
+서버의 재시작 여부, 에이전트의 통신 장애 지속시간, 자원 사용량에 따라 알림 발생 여부를 설정할 수 있습니다.[![1480](https://github.com/jinronara/IntegratedManual/raw/master/images/1480.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1480.png)
 
 | 이름 | 설명 |
 | :--- | :--- |
@@ -393,7 +393,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 **프로세스 알림 정책 설정**
 
-특정 프로세스에 대한 알림 정책을 설정할 수 있습니다.[![1490](https://github.com/jinronara/deleteme_2/raw/master/images/1490.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1490.png)
+특정 프로세스에 대한 알림 정책을 설정할 수 있습니다.[![1490](https://github.com/jinronara/IntegratedManual/raw/master/images/1490.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1490.png)
 
 1. 프로세스명: 선택한 프로세스명이 표기됩니다.
 2. Enable as Project-Wide: 해당 프로젝트에 있는 모든 서버들에 해당 알람 정책을 적용합니다.
@@ -410,7 +410,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 **로그 알림 정책 설정**
 
-[![1500](https://github.com/jinronara/deleteme_2/raw/master/images/1500.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1500.png)
+[![1500](https://github.com/jinronara/IntegratedManual/raw/master/images/1500.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1500.png)
 
 1. 해당 정책의 이름을 지정합니다.
 2. 새로운 규칙을 생성합니다.
@@ -420,22 +420,22 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 **파일 로그**
 
-[![1510](https://github.com/jinronara/deleteme_2/raw/master/images/1510.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1510.png)
+[![1510](https://github.com/jinronara/IntegratedManual/raw/master/images/1510.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1510.png)
 
 파일 로그를 감시하기 위해 파일 경로, 키워드를 입력할 수 있습니다. \* 파일 경로: 감시할 파일의 경로 \* 키워드: 해당 파일의 로그에서 해당 키워드가 발생시 알림을 발생시킵니다. \* 위험도: 알림이 발생하였을 때 위험도를 지정합니다.
 
 **이벤트 로그**
 
-[![1520](https://github.com/jinronara/deleteme_2/raw/master/images/1520.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1520.png)
+[![1520](https://github.com/jinronara/IntegratedManual/raw/master/images/1520.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1520.png)
 
-이벤트 로그를 감시하기 위해 로그명, 수준을 선택할 수 있으며, 이벤트 소스, 이벤트 ID, 키워드를 입력할 수 있습니다. 각각의 빈칸에는 아래의 사진들에서 지정된 영역에 해당하는 값들 중에서 모니터링 하고자 하는 값을 골라 기입하시면 됩니다.[![1530](https://github.com/jinronara/deleteme_2/raw/master/images/1530.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1530.png)[![1540](https://github.com/jinronara/deleteme_2/raw/master/images/1540.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1540.png)
+이벤트 로그를 감시하기 위해 로그명, 수준을 선택할 수 있으며, 이벤트 소스, 이벤트 ID, 키워드를 입력할 수 있습니다. 각각의 빈칸에는 아래의 사진들에서 지정된 영역에 해당하는 값들 중에서 모니터링 하고자 하는 값을 골라 기입하시면 됩니다.[![1530](https://github.com/jinronara/IntegratedManual/raw/master/images/1530.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1530.png)[![1540](https://github.com/jinronara/IntegratedManual/raw/master/images/1540.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1540.png)
 
 * 위험도: 알림이 발생했을 때 해당 알림의 위험도를 지정할 수 있습니다.
 * 이벤트 로그는 Windows 환경에서만 사용 가능합니다.
 
 **알림 내역**
 
-해당 프로젝트에 등록된 모든 서버에서 발생한 모든 알림 내역 리스트를 볼 수 있으며, 서버명을 기준으로 검색할 수 있습니다.[![1550](https://github.com/jinronara/deleteme_2/raw/master/images/1550.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1550.png)
+해당 프로젝트에 등록된 모든 서버에서 발생한 모든 알림 내역 리스트를 볼 수 있으며, 서버명을 기준으로 검색할 수 있습니다.[![1550](https://github.com/jinronara/IntegratedManual/raw/master/images/1550.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1550.png)
 
 | 이름 | 설명 |
 | :--- | :--- |
@@ -447,7 +447,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 | 현재상태 | 해당 알림의 현재 상태 |
 | 처리내역 | 알림에 대한 처리내역 |
 
-7.2.4.3. 알림 상세 정보 알림 내역에서 하나의 알림을 선택 시 상세 정보 페이지로 이동합니다.[![1560](https://github.com/jinronara/deleteme_2/raw/master/images/1560.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1560.png)
+7.2.4.3. 알림 상세 정보 알림 내역에서 하나의 알림을 선택 시 상세 정보 페이지로 이동합니다.[![1560](https://github.com/jinronara/IntegratedManual/raw/master/images/1560.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1560.png)
 
 1. 개요: 발생한 알림에 대한 개요를 확인할 수 있습니다.
 2. 발생한 시점의 전후로 5분씩의 CPU, Memory, Disk, Network 차트를 보여줍니다. 알림에 해당하는 부분의 Severity\(위험도\)를 표시하고 있습니다.
@@ -459,7 +459,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 **일일 보고서 \(전체 요약\)**
 
-하루 동안 수집한 데이터를 토대로 보고서를 작성해 보여줍니다.[![1570](https://github.com/jinronara/deleteme_2/raw/master/images/1570.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1570.png)
+하루 동안 수집한 데이터를 토대로 보고서를 작성해 보여줍니다.[![1570](https://github.com/jinronara/IntegratedManual/raw/master/images/1570.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1570.png)
 
 * 보고서를 작성할 데이터 기간을 설정합니다. 시간 설정 버튼을 눌러 시작~종료 시간을 설정할 수 있습니다.
 * 이메일 수신을 체크면 매일 오전 중 일일 보고서를 이메일로 전달 받을 수 있습니다.
@@ -471,21 +471,21 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 **주간 보고서**
 
-일주일 동안 수집한 데이터를 토대로 보고서를 작성해 보여줍니다.[![1580](https://github.com/jinronara/deleteme_2/raw/master/images/1580.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1580.png)
+일주일 동안 수집한 데이터를 토대로 보고서를 작성해 보여줍니다.[![1580](https://github.com/jinronara/IntegratedManual/raw/master/images/1580.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1580.png)
 
 * 보고서를 작성할 데이터 기간을 설정합니다.
 * 내보내기 버튼을 누를 경우 .CSV 형식으로 보고서를 저장합니다.
 * 인쇄 버튼을 누를 경우 해당 보고서를 인쇄할 수 있습니다.
 * 서버 이름, CPU Avg\(%\), Memory Avg\(%\)를 요약해서 보여줍니다.   ==== 주간 보고서 \(디스크\) 일주일간 수집한 데이터 중 디스크만 추출하여 보고서를 작성해 보여줍니다.
 
-[![1590](https://github.com/jinronara/deleteme_2/raw/master/images/1590.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1590.png)
+[![1590](https://github.com/jinronara/IntegratedManual/raw/master/images/1590.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1590.png)
 
 * 보고서를 작성할 데이터 기간을 설정합니다, 설정한 날짜의 이후 7일간의 데이터를 보여줍니다.
 * 내보내기 버튼을 누를 경우 .CSV 형식으로 보고서를 저장합니다.
 * 인쇄 버튼을 누를 경우 해당 보고서를 인쇄할 수 있습니다.
 * 서버 이름, Disk\(%\)를 요약해서 보여줍니다.   ==== 월간 보고서 한달 동안 수집한 데이터를 토대로 보고서를 작성해 보여줍니다.
 
-[![1600](https://github.com/jinronara/deleteme_2/raw/master/images/1600.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1600.png)
+[![1600](https://github.com/jinronara/IntegratedManual/raw/master/images/1600.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1600.png)
 
 * 보고서를 작성할 데이터 기간을 설정합니다.
 * 내보내기 버튼을 누를 경우 .CSV 형식으로 보고서를 저장합니다.
@@ -494,7 +494,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 **월간 보고서 \(디스크\)**
 
-한달간 수집한 데이터 중 디스크 정보만 추출하여 월간 보고서를 작성하여 보여줍니다.[![1610](https://github.com/jinronara/deleteme_2/raw/master/images/1610.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1610.png)
+한달간 수집한 데이터 중 디스크 정보만 추출하여 월간 보고서를 작성하여 보여줍니다.[![1610](https://github.com/jinronara/IntegratedManual/raw/master/images/1610.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1610.png)
 
 * 보고서를 작성할 데이터 기간을 설정합니다. 설정한 기간 이후의 1달간 데이터를 보고서로 작성합니다.
 * 내보내기 버튼을 누를 경우 .CSV 형식으로 보고서를 저장합니다.
@@ -503,7 +503,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 **월간 보고서 \(애플리케이션 상세\)**
 
-한달간 수집한 데이터를 토대로 애플리케이션 별 월간 보고서를 작성하여 보여줍니다.[![1620](https://github.com/jinronara/deleteme_2/raw/master/images/1620.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1620.png)
+한달간 수집한 데이터를 토대로 애플리케이션 별 월간 보고서를 작성하여 보여줍니다.[![1620](https://github.com/jinronara/IntegratedManual/raw/master/images/1620.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1620.png)
 
 * 보고서를 작성할 데이터 기간을 설정합니다.
 * 내보내기 버튼을 누를 경우 .CSV 형식으로 보고서를 저장합니다.
@@ -529,9 +529,9 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 **그룹 추가**
 
-와탭 콘솔의 좌측 탭에 있는 그룹 추가 버튼을 눌러 그룹을 생성합니다.[![1630](https://github.com/jinronara/deleteme_2/raw/master/images/1630.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1630.png)
+와탭 콘솔의 좌측 탭에 있는 그룹 추가 버튼을 눌러 그룹을 생성합니다.[![1630](https://github.com/jinronara/IntegratedManual/raw/master/images/1630.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1630.png)
 
-생성창에 그룹 명과 그룹에 대한 설명을 적으신 후 생성버튼을 눌러 그룹을 생성합니다.[![1640](https://github.com/jinronara/deleteme_2/raw/master/images/1640.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1640.png)
+생성창에 그룹 명과 그룹에 대한 설명을 적으신 후 생성버튼을 눌러 그룹을 생성합니다.[![1640](https://github.com/jinronara/IntegratedManual/raw/master/images/1640.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1640.png)
 
 **그룹 멤버**
 
@@ -539,23 +539,23 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 **프로젝트 그룹화**
 
-프로젝트를 생성할 때 그룹을 정할 수 있습니다.[![1650](https://github.com/jinronara/deleteme_2/raw/master/images/1650.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1650.png)
+프로젝트를 생성할 때 그룹을 정할 수 있습니다.[![1650](https://github.com/jinronara/IntegratedManual/raw/master/images/1650.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1650.png)
 
-프로젝트를 생성한 이후에는 프로젝트의 우측 상단에 있는 더보기 버튼을 눌러 그룹을 이동할 수 있습니다.[![1660](https://github.com/jinronara/deleteme_2/raw/master/images/1660.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1660.png)[![1670](https://github.com/jinronara/deleteme_2/raw/master/images/1670.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1670.png)
+프로젝트를 생성한 이후에는 프로젝트의 우측 상단에 있는 더보기 버튼을 눌러 그룹을 이동할 수 있습니다.[![1660](https://github.com/jinronara/IntegratedManual/raw/master/images/1660.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1660.png)[![1670](https://github.com/jinronara/IntegratedManual/raw/master/images/1670.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1670.png)
 
 **그룹 삭제**
 
 **프로젝트 그룹 삭제**
 
-프로젝트의 그룹만 삭제하고 싶다면 프로젝트 우측 상단에 존재하는 더보기 버튼을 눌러 그룹 삭제 버튼을 눌러 삭제합니다.[![1680](https://github.com/jinronara/deleteme_2/raw/master/images/1680.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1680.png)[![1690](https://github.com/jinronara/deleteme_2/raw/master/images/1690.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1690.png)
+프로젝트의 그룹만 삭제하고 싶다면 프로젝트 우측 상단에 존재하는 더보기 버튼을 눌러 그룹 삭제 버튼을 눌러 삭제합니다.[![1680](https://github.com/jinronara/IntegratedManual/raw/master/images/1680.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1680.png)[![1690](https://github.com/jinronara/IntegratedManual/raw/master/images/1690.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1690.png)
 
 **그룹 삭제**
 
-그룹 자체를 삭제하고 싶은 경우 그룹탭의 그룹명 우측에 존재하는 더보기 버튼을 누른 뒤 그룹 삭제 버튼을 눌러 그룹을 삭제합니다.[![1700](https://github.com/jinronara/deleteme_2/raw/master/images/1700.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1700.png)[![1710](https://github.com/jinronara/deleteme_2/raw/master/images/1710.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1710.png)
+그룹 자체를 삭제하고 싶은 경우 그룹탭의 그룹명 우측에 존재하는 더보기 버튼을 누른 뒤 그룹 삭제 버튼을 눌러 그룹을 삭제합니다.[![1700](https://github.com/jinronara/IntegratedManual/raw/master/images/1700.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1700.png)[![1710](https://github.com/jinronara/IntegratedManual/raw/master/images/1710.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1710.png)
 
 #### 그룹 사용 {#user-content-그룹-사용}
 
-[![1720](https://github.com/jinronara/deleteme_2/raw/master/images/1720.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1720.png)
+[![1720](https://github.com/jinronara/IntegratedManual/raw/master/images/1720.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1720.png)
 
 와탭 모니터링 서비스는 기본값으로 프로젝트 단위로 구성되어 작동합니다. 프로젝트에 속한 SuperAdmin은 프로젝트 관리 뿐만 아니라, 청구의 대상이 됩니다.
 
@@ -575,9 +575,9 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 * 1개의 프로젝트는 1개의 그룹에만 속할 수 있습니다.
 
-새롭게 생성한 프로젝트를 그룹에 등록하고자 하는 경우, 해당 그룹에 들어간 뒤, 프로젝트를 생성해주면 됩니다.[![1730](https://github.com/jinronara/deleteme_2/raw/master/images/1730.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1730.png)
+새롭게 생성한 프로젝트를 그룹에 등록하고자 하는 경우, 해당 그룹에 들어간 뒤, 프로젝트를 생성해주면 됩니다.[![1730](https://github.com/jinronara/IntegratedManual/raw/master/images/1730.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1730.png)
 
-기존에 있는 프로젝트를 그룹에 등록하고자 하는 경우, 대시보드를 그룹뷰의 형태로 변경한 후, 해당 프로젝트의 우측에 있는 버튼을 클릭합니다.[![1740](https://github.com/jinronara/deleteme_2/raw/master/images/1740.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1740.png)
+기존에 있는 프로젝트를 그룹에 등록하고자 하는 경우, 대시보드를 그룹뷰의 형태로 변경한 후, 해당 프로젝트의 우측에 있는 버튼을 클릭합니다.[![1740](https://github.com/jinronara/IntegratedManual/raw/master/images/1740.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1740.png)
 
 해당 화면에서 희망하는 그룹으로 선택하면 이동됩니다.
 
@@ -587,11 +587,11 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 **프로젝트 그룹 삭제**
 
-그룹에 속해있는 프로젝트를 그룹으로부터 삭제하고자 하는 경우, 그룹 삭제 기능을 이용하면 됩니다. 그룹으로부터 삭제된 프로젝트는 All에서만 보실 수 있으며, 다른 그룹으로 재배치가 가능합니다.[![1750](https://github.com/jinronara/deleteme_2/raw/master/images/1750.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1750.png)
+그룹에 속해있는 프로젝트를 그룹으로부터 삭제하고자 하는 경우, 그룹 삭제 기능을 이용하면 됩니다. 그룹으로부터 삭제된 프로젝트는 All에서만 보실 수 있으며, 다른 그룹으로 재배치가 가능합니다.[![1750](https://github.com/jinronara/IntegratedManual/raw/master/images/1750.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1750.png)
 
 **그룹 삭제**
 
-[![1760](https://github.com/jinronara/deleteme_2/raw/master/images/1760.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1760.png)
+[![1760](https://github.com/jinronara/IntegratedManual/raw/master/images/1760.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1760.png)
 
 그룹 Owner 권한을 가진 유저의 경우, 해당 그룹을 삭제할 수 있습니다. 해당 그룹 버튼 우측에 있는 버튼을 누른 뒤 그룹 삭제를 선택하면 됩니다. 그룹 삭제는 해당 그룹과 더불어 속해있던 사용자 목록 정보도 삭제됩니다. 다만 삭제 된 뒤에도 프로젝트는 그룹 정보만 삭제되며 최종 관리자 권한이 SuperAdmin으로 귀속됩니다.
 
@@ -599,11 +599,11 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 **청구 계정 통일**
 
-[![1770](https://github.com/jinronara/deleteme_2/raw/master/images/1770.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1770.png)
+[![1770](https://github.com/jinronara/IntegratedManual/raw/master/images/1770.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1770.png)
 
 * 그룹을 사용하지 않고 SuperAdmin이 청구의 단위가 될 경우
 
-와탭 모니터링 서비스의 청구 단위는 SuperAdmin 계정 단위로 발생합니다. 프로젝트 4개가 각각 다른 SuperAdmin 계정으로 되어 있다면 청구는 총 4개의 아이디를 대상으로 됩니다. 사내에서 별도로 프로젝트를 관리하며 청구 계정은 동일하게 유지하고자 하는 경우, &lt;그룹&gt; 기능을 이용하여 하나의 아이디로 관리해주시기 바랍니다.[![1780](https://github.com/jinronara/deleteme_2/raw/master/images/1780.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1780.png)
+와탭 모니터링 서비스의 청구 단위는 SuperAdmin 계정 단위로 발생합니다. 프로젝트 4개가 각각 다른 SuperAdmin 계정으로 되어 있다면 청구는 총 4개의 아이디를 대상으로 됩니다. 사내에서 별도로 프로젝트를 관리하며 청구 계정은 동일하게 유지하고자 하는 경우, &lt;그룹&gt; 기능을 이용하여 하나의 아이디로 관리해주시기 바랍니다.[![1780](https://github.com/jinronara/IntegratedManual/raw/master/images/1780.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1780.png)
 
 * 그룹을 사용하여 단일 Owner가 청구의 단위가 될 경우
 
@@ -617,17 +617,17 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 **그룹뷰 설정**
 
-와탭 콘솔에서 그룹뷰 버튼을 클릭하고 수정 버튼을 클릭합니다.[![1790](https://github.com/jinronara/deleteme_2/raw/master/images/1790.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1790.png)
+와탭 콘솔에서 그룹뷰 버튼을 클릭하고 수정 버튼을 클릭합니다.[![1790](https://github.com/jinronara/IntegratedManual/raw/master/images/1790.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1790.png)
 
-좌측에 표시되는 차트 중 조합하고자 하는 차트를 클릭하면 우측에 차트가 표시될 영역에 차트가 추가됩니다. 우측 상단의 더보기 버튼을 클릭하여 차트에 표시할 대상 프로젝트를 선택합니다.[![1800](https://github.com/jinronara/deleteme_2/raw/master/images/1800.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1800.png)
+좌측에 표시되는 차트 중 조합하고자 하는 차트를 클릭하면 우측에 차트가 표시될 영역에 차트가 추가됩니다. 우측 상단의 더보기 버튼을 클릭하여 차트에 표시할 대상 프로젝트를 선택합니다.[![1800](https://github.com/jinronara/IntegratedManual/raw/master/images/1800.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1800.png)
 
 * 추가된 차트의 우측 하단을 드래그하여 차트의 사이즈를 조정하고, 차트를 클릭한 채로 이동하여 차트를 표시할 위치를 지정합니다.
 
-설정이 완료되었으면 Save 버튼을 클릭하여 저장하고, Complete 버튼을 클릭하여 종료합니다. 잠시 기다리면 모니터링 정보가 표시됩니다.[![1810](https://github.com/jinronara/deleteme_2/raw/master/images/1810.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1810.png)
+설정이 완료되었으면 Save 버튼을 클릭하여 저장하고, Complete 버튼을 클릭하여 종료합니다. 잠시 기다리면 모니터링 정보가 표시됩니다.[![1810](https://github.com/jinronara/IntegratedManual/raw/master/images/1810.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1810.png)
 
 **그룹뷰 활용 예시**
 
-[![1820](https://github.com/jinronara/deleteme_2/raw/master/images/1820.png)](https://github.com/jinronara/deleteme_2/blob/master/images/1820.png)
+[![1820](https://github.com/jinronara/IntegratedManual/raw/master/images/1820.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1820.png)
 
 #### 멀티 프로젝트 연관뷰 \(준비 중\) {#user-content-멀티-프로젝트-연관뷰-준비-중}
 

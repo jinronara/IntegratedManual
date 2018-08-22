@@ -17,7 +17,7 @@
 * 네트워크
   * 와탭 모니터링 에이전트는 모니터링 정보를 수집하여 서버에 데이터 전송하기 위하여 외부통신\(TCP\)을 위한 6600포트내부통신\(UDP\)을 위한 6600포트를 사용합니다. 내부 포트가 충돌이 나는 경우, net\_udp\_port=xxx 옵션으로 포트를 변경 할 수 있습니다.
 
-[![530](https://github.com/jinronara/deleteme_2/raw/master/images/530.png)](https://github.com/jinronara/deleteme_2/blob/master/images/530.png)
+[![530](https://github.com/jinronara/IntegratedManual/raw/master/images/530.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/530.png)
 
 **에이전트 구성 파일**
 
@@ -71,13 +71,13 @@ Table 1. 패턴 옵션
 
 **프로젝트 생성**
 
-[![540](https://github.com/jinronara/deleteme_2/raw/master/images/540.png)](https://github.com/jinronara/deleteme_2/blob/master/images/540.png)
+[![540](https://github.com/jinronara/IntegratedManual/raw/master/images/540.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/540.png)
 
-서버를 등록하기 위해 우선 프로젝트를 생성합니다. 추가 버튼을 선택하면 아래와 같이 프로젝트 생성 창이 나타납니다. PHP 아이콘을 선택한 뒤, 희망하는 프로젝트명과 데이터 서버 지역\(Region\), 소속하게 될 그룹을 선택한 뒤 프로젝트를 생성합니다.[![550](https://github.com/jinronara/deleteme_2/raw/master/images/550.png)](https://github.com/jinronara/deleteme_2/blob/master/images/550.png)
+서버를 등록하기 위해 우선 프로젝트를 생성합니다. 추가 버튼을 선택하면 아래와 같이 프로젝트 생성 창이 나타납니다. PHP 아이콘을 선택한 뒤, 희망하는 프로젝트명과 데이터 서버 지역\(Region\), 소속하게 될 그룹을 선택한 뒤 프로젝트를 생성합니다.[![550](https://github.com/jinronara/IntegratedManual/raw/master/images/550.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/550.png)
 
 **라이선스 발급**
 
-[![560](https://github.com/jinronara/deleteme_2/raw/master/images/560.png)](https://github.com/jinronara/deleteme_2/blob/master/images/560.png)
+[![560](https://github.com/jinronara/IntegratedManual/raw/master/images/560.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/560.png)
 
 프로젝트 관리화면에서는 우선적으로 라이선스를 발급 받습니다. 라이선스 키는 프로젝트별로 귀속되기 때문에, 유출되거나 배포되어서는 안됩니다. 반드시 본인 프로젝트에 서버를 등록할 때에만 이용하시기 바랍니다.
 

@@ -13,7 +13,7 @@ PHP 모니터링 서비스를 사용하기 위해서는 모니터링 대상 애�
 * 설정 스크립트를 실행합니다.
 * Apache 또는 PHP-FRPM을 재시작 합니다.
 
-설정 스크립트를 통해서 트레이서는 PHP 확장 모듈\(PHP Extension module\)로 등록되고, 에이전트는 whatap-php 서비스\(Service\)로 실행됩니다.[![490](https://github.com/jinronara/deleteme_2/raw/master/images/490.png)](https://github.com/jinronara/deleteme_2/blob/master/images/490.png)
+설정 스크립트를 통해서 트레이서는 PHP 확장 모듈\(PHP Extension module\)로 등록되고, 에이전트는 whatap-php 서비스\(Service\)로 실행됩니다.[![490](https://github.com/jinronara/IntegratedManual/raw/master/images/490.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/490.png)
 
 **구성 파일**
 
@@ -58,13 +58,13 @@ object\_name default: {type}-{ip2}-{ip3}-{process}
 
 **프로젝트 생성**
 
-서버를 등록하기 위해 우선 프로젝트를 생성합니다. 추가 버튼을 선택하면 아래와 같이 프로젝트 생성 창이 나타납니다. PHP 아이콘을 선택한 뒤, 희망하는 프로젝트명과 데이터 서버 지역\(Region\), 소속하게 될 그룹을 선택한 뒤 프로젝트를 생성합니다.[![500](https://github.com/jinronara/deleteme_2/raw/master/images/500.png)](https://github.com/jinronara/deleteme_2/blob/master/images/500.png)
+서버를 등록하기 위해 우선 프로젝트를 생성합니다. 추가 버튼을 선택하면 아래와 같이 프로젝트 생성 창이 나타납니다. PHP 아이콘을 선택한 뒤, 희망하는 프로젝트명과 데이터 서버 지역\(Region\), 소속하게 될 그룹을 선택한 뒤 프로젝트를 생성합니다.[![500](https://github.com/jinronara/IntegratedManual/raw/master/images/500.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/500.png)
 
-이후, 생성된 프로젝트를 클릭하여 관리 화면에 진입합니다.[![510](https://github.com/jinronara/deleteme_2/raw/master/images/510.png)](https://github.com/jinronara/deleteme_2/blob/master/images/510.png)
+이후, 생성된 프로젝트를 클릭하여 관리 화면에 진입합니다.[![510](https://github.com/jinronara/IntegratedManual/raw/master/images/510.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/510.png)
 
 **라이선스 발급**
 
-[![520](https://github.com/jinronara/deleteme_2/raw/master/images/520.png)](https://github.com/jinronara/deleteme_2/blob/master/images/520.png)
+[![520](https://github.com/jinronara/IntegratedManual/raw/master/images/520.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/520.png)
 
 프로젝트 관리화면에서는 우선적으로 라이선스를 발급 받습니다. 라이선스 키는 프로젝트별로 귀속되기 때문에, 유출되거나 배포되어서는 안됩니다. 반드시 본인 프로젝트에 서버를 등록할 때에만 이용하시기 바랍니다.
 

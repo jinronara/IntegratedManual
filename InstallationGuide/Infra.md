@@ -43,13 +43,13 @@
 
 **프로젝트 생성**
 
-[![570](https://github.com/jinronara/deleteme_2/raw/master/images/570.png)](https://github.com/jinronara/deleteme_2/blob/master/images/570.png)
+[![570](https://github.com/jinronara/IntegratedManual/raw/master/images/570.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/570.png)
 
-서버를 등록하기 위해 우선 프로젝트를 생성합니다. 추가 버튼을 선택하면 아래와 같이 프로젝트 생성 창이 나타납니다. INFRASTRUCTURE 아이콘을 선택한 뒤, 희망하는 프로젝트명과 데이터 서버 지역, 소속하게 될 그룹을 선택한 뒤 프로젝트를 생성합니다.[![580](https://github.com/jinronara/deleteme_2/raw/master/images/580.png)](https://github.com/jinronara/deleteme_2/blob/master/images/580.png)
+서버를 등록하기 위해 우선 프로젝트를 생성합니다. 추가 버튼을 선택하면 아래와 같이 프로젝트 생성 창이 나타납니다. INFRASTRUCTURE 아이콘을 선택한 뒤, 희망하는 프로젝트명과 데이터 서버 지역, 소속하게 될 그룹을 선택한 뒤 프로젝트를 생성합니다.[![580](https://github.com/jinronara/IntegratedManual/raw/master/images/580.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/580.png)
 
 **라이선스 발급**
 
-[![590](https://github.com/jinronara/deleteme_2/raw/master/images/590.png)](https://github.com/jinronara/deleteme_2/blob/master/images/590.png)
+[![590](https://github.com/jinronara/IntegratedManual/raw/master/images/590.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/590.png)
 
 에이전트 설치 화면에서 라이선스를 발급 받습니다. 라이선스 키는 프로젝트별로 귀속되기 때문에, 유출되거나 배포되어서는 안됩니다. 반드시 본인 프로젝트에 서버를 등록할 때에만 이용하시기 바랍니다.
 
@@ -123,7 +123,7 @@ sudo service whatap-infra restart
 
 **에이전트 다운로드**
 
-에이전트 설치 페이지에서 WINDOWS를 클릭합니다.[![600](https://github.com/jinronara/deleteme_2/raw/master/images/600.png)](https://github.com/jinronara/deleteme_2/blob/master/images/600.png)
+에이전트 설치 페이지에서 WINDOWS를 클릭합니다.[![600](https://github.com/jinronara/IntegratedManual/raw/master/images/600.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/600.png)
 
 whata\_infra.exe 파일을 다운받습니다. 보안 설정으로 인해 .exe형식의 파일을 받지 못할 경우를 대비하여 .zip 형식의 파일로도 다운받을 수 있습니다.
 
@@ -135,13 +135,13 @@ whata\_infra.exe 파일을 다운받습니다. 보안 설정으로 인해 .exe�
 
 **에이전트 설치**
 
-서버에서 업로드 받은 파일을 실행합니다.[![610](https://github.com/jinronara/deleteme_2/raw/master/images/610.png)](https://github.com/jinronara/deleteme_2/blob/master/images/610.png)
+서버에서 업로드 받은 파일을 실행합니다.[![610](https://github.com/jinronara/IntegratedManual/raw/master/images/610.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/610.png)
 
 해당 입력란에 발급받은 라이선스 키와 데이터 서버 주소\(IP\)를 입력합니다. 이후 설치가 완료되면 아래 그림과 같은 화면을 볼 수 있으며, 에이전트가 자동적으로 모니터링을 시작합니다. 버튼을 눌러 설치를 완료합니다.
 
 * 에이전트는 수집 서버 주소로 정보를 전송합니다. 그러므로 수집 서버 주소로 가는 TCP 아웃바운드 포트\(6600\)가 차단되어 있으면 안됩니다.
 
-[![620](https://github.com/jinronara/deleteme_2/raw/master/images/620.png)](https://github.com/jinronara/deleteme_2/blob/master/images/620.png)
+[![620](https://github.com/jinronara/IntegratedManual/raw/master/images/620.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/620.png)
 
 **알림 일시 정지**
 
@@ -149,7 +149,7 @@ whata\_infra.exe 파일을 다운받습니다. 보안 설정으로 인해 .exe�
 
 * 주의: 서비스 일시정지 시에도 요금은 청구됩니다,
 
-[![630](https://github.com/jinronara/deleteme_2/raw/master/images/630.png)](https://github.com/jinronara/deleteme_2/blob/master/images/630.png)
+[![630](https://github.com/jinronara/IntegratedManual/raw/master/images/630.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/630.png)
 
 모니터링 중인 서버들 중 일시정지하고자 하는 서버를 선택합니다. 일시정지하고자 하는 서버 선택 후 우측 상단에 있는 액션을 클릭하면 드롭다운 메뉴가 나오는 것이 확인 가능합니다. 해당 메뉴에서 일시정지 버튼을 클릭할 경우 알림이 나가지 않습니다.
 
@@ -161,7 +161,7 @@ whata\_infra.exe 파일을 다운받습니다. 보안 설정으로 인해 .exe�
 
 **해지**
 
-모니터링이 더 이상 필요하지 않을 경우 와탭 에이전트를 손쉽게 해지할 수 있습니다. 해지를 희망하는 서버를 선택한 후, 액션 버튼을 클릭하여 나오는 드롭다운 메뉴에서 해지 버튼을 누르면 아래 그림과 같은 팝업창을 확인 할 수 있습니다.[![630](https://github.com/jinronara/deleteme_2/raw/master/images/630.png)](https://github.com/jinronara/deleteme_2/blob/master/images/630.png)
+모니터링이 더 이상 필요하지 않을 경우 와탭 에이전트를 손쉽게 해지할 수 있습니다. 해지를 희망하는 서버를 선택한 후, 액션 버튼을 클릭하여 나오는 드롭다운 메뉴에서 해지 버튼을 누르면 아래 그림과 같은 팝업창을 확인 할 수 있습니다.[![630](https://github.com/jinronara/IntegratedManual/raw/master/images/630.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/630.png)
 
 해당 팝업 창에서 해지를 누를 경우 서버가 해지됩니다.
 
