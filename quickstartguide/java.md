@@ -1,8 +1,10 @@
 # Java
 
-## Java 애플리케이션 모니터링 {#user-content-java-애플리케이션-모니터링}
+## Java
 
-### javaagent + onetime attach {#user-content-javaagent-onetime-attach}
+### Java 애플리케이션 모니터링 {#user-content-java-애플리케이션-모니터링}
+
+#### javaagent + onetime attach {#user-content-javaagent-onetime-attach}
 
 본 가이드는 와탭 APM 모니터링의 3가지 설치 방식 중 “javaagent + onetime attach” 방식을 대상으로 합니다. “javaagent + onetime attach” 방식은 실행 중인 애플리케이션 서버에 와탭 APM 모니터링을 적용하고, 애플리케이션 서버 재기동 시 “javaagent” 방식으로 실행하고자 하는 경우에 적용하는 방식입니다. \(attach 방식으로 설치할 경우 일부 쿼리 데이터가 정상적으로 수집되지 않을 수 있습니다.\) ==== 설치 환경 설치 환경 구성
 
@@ -35,23 +37,23 @@ Windows에 진행하고 있다면 5장의 Java 애플리케이션 모니터링�
 
 **프로젝트 생성**
 
-![](https://github.com/jinronara/IntegratedManual/tree/93fdbbf61f0cb8cedae22fdbf4c1e9e88904c19c/QuickStartGuide/.gitbook/assets/20.png)
+![&#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC0DD;&#xC131; &#xD398;&#xC774;&#xC9C0;](../.gitbook/assets/20.png)
 
 서버를 등록하기 위해 우선 프로젝트를 생성합니다. 추가 버튼을 선택하면 아래와 같이 프로젝트 생성 창이 나타납니다. Java 아이콘을 선택한 뒤, 희망하는 프로젝트명과 데이터 서버 지역\(Region\), 소속하게 될 그룹을 선택한 뒤 프로젝트를 생성합니다.
 
-![](https://github.com/jinronara/IntegratedManual/tree/93fdbbf61f0cb8cedae22fdbf4c1e9e88904c19c/QuickStartGuide/.gitbook/assets/30.png)
+![](../.gitbook/assets/30.png)
 
 이후, 생성된 프로젝트를 클릭하여 관리 화면에 진입합니다
 
 **라이선스 발급**
 
-![](https://github.com/jinronara/IntegratedManual/tree/93fdbbf61f0cb8cedae22fdbf4c1e9e88904c19c/QuickStartGuide/.gitbook/assets/40.png)
+![](../.gitbook/assets/40.png)
 
 프로젝트 관리화면에서는 우선적으로 라이선스를 발급 받습니다. 라이선스 키는 프로젝트별로 귀속되기 때문에, 유출되거나 배포되어서는 안됩니다. 반드시 본인 프로젝트에 서버를 등록할 때에만 이용하시기 바랍니다.
 
 **에이전트 다운로드**
 
-![](https://github.com/jinronara/IntegratedManual/tree/93fdbbf61f0cb8cedae22fdbf4c1e9e88904c19c/QuickStartGuide/.gitbook/assets/50.png)
+![](../.gitbook/assets/50.png)
 
 라이선스를 발급 받은 후에는 ‘에이전트 파일 다운로드’ 버튼이 활성화 되었음을 확인할 수 있습니다. 해당 버튼을 눌러 와탭 에이전트 파일을 다운로드 받습니다.
 
@@ -132,18 +134,18 @@ AttachAgent Success :  [2583] org.apache.catalina.startup.Bootstrap start
 
 **모니터링 확인**
 
-![](https://github.com/jinronara/IntegratedManual/tree/93fdbbf61f0cb8cedae22fdbf4c1e9e88904c19c/QuickStartGuide/.gitbook/assets/60.png)
+![](../.gitbook/assets/60.png)
 
 와탭 프로젝트로 돌아와 등록된 서버를 확인 합니다.
 
-![](https://github.com/jinronara/IntegratedManual/tree/93fdbbf61f0cb8cedae22fdbf4c1e9e88904c19c/QuickStartGuide/.gitbook/assets/70.png)
+![](../.gitbook/assets/70.png)
 
 정상적으로 등록되어 있는지를 확인하기 위해서는 프로젝트 메뉴 좌측에 위치한 ‘서버’ 메뉴를 클릭하여 들어온 후, 해당 서버의 정보를 확인합니다. 해당 서버 우측의 More 메뉴의 Boot Environment 항목을 선택한 뒤 나오는 정보 중 whatap.name과 whatap.type 항목을 확인합니다.
 
 * whatap.name - JVMP 메뉴 선택 시 표시되는 애플리케이션 목록의 애플리케이션에 표시되는 서버 식별용 명칭 포맷입니다.
 * whatap.type - 애플리케이션 서버 종류가 표시됩니다.
 
-### javaagent {#user-content-javaagent}
+#### javaagent {#user-content-javaagent}
 
 본 가이드는 와탭 APM 모니터링의 3가지 설치 방식 중 “javaagent” 방식을 대상으로 합니다. “javaagent” 방식은 애플리케이션 서버 실행 시점에 와탭 APM 모니터링을 적용하고자 하는 경우에 적용하는 방식입니다.
 
@@ -176,23 +178,23 @@ AttachAgent Success :  [2583] org.apache.catalina.startup.Bootstrap start
 
 **프로젝트 생성**
 
-![](https://github.com/jinronara/IntegratedManual/tree/93fdbbf61f0cb8cedae22fdbf4c1e9e88904c19c/QuickStartGuide/.gitbook/assets/20.png)
+![](../.gitbook/assets/20.png)
 
 서버를 등록하기 위해 우선 프로젝트를 생성합니다. 추가 버튼을 선택하면 아래와 같이 프로젝트 생성 창이 나타납니다. Java 아이콘을 선택한 뒤, 희망하는 프로젝트명과 데이터 서버 지역\(Region\), 소속하게 될 그룹을 선택한 뒤 프로젝트를 생성합니다.
 
-![](https://github.com/jinronara/IntegratedManual/tree/93fdbbf61f0cb8cedae22fdbf4c1e9e88904c19c/QuickStartGuide/.gitbook/assets/30.png)
+![](../.gitbook/assets/30.png)
 
 이후, 생성된 프로젝트를 클릭하여 관리 화면에 진입합니다
 
 **라이선스 발급**
 
-![](https://github.com/jinronara/IntegratedManual/tree/93fdbbf61f0cb8cedae22fdbf4c1e9e88904c19c/QuickStartGuide/.gitbook/assets/40.png)
+![](../.gitbook/assets/40.png)
 
 프로젝트 관리화면에서는 우선적으로 라이선스를 발급 받습니다. 라이선스 키는 프로젝트별로 귀속되기 때문에, 유출되거나 배포되어서는 안됩니다. 반드시 본인 프로젝트에 서버를 등록할 때에만 이용하시기 바랍니다.
 
 **에이전트 다운로드**
 
-![](https://github.com/jinronara/IntegratedManual/tree/93fdbbf61f0cb8cedae22fdbf4c1e9e88904c19c/QuickStartGuide/.gitbook/assets/50.png)
+![](../.gitbook/assets/50.png)
 
 라이선스를 발급 받은 후에는 ‘에이전트 파일 다운로드’ 버튼이 활성화 되었음을 확인할 수 있습니다. 해당 버튼을 눌러 와탭 에이전트 파일을 다운로드 받습니다.
 
@@ -255,22 +257,22 @@ WhaTap Agent version 0.3.9 20161115
 
 **모니터링 확인**
 
-![](https://github.com/jinronara/IntegratedManual/tree/93fdbbf61f0cb8cedae22fdbf4c1e9e88904c19c/QuickStartGuide/.gitbook/assets/60.png)
+![](../.gitbook/assets/60.png)
 
 와탭 프로젝트로 돌아와 등록된 서버를 확인 합니다.
 
-![](https://github.com/jinronara/IntegratedManual/tree/93fdbbf61f0cb8cedae22fdbf4c1e9e88904c19c/QuickStartGuide/.gitbook/assets/70.png)
+![](../.gitbook/assets/70.png)
 
 정상적으로 등록되어 있는지를 확인하기 위해서는 프로젝트 메뉴 좌측에 위치한 ‘서버’ 메뉴를 클릭하여 들어온 후, 해당 서버의 정보를 확인합니다. 해당 서버 우측의 더보기 메뉴의 부트 환경 항목을 선택한 뒤 나오는 정보 중 whatap.name과 whatap.type 항목을 확인합니다.
 
 * whatap.name - JVMP 메뉴 선택 시 표시되는 애플리케이션 서버 목록의 애플리케이션에 표시되는 서버 식별용 명칭 포맷입니다.
 * whatap.type - 애플리케이션 서버 종류가 표시됩니다.
 
-## Node.JS 애플리케이션 모니터링 {#user-content-node-js-애플리케이션-모니터링}
+### Node.JS 애플리케이션 모니터링 {#user-content-node-js-애플리케이션-모니터링}
 
 본 가이드는 사용자가 Linux Ubuntu 16.04 환경에서 Node.js와 Express를 기반으로 생성된 애플리케이션 서버를 구동하고 있을 때 와탭 Node.js 모니터링을 설치하는 방법에 대해 다룹니다. 별도의 세부적인 가이드를 필요로 하는 여타 다른 프레임워크를 이용하는 경우 사용자 가이드를 참고해주시기 바랍니다. 와탭 Node.js APM 모니터링 서비스를 사용하기 위해서는 모니터링 대상 애플리케이션에 모니터링 에이전트를 설치해야 합니다. 와탭 Node.js APM 모니터링 에이전트는 npm 서비스를 통해 다운받을 수 있으며, 홈페이지에서 발급 받은 라이선스 키를 입력하여 등록할 수 있습니다.
 
-### 설치 환경 {#user-content-설치-환경-1}
+#### 설치 환경 {#user-content-설치-환경-1}
 
 * OS: Linux Ubuntu 16.04
 * Framework: Express
@@ -360,7 +362,7 @@ WhaTap Node Agent version 0.1.26, 20170626
 
 {text 모니터링 확인에 대한 부분 확인 필요}
 
-## PHP 애플리케이션 모니터링 {#user-content-php-애플리케이션-모니터링}
+### PHP 애플리케이션 모니터링 {#user-content-php-애플리케이션-모니터링}
 
 본 가이드는 사용자가 와탭 PHP 모니터링 서비스를 사용 중인 PHP 애플리케이션 서버에 설치하고 확인하는 내용을 다룹니다. 별도의 세부적인 설정을 필요로 하는 프레임워크/옵션을 사용하는 경우 설치 가이드를 참고해주시기 바랍니다.[![90](https://github.com/jinronara/IntegratedManual/raw/master/images/90.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/90.png)
 
@@ -373,14 +375,14 @@ PHP 모니터링 서비스를 사용하기 위해서는 모니터링 대상 애�
 
 설정 스크립트를 통해서 트레이서는 PHP 확장 모듈\(PHP Extension module\)로 등록되고, 에이전트는 whatap-php 서비스\(Service\)로 실행됩니다.
 
-### 지원 환경 {#user-content-지원-환경}
+#### 지원 환경 {#user-content-지원-환경}
 
 * OS : RedHat / CentOS 64bit 6.x 이상, Ubuntu 64bit 12.04 이상
 * PHP: 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, ZTS\(Zend Thread Safe\)
 * Library: mysql, mysqli, PDO, cURL, Oracle\(oci8\), Mssql
 * Network : 외부 와탭 서버 연결 포트 6600, 내부 UDP 포트 6600
 
-### 에이전트 구성 파일 {#user-content-에이전트-구성-파일-2}
+#### 에이전트 구성 파일 {#user-content-에이전트-구성-파일-2}
 
 모니터링 정보를 수집하기 위한 트레이서, 수집된 정보를 서버에 전송하기 위한 에이전트, 트레이서와 에이전트를 서버에 동적으로 적용하기 위한 설치 스크립트 파일로 구성됩니다.
 
@@ -398,7 +400,7 @@ PHP 모니터링 서비스를 구성하는 각 파일의 역할은 다음과 같
 | install.sh | 웹 애플리케이션 서버에 트레이서를 적용하기 위한 쉘 스크립트입니다. |
 | Whatap.php | \(sample.php\) PHP 소스코드에서 사용할 API 레퍼런스 클래스 \(/usr/whatap/php/lib/Whatap.php\) 및 예제 소스 파일\(sample.php\) 입니다. |
 
-### 에이전트 설치 절차 {#user-content-에이전트-설치-절차-2}
+#### 에이전트 설치 절차 {#user-content-에이전트-설치-절차-2}
 
 **프로젝트 생성**
 
@@ -557,11 +559,11 @@ WA001 Whatap APM started
 
 * 데이터 수집 주기는 5초입니다.
 
-## Python 애플리케이션 모니터링 {#user-content-python-애플리케이션-모니터링}
+### Python 애플리케이션 모니터링 {#user-content-python-애플리케이션-모니터링}
 
 본 가이드는 사용자가 와탭 Python 모니터링 서비스를 사용 중인 Python 애플리케이션 서버에 설치하고 확인하는 내용을 다룹니다. 별도의 세부적인 설정을 필요로 하는 프레임워크/옵션을 사용하는 경우 설치 가이드를 참고해주시기 바랍니다.
 
-### 설치 환경 {#user-content-설치-환경-2}
+#### 설치 환경 {#user-content-설치-환경-2}
 
 * 운영체제
   * CentOs 6 이상\(64bit\)
@@ -573,7 +575,7 @@ WA001 Whatap APM started
   * 와탭 서버 연결을 위한 6600 Port 허용
   * 서버 내부 UDP 통신을 위한 6600 Port 사용
 
-### 에이전트 설정 파일 {#user-content-에이전트-설정-파일}
+#### 에이전트 설정 파일 {#user-content-에이전트-설정-파일}
 
 whatap.conf은 에이전트 설정 기본 필수 파일입니다. 에이전트와 관련된 옵션은 모두 whatap.conf에서 설정이 가능합니다. 애플리케이션 서버의 데이터를 수집하는 수집서버의 주소와 서버의 프로젝트의 라이선스 키는 필수 옵션입니다. 이때, 라이선스키와 수집서버의 주소는 프로젝트를 생성하여 발급 및 확인이 가능합니다. 다음과 같은 옵션은 필수 조건입니다.
 
@@ -587,7 +589,7 @@ whatap.conf은 에이전트 설정 기본 필수 파일입니다. 에이전트�
 * app\_process\_name=XXXX \# 애플리케이션의 프로세스명
   * ex\)uwsgi, gunicorn ..
 
-### 에이전트 설치 절차 {#user-content-에이전트-설치-절차-3}
+#### 에이전트 설치 절차 {#user-content-에이전트-설치-절차-3}
 
 와탭 python 모니터링 서비스를 사용하기 위해서는 모니터링 대상 애플리케이션에 모니터링 에이전트를 설치해야 합니다. 와탭 Python 모니터링 에이전트는 Python Package Index\(pip\)를 통해 와탭 -python 패키지를 설치 합니다. 홈페이지에서 발급 받은 라이선스 키를 입력하여 등록할 수 있습니다.
 
@@ -595,13 +597,13 @@ whatap.conf은 에이전트 설정 기본 필수 파일입니다. 에이전트�
 
 [![20](https://github.com/jinronara/IntegratedManual/raw/master/images/20.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/20.png)
 
-<<<<<<< HEAD:QuickStartGuide/Java.md
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:QuickStartGuide/Java.md
 
+## [![140](https://github.com/jinronara/IntegratedManual/raw/master/images/140.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/140.png)
 
-[![140](https://github.com/jinronara/IntegratedManual/raw/master/images/140.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/140.png)
-=======
 [![140](https://github.com/jinronara/deleteme_2/raw/master/images/140.png)](https://github.com/jinronara/deleteme_2/blob/master/images/140.png)
->>>>>>> 3fe6b1e065751bb93380d2417296b8133bef459a:quickstartguide/java.md
+
+> > > > > > > 3fe6b1e065751bb93380d2417296b8133bef459a:quickstartguide/java.md
 
 이후, 생성된 프로젝트를 클릭하여 관리 화면에 진입합니다
 
@@ -675,9 +677,11 @@ Logs: /Users/kimjihye/workspace/whatap/python-sample/whatap/logs
 
 **모니터링 확인**
 
-<<<<<<< HEAD:QuickStartGuide/Java.md
-[![110](https://github.com/jinronara/IntegratedManual/raw/master/images/110.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/110.png)
-=======
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:QuickStartGuide/Java.md
+
+## [![110](https://github.com/jinronara/IntegratedManual/raw/master/images/110.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/110.png)
+
 [![110](https://github.com/jinronara/deleteme_2/raw/master/images/110.png)](https://github.com/jinronara/deleteme_2/blob/master/images/110.png)
 
->>>>>>> 3fe6b1e065751bb93380d2417296b8133bef459a:quickstartguide/java.md
+> > > > > > > 3fe6b1e065751bb93380d2417296b8133bef459a:quickstartguide/java.md
+
