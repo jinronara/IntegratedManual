@@ -682,13 +682,5 @@ Logs: /Users/kimjihye/workspace/whatap/python-sample/whatap/logs
 ```
 
 **모니터링 확인**
-
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:QuickStartGuide/Java.md
-
-## [![110](https://github.com/jinronara/IntegratedManual/raw/master/images/110.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/110.png)
-
 [![110](https://github.com/jinronara/deleteme_2/raw/master/images/110.png)](https://github.com/jinronara/deleteme_2/blob/master/images/110.png)
 
-> > > > > > > 3fe6b1e065751bb93380d2417296b8133bef459a:quickstartguide/java.md
-
->>>>>>> 8d01a9e523745b3d058d68ba620f16098e8a5483
