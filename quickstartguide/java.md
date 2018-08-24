@@ -1,4 +1,4 @@
-# Java 애플리케이션 모니터링 {#user-content-java-애플리케이션-모니터링}
+# Java
 
 ## javaagent + onetime attach {#user-content-javaagent-onetime-attach}
 
@@ -265,3 +265,4 @@ WhaTap Agent version 0.3.9 20161115
 
 * whatap.name - JVMP 메뉴 선택 시 표시되는 애플리케이션 서버 목록의 애플리케이션에 표시되는 서버 식별용 명칭 포맷입니다.
 * whatap.type - 애플리케이션 서버 종류가 표시됩니다.
+

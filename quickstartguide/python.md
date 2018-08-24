@@ -1,4 +1,4 @@
-# Python 애플리케이션 모니터링 {#user-content-python-애플리케이션-모니터링}
+# Python
 
 본 가이드는 사용자가 와탭 Python 모니터링 서비스를 사용 중인 Python 애플리케이션 서버에 설치하고 확인하는 내용을 다룹니다. 별도의 세부적인 설정을 필요로 하는 프레임워크/옵션을 사용하는 경우 설치 가이드를 참고해주시기 바랍니다.
 
@@ -36,8 +36,7 @@ whatap.conf은 에이전트 설정 기본 필수 파일입니다. 에이전트�
 
 ![](https://github.com/jinronara/IntegratedManual/tree/93fdbbf61f0cb8cedae22fdbf4c1e9e88904c19c/QuickStartGuide/.gitbook/assets/20.png)
 
-<<<<<<< HEAD:QuickStartGuide/Java.md
-
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:QuickStartGuide/Java.md
 
 ![](https://github.com/jinronara/IntegratedManual/tree/93fdbbf61f0cb8cedae22fdbf4c1e9e88904c19c/QuickStartGuide/.gitbook/assets/140.png)
 
@@ -114,3 +113,4 @@ Logs: /Users/kimjihye/workspace/whatap/python-sample/whatap/logs
 **모니터링 확인**
 
 ![](https://github.com/jinronara/IntegratedManual/tree/93fdbbf61f0cb8cedae22fdbf4c1e9e88904c19c/QuickStartGuide/.gitbook/assets/110.png)
+

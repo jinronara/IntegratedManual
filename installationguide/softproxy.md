@@ -1,4 +1,4 @@
-# 소프트웨어 프록시 \(준비 중\) {#user-content-소프트웨어-프록시-준비-중}
+# Software Proxy
 
 ## 개요 {#user-content-개요}
 
