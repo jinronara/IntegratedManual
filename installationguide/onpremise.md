@@ -1,27 +1,27 @@
 # 설치형 서버
 
-### 안내사항
+## 안내사항
 
 수집 서버가 설치될 장비의 IP 및 수집 규모에 따른 라이센스 발급을 진행합니다.   
-라이센스 발급은 license@whatap.io에 필요사항을 기술하여 요청합니다. 
+라이센스 발급은 license@whatap.io에 필요사항을 기술하여 요청합니다.
 
-* 설치 환경 식별을 위한 명칭: 고객사 + 사업명 
-* 고객사 담당자: 이름, 전화번호, 이메일 
-* 라이선스 시작일 
-* 라이선스 종료일: 종료일 0시에 제한되므로 종료일 + 1로 요청 
-* 인프라 모니터링 대상 코어 수/에이전트 수: 코어 또는 에이전트 수 \(정식 라이센스는 에이전트 수 기준임\) 
+* 설치 환경 식별을 위한 명칭: 고객사 + 사업명
+* 고객사 담당자: 이름, 전화번호, 이메일
+* 라이선스 시작일
+* 라이선스 종료일: 종료일 0시에 제한되므로 종료일 + 1로 요청
+* 인프라 모니터링 대상 코어 수/에이전트 수: 코어 또는 에이전트 수 \(정식 라이센스는 에이전트 수 기준임\)
 * 어플리케이션 모니터링 대상 코어 수/에이전트 수 \(정식 라이센스는 코어 수 기준임\)
 
 이벤트 알림을 위한 설정은 계약 완료 시점 이후 별도의 절차로 진행합니다. 단 본 문서에는 이벤트 알림용 notihub 서버와 관련한 사항도 기술합니다.
 
-### **수집 서버 권장 사양**
+## 수집 서버 권장 사양
 
-#### 방화벽 오픈
+### 방화벽 오픈
 
 * 에이전트 설치대상 -&gt; 수집 서버 \(TCP 6600 포트\)
 * 모니터링 PC -&gt; 수집 서버 \(TCP 8080 포트\)
 
-#### 파일 디스크립터 설정의 상향 조정
+### 파일 디스크립터 설정의 상향 조정
 
 시스템의 파일 디스크립터 설정을 상향 조정합니다.   
 sysctl.conf 파일 내용에 fs.file-max = 999999 설정을 추가합니다.
@@ -30,13 +30,13 @@ sysctl.conf 파일 내용에 fs.file-max = 999999 설정을 추가합니다.
  $ vi /etc/sysctl.conf fs.file-max = 999999
 ```
 
-추가한 설정을 적용합니다. 
+추가한 설정을 적용합니다.
 
 ```bash
 $ sysctl -p
 ```
 
-추가한 설정을 적용합니다. 
+추가한 설정을 적용합니다.
 
 ```bash
 $ sysctl -a | grep file-max fs.file-max = 999999
@@ -44,37 +44,37 @@ $ sysctl -a | grep file-max fs.file-max = 999999
 
 설치형 서버를 실행할 사용자에 대해 파일 디스크립터 설정을 상향 조정합니다.   
 /etc/security/limits.conf 파일에 사용자 또는 그룹 이름으로 soft, hard 설정을 상향 조정합니다.   
-사용자 계정은 그대로 사용하고, 그룹은 앞에 @를 붙여서 설정합니다. 
+사용자 계정은 그대로 사용하고, 그룹은 앞에 @를 붙여서 설정합니다.
 
 ```bash
  vi /etc/security/limits.conf
- ${사용자 계정 또는 @그룹명} soft nofile 999999 
+ ${사용자 계정 또는 @그룹명} soft nofile 999999
  ${사용자 계정 또는 @그룹명} hard nofile 999999
 ```
 
-### **설치 작업 절차**
+## 설치 작업 절차
 
-#### 설치 파일 및 라이센스 파일을 설치 대상 서버에 업로드 
+### 설치 파일 및 라이센스 파일을 설치 대상 서버에 업로드
 
-단일 서버에 구성하는 경우, 최소형 패키지를 활용하며 향후 확장성을 고려할 때 확장형 패키지를 활용하여 설치를 진행합니다. JDK 및 와탭 모니터링 패키지를 설치 대상 서버에 업로드 하고 압축을 해제합니다. 
+단일 서버에 구성하는 경우, 최소형 패키지를 활용하며 향후 확장성을 고려할 때 확장형 패키지를 활용하여 설치를 진행합니다. JDK 및 와탭 모니터링 패키지를 설치 대상 서버에 업로드 하고 압축을 해제합니다.
 
 * 최소형 패키지: whatap\_single-\#.\#.\#.\#\#\#\#.tar
-*  확장형 패키지: whatap\_multi-\#.\#.\#.\#\#\#\#.tar 
+*  확장형 패키지: whatap\_multi-\#.\#.\#.\#\#\#\#.tar
 * Oracle JDK 1.7 이상
 * 라이센스 파일: 텍스트 파일로 준
 
 와탭 모니터링 패키지를 압축 해제하면 whatap\_package 라는 디렉토리로 압축이 해제됩니다. 본 문서에서 이후 해당 경로를 $WHATAP\_PACKAGE로 기술합니다.
 
-#### JDK 설치 
+### JDK 설치
 
 Oracle JDK 1.7 이상의 버전이 사전에 설치되어 있는 경우 이를 활용합니다. 설치되어 있지 않은 경우, JDK를 설치합니다. 본 문서에서 이후 JDK 설치 경로를 $JDK로 기술합니다.
 
-### 실행 파일 편집 
+### 실행 파일 편집
 
-$WHATAP\_PACKAGE/bin 하위에는 쉘 스크립트가 존재합니다. 스크립트에 실행 권한을 부여합니다. 
+$WHATAP\_PACKAGE/bin 하위에는 쉘 스크립트가 존재합니다. 스크립트에 실행 권한을 부여합니다.
 
 ```bash
-$ cd $WHATAP_PACKAGE/bin 
+$ cd $WHATAP_PACKAGE/bin
 $ chmod +x *.sh
 ```
 
@@ -98,77 +98,128 @@ $WHATAP\_PACKAGE/lib 하위에는 어플리케이션 라이브러리\(jar\), $WH
 
 각 설정 파일에는 필수로 설정해야 하는 정보를 수정합니다.
 
-| 구분  | 파일명 | 항목명 | 설정  |
-| :--- | :--- | :--- | :--- |
-| 최소형 | account.conf | owner | ifconfig/ipconfig로 식별 가능한 IP |
-|  |  | license | 발급받은 서버 라이센스 |
-|  | front.conf | region.proxy.address | 에이전트가 데이터를 전송하게 될 수집 서버의 IP |
-|  |  | admin.password | 사이트 관리자 계정 패스워드 \(초기값 : admin\) |
-|  | notihub.conf | mail.host  | SMTP 연계를 통한 초대 메일 및 알람발송 등 적용 시  |
-|  |  | mail.port |  |
-|  |  | mail.username |  |
-|  |  | mail.password |  |
-|  |  | mail.sender |  |
-|  |  | mail.smtp.auth |  |
-|  |  | mail.smtp.ssl.enable |  |
-|  |  | mail.smtp.starttls.enable |  |
-|  |  | mail.smtp.starttls.required |  |
-|  |  | smsformat |  |
-|  |  | smssender | 이벤트 알림 중 문자 발송 시 고객사 커스터마이징 설정을 지정 |
-|  |  | smsformat |  |
-| 확장형 | account.conf |  |  |
+| 구분  | 파일명           | 항목명                         | 설정  |
+| :--- | :---           |:---                         | :--- |
+| 최소형 | account.conf   |owner                        | ifconfig/ipconfig로 식별 가능한 IP |
+|      |                |license                      | 발급받은 서버 라이센스 |
+|      | front.conf     |region.proxy.address         | 에이전트가 데이터를 전송하게 될 수집 서버의 IP |
+|      |                |admin.password               | 사이트 관리자 계정 패스워드 \(초기값 : admin\) |
+|      | notihub.conf   |mail.host                    | SMTP 연계를 통한 초대 메일 및 알람발송 등 적용 시  |
+|      |                |mail.port                    |  |
+|      |                |mail.username                |  |
+|      |                |mail.password                |  |
+|      |                |mail.sender                  |  |
+|      |                |mail.smtp.auth               |  |
+|      |                |mail.smtp.ssl.enable         |  |
+|      |                |mail.smtp.starttls.enable    |  |
+|      |                |mail.smtp.starttls.required  |  |
+|      |                |smsformat                    |  |
+|      |                |smssender                    | 이벤트 알림 중 문자 발송 시 고객사 커스터마이징 설정을 지정 |
+|      |                |smsformat                    |  |
+| 확장형 | account.conf   |owner                        | ifconfig/ipconfig로 확인 가능한 account 서버 IP |
+|      |                |license                      |발급받은 서버 라이센스 |
+|      |                |eureka.addr                  |eureka 서버 접근 정보|
+|      |                |eureka.hostname              |eureka에 등록할 명칭\(복수의 서버가 동일 명칭을 가질 수 있음\) |
+|      |                |eureka\_client\_ip\_address  |gateway에서 접근 가능한 account 서버 IP|
+|      |                |region.id                    |첫 번째 리전의 ID|
+|      |                |region.name                  |  |
+|      |                |region.proxy.address         |첫 번째 리전의 proxy IP\(복수 지정 가능\) |
+|      |                |mail.host                    | SMTP 연계를 통한 초대 메일 적용 시  |
+|      |                |mail.port                    |  |
+|      |                |mail.username                |  |
+|      |                |mail.password                |  |
+|      |                |mail.sender                  |  |
+|      |                |mail.smtp.auth               |  |
+|      |                |mail.smtp.ssl.enable         |  |
+|      |                |mail.smtp.starttls.enable    |  |
+|      |                |mail.smtp.starttls.required  |  |
+|      |front.conf      |eureka.addr                  |eureka 서버 접근 정보 |
+|      |                |eureka.hostname              |eureka에 등록할 명칭\(복수의 서버가 동일 명칭을 가질 수 있음\) |
+|      |                |eureka\_client\_ip\_address  |front 서버 IP |
+|      |                |admin.password               |사이트 관리자 계정 패스워드 \(초기값 : admin\) |
+|      |yard.conf       |keeper                       |yard에서 접근 가능한 keeper 서버 IP:Port |
+|      |                |server.name                  |keeper에 등록할 이름\(서버 단위\) |
+|      |                |net\_noti\_ip                |yard에서 접근 가능한 noti 서버 IP |
+|      |proxy.conf      |keeper                       |proxy에서 접근 가능한 keeper 서버 IP:Port |
+|      |                |server.name                  |keeper에 등록할 이름\(서버 단위\) |
+|      |gateway.conf    |eureka.addr                  |eureka 서버 접근 정보 |
+|      |                |eureka.hostname              |eureka에 등록할 명칭\(복수의 서버가 동일 명칭을 가질 수 있음\) |
+|      |                |eureka\_client\_ip\_address  |account/front 에서 접근 가능한 gateway 서버 IP |
+|      |                |keeper                       |gateway에서 접근 가능한 keeper 서버 IP:Port |
+|      |                |region.name                  |region 명 첫 번째 region명은 account.conf에서 지정한 region.name과 일치해야 함 두 번째 이후 region명은 사이트 관리자 페이지에서 지정한 region명과 일치해야 함 |
+|      |notihub.conf    |eureka.addr                  |eureka 서버 접근 정보 |
+|      |                |eureka.hostname              |eureka에 등록할 명칭\(복수의 서버가 동일 명칭을 가질 수 있음\) |
+|      |                |eureka\_client\_ip\_address  |noti 서버 IP |
+|      |                |keeper                       |noti에서 접근 가능한 keeper 서버 IP:Port |
+|      |                |mail.host                    | 이벤트 알람 중 SMTP 통한 메일발송 기 적용 시  |
+|      |                |mail.port                    |  |
+|      |                |mail.username                |  |
+|      |                |mail.password                |  |
+|      |                |mail.sender                  |  |
+|      |                |mail.smtp.auth               |  |
+|      |                |mail.smtp.ssl.enable         |  |
+|      |                |mail.smtp.starttls.enable    |  |
+|      |                |mail.smtp.starttls.required  |  |
+|      |                |smsformat                    |  |
+|      |                |smssender                    | 이벤트 알림 중 문자 발송 시 고객사 커스터마이징 설정을 지정 |
+|      |                |smsformat                    |  |
 
-### **실행 확인**
 
-### FAQ
+### 로그 경로 변경
+실행 시 로그는 $WHATAP\_PACKAGE /logs/{server명}.log 로 출력됩니다.
+로그를 외부 경로에 출력할 경우 다음과 같이 지정합니다.
+
+```bash
+$ cd $WHATAP\_PACKAGE
+$ rmdir logs
+$ ln -s {외부경로} logs
+$ cd javam/server
+$ ln -s {외부경로} logs
+```
+
+### 실행
+서버 실행은 $WHATAP\_PACKAGE /bin/control.sh를 통해 실행하게 된다. 최소형 설치본의 경우 $WHATAP\_PACKAGE /bin/start.sh, $WHATAP\_PACKAGE /bin/stop.sh 파일을 통해서도 실행/정지가 가능합니다.
+
+#### control.sh 를 통한 실행
+control.sh를 통해 최소형 서버 실행 시에는 다음의 명령을 통해 실행하게 됩니다.
+
+* ./control.sh keeper start
+* ./control.sh front start
+* ./control.sh yard start
+* ./control.sh proxy start
+* ./control.sh notihub start \(이벤트 알림 설정 시\)
+
+확장형 서버 실행 시에는 front를 구성한 서버에서 다음의 명령을 실행합니다.
+
+* ./control.sh eureka start
+* ./control.sh account start
+* ./control.sh front start
+* ./control.sh notihub start
+
+yard 구성 서버에서 다음의 명령을 실행합니다.
+
+* ./control.sh keeper start
+* ./control.sh yard start
+* ./control.sh proxy start
+* ./control.sh gateway start
 
 
+control.sh 실행 시 다음과 같이 메뉴를 선택하여 작업을 수행할 수도 있습니다.
 
-## 
+\(예시\) 사용법 출력 $ cd $WHATAP\_PACKAGE/bin
 
-  
-  
-  
-  owner ifconfig/ipconfig로 확인 가능한 account 서버 IP license 발급받은 서버 라이센스 eureka.addr eureka 서버 접근 정보 eureka.hostname eureka에 등록할 명칭\(복수의 서버가 동일 명칭을 가질 수 있음\) eureka\_client\_ip\_address gateway에서 접근 가능한 account 서버 IP region.id 첫 번째 리전의 ID region.name  
-region.proxy.address 첫 번째 리전의 proxy IP\(복수 지정 가능\) mail.host SMTP 연계를 통한 초대 메일 발송 등 적용 시 mail.port  
-mail.username  
-mail.password  
-mail.sender  
-mail.smtp.auth  
-mail.smtp.ssl.enable  
-mail.smtp.starttls.enable  
-mail.smtp.starttls.required  
-front.conf eureka.addr eureka 서버 접근 정보 eureka.hostname eureka에 등록할 명칭\(복수의 서버가 동일 명칭을 가질 수 있음\) eureka\_client\_ip\_address front 서버 IP admin.password 사이트 관리자 계정 패스워드 \(초기값 : admin\) yard.conf keeper yard에서 접근 가능한 keeper 서버 IP:Port server.name keeper에 등록할 이름\(서버 단위\) net\_noti\_ip yard에서 접근 가능한 noti 서버 IP proxy.conf keeper proxy에서 접근 가능한 keeper 서버 IP:Port server.name keeper에 등록할 이름\(서버 단위\) gateway.conf eureka.addr eureka 서버 접근 정보 eureka.hostname eureka에 등록할 명칭\(복수의 서버가 동일 명칭을 가질 수 있음\) eureka\_client\_ip\_address account/front 에서 접근 가능한 gateway 서버 IP keeper gateway에서 접근 가능한 keeper 서버 IP:Port region.name region 명 첫 번째 region명은 account.conf에서 지정한 region.name과 일치해야 함 두 번째 이후 region명은 사이트 관리자 페이지에서 지정한 region명과 일치해야 함 noti.conf eureka.addr eureka 서버 접근 정보 eureka.hostname eureka에 등록할 명칭\(복수의 서버가 동일 명칭을 가질 수 있음\) eureka\_client\_ip\_address noti 서버 IP keeper noti에서 접근 가능한 keeper 서버 IP:Port mail.host 이벤트 알림 중 SMTP를 통한 메일 발송 기능 적용 시 mail.port  
-mail.username  
-mail.password  
-mail.sender  
-mail.smtp.auth  
-mail.smtp.ssl.enable  
-mail.smtp.starttls.enable  
-mail.smtp.starttls.required  
-smsformat 이벤트 알림 중 문자 발송 시 고객사 커스터마이징 설정을 지정 smssender
-
-1.3.5. 로그 경로 변경 실행 시 로그는 $WHATAP\_PACKAGE /logs/{server명}.log 로 출력됩니다.
-
-로그를 외부 경로에 출력할 경우 다음과 같이 지정합니다. $ cd $WHATAP\_PACKAGE $ rmdir logs $ ln -s {외부경로} logs $ cd javam/server $ ln -s {외부경로} logs
-
-1.3.6. 실행 서버 실행은 $WHATAP\_PACKAGE /bin/control.sh를 통해 실행하게 된다. 최소형 설치본의 경우 $WHATAP\_PACKAGE /bin/start.sh, $WHATAP\_PACKAGE /bin/stop.sh 파일을 통해서도 실행/정지가 가능합니다.
-
-1.3.6.1. control.sh 를 통한 실행 control.sh를 통해 최소형 서버 실행 시에는 다음의 명령을 통해 실행하게 됩니다.  ./control.sh keeper start  ./control.sh front start  ./control.sh yard start  ./control.sh proxy start  ./control.sh noti start \(이벤트 알림 설정 시\)
-
-확장형 서버 실행 시에는 front를 구성한 서버에서 다음의 명령을 실행합니다.  ./control.sh eureka start  ./control.sh account start  ./control.sh front start
-
-yard 구성 서버에서 다음의 명령을 실행합니다.  ./control.sh keeper start  ./control.sh yard start  ./control.sh proxy start  ./control.sh gateway start  ./control.sh noti start
-
-control.sh 실행 시 다음과 같이 메뉴를 선택하여 작업을 수행할 수도 있습니다. \(예시\) 사용법 출력 $ cd $WHATAP\_PACKAGE/bin
-
-### $ ./control.sh
+```bash
+$ ./control.sh
 
 \[ Usage \] ./control.sh \[ service\_name \[ command \]\] ./control.sh menu ./control.sh start-multi ./control.sh restart-multi ./control.sh start-single ./control.sh restart-single ./control.sh stop-all ./control.sh status-all ./control.sh front \(status/start/stop/restart\) ./control.sh proxy \(status/start/stop/restart\) ./control.sh yard \(status/start/stop/restart\) ./control.sh keeper \(status/start/stop/restart\) ./control.sh noti \(status/start/stop/restart\) ./control.sh billing \(status/start/stop/restart\) ./control.sh eureka \(status/start/stop/restart\) ./control.sh gateway \(status/start/stop/restart\) ./control.sh account \(status/start/stop/restart\)
 
 ### ./admin\_console.sh
+```
 
-\(예시\) 메뉴 선택형 모드 ./control.sh menu
+\(예시\) 메뉴 선택형 모드
+
+```bash
+./control.sh menu
 
 Select type
 
@@ -218,9 +269,17 @@ Select command
 
     number&gt;{원하는 메뉴 번호를 입력함}
 
-1.3.7. 실행 확인 기동 완료 여부는 서버의 포트 리스닝 여부와 로그를 확인합니다.
+```
 
-1.3.7.1. 포트 리스닝 확인 구성 환경에 따른 서버의 포트 리스닝 여부를 체크합니다. $ netstat -na \| grep {체크 대상 포트} \| grep LISTEN
+### 실행 확인
+기동 완료 여부는 서버의 포트 리스닝 여부와 로그를 확인합니다.
+
+#### 포트 리스닝 확인
+구성 환경에 따른 서버의 포트 리스닝 여부를 체크합니다.
+
+```bash
+$ netstat -na \| grep {체크 대상 포트} \| grep LISTEN
+```
 
 1.3.7.1.1. 최소형
 
@@ -273,4 +332,3 @@ Host파일에
 [http://wiki.whatapkvm.io/jemeter.tar.gz](http://wiki.whatapkvm.io/jemeter.tar.gz)
 
 [http://톰켓서버IP:8080/petstore/sleep.jsp](http://톰켓서버IP:8080/petstore/sleep.jsp)
-
