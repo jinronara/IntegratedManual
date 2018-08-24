@@ -1,10 +1,10 @@
-# Java
+# Java 애플리케이션 모니터링 {#user-content-java-애플리케이션-모니터링}
 
-## Java 애플리케이션 모니터링 {#user-content-java-애플리케이션-모니터링}
+## javaagent + onetime attach {#user-content-javaagent-onetime-attach}
 
-### javaagent + onetime attach {#user-content-javaagent-onetime-attach}
+본 가이드는 와탭 APM 모니터링의 3가지 설치 방식 중 “javaagent + onetime attach” 방식을 대상으로 합니다. “javaagent + onetime attach” 방식은 실행 중인 애플리케이션 서버에 와탭 APM 모니터링을 적용하고, 애플리케이션 서버 재기동 시 “javaagent” 방식으로 실행하고자 하는 경우에 적용하는 방식입니다. \(attach 방식으로 설치할 경우 일부 쿼리 데이터가 정상적으로 수집되지 않을 수 있습니다.\)
 
-본 가이드는 와탭 APM 모니터링의 3가지 설치 방식 중 “javaagent + onetime attach” 방식을 대상으로 합니다. “javaagent + onetime attach” 방식은 실행 중인 애플리케이션 서버에 와탭 APM 모니터링을 적용하고, 애플리케이션 서버 재기동 시 “javaagent” 방식으로 실행하고자 하는 경우에 적용하는 방식입니다. \(attach 방식으로 설치할 경우 일부 쿼리 데이터가 정상적으로 수집되지 않을 수 있습니다.\) ==== 설치 환경 설치 환경 구성
+### 설치 환경 구성
 
 * OS: Linux
 * 애플리케이션 서버: Tomcat
@@ -143,7 +143,7 @@ AttachAgent Success :  [2583] org.apache.catalina.startup.Bootstrap start
 * whatap.name - JVMP 메뉴 선택 시 표시되는 애플리케이션 목록의 애플리케이션에 표시되는 서버 식별용 명칭 포맷입니다.
 * whatap.type - 애플리케이션 서버 종류가 표시됩니다.
 
-### javaagent {#user-content-javaagent}
+## javaagent {#user-content-javaagent}
 
 본 가이드는 와탭 APM 모니터링의 3가지 설치 방식 중 “javaagent” 방식을 대상으로 합니다. “javaagent” 방식은 애플리케이션 서버 실행 시점에 와탭 APM 모니터링을 적용하고자 하는 경우에 적용하는 방식입니다.
 
@@ -265,4 +265,3 @@ WhaTap Agent version 0.3.9 20161115
 
 * whatap.name - JVMP 메뉴 선택 시 표시되는 애플리케이션 서버 목록의 애플리케이션에 표시되는 서버 식별용 명칭 포맷입니다.
 * whatap.type - 애플리케이션 서버 종류가 표시됩니다.
-
