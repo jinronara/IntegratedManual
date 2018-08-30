@@ -1305,3 +1305,4 @@ Exception 발생 시 이벤트 알림 발행 간격을 지정합니다.
 
 * Default : \[**Null**\]
 * Type : String
+
