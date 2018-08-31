@@ -29,7 +29,9 @@
 
 ### **javaagent 방식**
 
-애플리케이션 서버 부팅 시에 성능 데이터 수집을 위한 모듈을 주입하는 방식입니다.[![210](https://github.com/jinronara/IntegratedManual/raw/master/images/210.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/210.png)
+애플리케이션 서버 부팅 시에 성능 데이터 수집을 위한 모듈을 주입하는 방식입니다.
+
+[![210](https://github.com/jinronara/IntegratedManual/raw/master/images/210.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/210.png)
 
 javaagent 적용법
 
@@ -85,7 +87,9 @@ javaagent 적용법
 
 [![220](https://github.com/jinronara/IntegratedManual/raw/master/images/220.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/220.png)
 
-서버를 등록하기 위해 우선 프로젝트를 생성합니다. 추가 버튼을 선택하면 아래와 같이 프로젝트 생성 창이 나타납니다. PHP 아이콘을 선택한 뒤, 희망하는 프로젝트명과 데이터 서버 지역\(Region\), 소속하게 될 그룹을 선택한 뒤 프로젝트를 생성합니다.[![230](https://github.com/jinronara/IntegratedManual/raw/master/images/230.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/230.png)
+서버를 등록하기 위해 우선 프로젝트를 생성합니다. 추가 버튼을 선택하면 아래와 같이 프로젝트 생성 창이 나타납니다. JAVA 아이콘을 선택한 뒤, 희망하는 프로젝트명과 데이터 서버 지역\(Region\), 소속하게 될 그룹을 선택한 뒤 프로젝트를 생성합니다.
+
+[![230](https://github.com/jinronara/IntegratedManual/raw/master/images/230.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/230.png)
 
 #### **라이선스 발급**
 
@@ -308,7 +312,11 @@ WhaTap Agent version 0.3.9 20161115
 | JBoss 5.0 이하 | $JBOSS\_HOME/bin/run.conf |
 | JBoss 7.0 이상 EAP 6.0이상 | $JBOSS\_HOME/bin/standalone.conf\(domain.conf\) |
 | WebLogic | $WEBLOGIC\_HOME/user\_projects/domains/사용자도메인/bin/startWebLogic.sh\(bat\) |
-| WebSphere | admin console 통해 1. Server &gt; Server Types &gt; WebSphere application servers &gt; 서버 선택 2. 서버 Configuration탭 &gt; Server Infrastructure의 Java and Process Management &gt; Process definition 선택 3. Additional Properties의 Java Virtual Machine 선택 4. Generic JVM arguments 편집 |
+| WebSphere | admin console 통해
+              1. Server &gt; Server Types &gt; WebSphere application servers &gt; 서버 선택
+              2. 서버 Configuration탭 &gt; Server Infrastructure의 Java and Process Management &gt; Process definition 선택
+              3. Additional Properties의 Java Virtual Machine 선택
+              4. Generic JVM arguments 편집 |
 | Jeus7 | $JEUS\_HOME/domains/jeus\_domain/config.xml |
 | Jeus6 | $JEUS\_HOME/config/$hostname/JEUSMain.xml |
 | Jetty | watch\_jetty.sh\(bat\) |
@@ -347,14 +355,14 @@ JAVA_OPTS="${JAVA_OPTS} -javaagent:${WHATAP_JAR} -Djboss.modules.system.pkgs=wha
 ########## WHATAP ############
 ```
 
-1. JBOSS의 PID\(프로세스 ID\)를 확인합니다.
+2. JBOSS의 PID\(프로세스 ID\)를 확인합니다.
 
 ```text
 $ ps -ef | grep jboss | grep -v 'grep'
 ec2-user 27757 27714 13 12:21 pts/2    00:00:03 /jdk1.7.0_79/bin/java -D[Standalone] -server -XX:+UseCompressedOops -XX:+TieredCompilation -Djboss.modules.system.pkgs=whatap -Dorg.jboss.boot.log.file=/jboss-as-7.1.1.Final/standalone/log/boot.log -Dlogging.configuration=file:/jboss-as-7.1.1.Final/standalone/configuration/logging.properties -jar /jboss-as-7.1.1.Final/jboss-modules.jar -mp /jboss-as-7.1.1.Final/modules -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -Djboss.home.dir=/jboss-as-7.1.1.Final
 ```
 
-1. attach.sh 스크립트를 실행합니다.
+3. attach.sh 스크립트를 실행합니다.
 
 ```text
 $ ./attach.sh 27757
@@ -418,23 +426,23 @@ $WEBLOGIC\_HOME/user\_projects/domains/사용자도메인/bin/startWebLogic.sh\(
 
 [![290](https://github.com/jinronara/IntegratedManual/raw/master/images/290.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/290.png)
 
-1. Servers &gt; Server Type &gt; WebSphere application servers 메뉴를 통해 에이전트를 설치할 서버를 선택합니다.
+2. Servers &gt; Server Type &gt; WebSphere application servers 메뉴를 통해 에이전트를 설치할 서버를 선택합니다.
 
 [![300](https://github.com/jinronara/IntegratedManual/raw/master/images/300.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/300.png)
 
-1. 선택된 서버 Configuration 탭에 Server Infrastructure의 Java and Process Management &gt; Process definition 메뉴를 선택합니다.
+3. 선택된 서버 Configuration 탭에 Server Infrastructure의 Java and Process Management - Process definition 메뉴를 선택합니다.
 
 [![310](https://github.com/jinronara/IntegratedManual/raw/master/images/310.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/310.png)
 
-1. Additional Properties의 Java Virtual Machine 메뉴를 선택합니다.
+4. Additional Properties의 Java Virtual Machine 메뉴를 선택합니다.
 
 [![320](https://github.com/jinronara/IntegratedManual/raw/master/images/320.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/320.png)
 
-1. WEBSHERE의 서비스 포트를 확인합니다.
+5. WEBSHERE의 서비스 포트를 확인합니다.
 
 [![330](https://github.com/jinronara/IntegratedManual/raw/master/images/330.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/330.png)
 
-1. Configuration 탭의 Generic JVM arguments에 -javaagent와 -Dwhatap.port를 추가합니다.
+6. Configuration 탭의 Generic JVM arguments에 -javaagent와 -Dwhatap.port를 추가합니다.
 
 [![340](https://github.com/jinronara/IntegratedManual/raw/master/images/340.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/340.png)리눅스 계열
 
@@ -477,11 +485,11 @@ $WEBLOGIC\_HOME/user\_projects/domains/사용자도메인/bin/startWebLogic.sh\(
 
 [![350](https://github.com/jinronara/IntegratedManual/raw/master/images/350.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/350.png)Figure 2. Jeus 6 예시
 
-1. 애플리케이션 서버를 재기동 시킵니다.
+2. 애플리케이션 서버를 재기동 시킵니다.
 
 [![360](https://github.com/jinronara/IntegratedManual/raw/master/images/360.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/360.png)
 
-1. 애플리케이션 서버 로그와 에이전트 로그를 통해 에이전트가 정상적으로 기동하였는지, 에러가 발생하지 않았는지 확인합니다.
+3. 애플리케이션 서버 로그와 에이전트 로그를 통해 에이전트가 정상적으로 기동하였는지, 에러가 발생하지 않았는지 확인합니다.
 
 |  | 로그 파일 위치 |
 | :--- | :--- |
@@ -493,7 +501,7 @@ JEUS7 예시
 
 \($JEUS\_HOME/domains/$HOST\_NAME/servers/$NODE\_NAME/logs/JeusServer.log\)[![370](https://github.com/jinronara/IntegratedManual/raw/master/images/370.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/370.png)
 
-1. 에이전트가 애플리케이션 서버의 종류와 애플리케이션 서버의 서비스 container명을 인식했는지 확인합니다.
+4. 에이전트가 애플리케이션 서버의 종류와 애플리케이션 서버의 서비스 container명을 인식했는지 확인합니다.
 
 와탭 사이트에서 whatap.name과 whatap.type을 확인합니다. whatap.io 사이트에 로그인 &gt; “APM” 제품 선택 &gt; 프로젝트의 Application Servers 메뉴 선택 &gt; 설치한 JEUS 서버 &gt; Boot Environment 메뉴 선택을 통해 확인합니다.
 
@@ -544,8 +552,8 @@ Resin4.x 예시
 (중략)
 ```
 
-1. 애플리케이션 서버를 재기동 시킵니다.
-2. 애플리케이션 서버 로그와 에이전트 로그를 통해 에이전트가 정상적으로 기동 되었는지 에러가 발생하지 않았는지 확인합니다.
+2. 애플리케이션 서버를 재기동 시킵니다.
+3. 애플리케이션 서버 로그와 에이전트 로그를 통해 에이전트가 정상적으로 기동 되었는지 에러가 발생하지 않았는지 확인합니다.
 
 |  | 로그 파일 위치 |
 | :--- | :--- |
@@ -1015,4 +1023,3 @@ JDK 6 이상 버전에서 지원되는 JBOSS Comunity, EAP, Wildfly의 모든 �
 | :--- | :--- | :--- | :--- | :--- |
 | Mysql | mysql-connector-java-5.1.39-bin.jar | 5.1.39 | JDK 1.7.0\_80 | ok |
 | Oracle | ojdbc6-11.2.0.2.0.jar | 11.2.0.2.0 | JDK 1.7.0\_80 | ok |
-
