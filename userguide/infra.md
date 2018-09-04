@@ -1,20 +1,18 @@
-# 인프라 모니터링
+# 관리 {#user-content-관리-1}
 
-## 인프라 모니터링 {#user-content-인프라-모니터링}
+와탭 Infra 모니터링 서비스는 다수의 서버를 프로젝트로 그룹화 하여 관리합니다.
+[![1170](https://github.com/jinronara/IntegratedManual/raw/master/images/1170.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1170.png)
 
-### 관리 {#user-content-관리-1}
-
-와탭 Infra 모니터링 서비스는 다수의 서버를 프로젝트로 그룹화 하여 관리합니다.[![1170](https://github.com/jinronara/IntegratedManual/raw/master/images/1170.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1170.png)
-
-**에이전트 설치**
+## 에이전트 설치
 
 [![1180](https://github.com/jinronara/IntegratedManual/raw/master/images/1180.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1180.png)
 
-와탭 콘솔의 프로젝트 그룹에서 추가 버튼을 누릅니다.[![1190](https://github.com/jinronara/IntegratedManual/raw/master/images/1190.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1190.png)
+와탭 콘솔의 프로젝트 그룹에서 추가 버튼을 누릅니다.
+[![1190](https://github.com/jinronara/IntegratedManual/raw/master/images/1190.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1190.png)
 
 INFRA STRUCTURE 아이콘 선택 후 각 입력란에 해당하는 정보를 입력하고 전송 버튼을 눌러 프로젝트를 추가합니다.
 
-**Linux**
+### Linux
 
 새롭게 생성한 인프라 모니터링 프로젝트를 클릭하여 아래와 같은 에이전트 설치 화면에 진입합니다.
 
@@ -22,7 +20,7 @@ INFRA STRUCTURE 아이콘 선택 후 각 입력란에 해당하는 정보를 입
 
 [![1200](https://github.com/jinronara/IntegratedManual/raw/master/images/1200.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1200.png)
 
-**패키지 저장소\(Repository\) 추가**
+#### 패키지 저장소\(Repository\) 추가
 
 에이전트 설치 페이지에서 상위에 위치한 OS탭에서 서버 OS와 동일한 탭을 클릭합니다.
 
@@ -42,7 +40,7 @@ $ sudo rpm --import http://repo.whatap.io/centos/release.gpg
 $ sudo rpm -Uvh http://repo.whatap.io/centos/5/noarch/whatap-repo-1.0-1.noarch.rpm
 ```
 
-**에이전트 설치**
+#### 에이전트 설치
 
 설치 페이지에 존재하는 “서버 모니터 패키지를 설치하십시오.” 밑에 있는 명령어를 copy 버튼을 눌러 복사하거나 밑의 명령어를 설치하고자 하는 서버에 입력합니다.Debian / Ubuntu
 
@@ -56,7 +54,7 @@ CentOS / Amazon Linux
 $ sudo yum install whatap-infra
 ```
 
-**라이선스 등록**
+#### 라이선스 등록
 
 설치 페이지에 존재하는 “설정 스크립트를 실행하여 서버 모니터 데몬을 시작하십시오.” 밑에 있는 박스를 클릭하여 라이선스를 발급받습니다. 이후 생성되는 명령어를 copy 버튼을 눌러 복사하거나 아래의 명령어에 라이선스키와 서버 IP를 추가하여 설치하고자 하는 서버에 입력합니다.
 
@@ -70,7 +68,7 @@ $ sudo service whatap-infra restart
 * 설치 페이지에서 발급받은 명령어에는 라이선스 키와 IP가 입력되어 있습니다.
 * 데이터 전송을 위해 6600 PORT가 열려 있어야 합니다. \(TCP 아웃바운드\)
 
-**Windows**
+### Windows
 
 새롭게 생성한 인프라 모니터링 프로젝트를 클릭하여 아래와 같은 에이전트 설치 화면에 진입합니다.
 
@@ -78,36 +76,40 @@ $ sudo service whatap-infra restart
 
 [![1210](https://github.com/jinronara/IntegratedManual/raw/master/images/1210.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1210.png)
 
-**에이전트 파일 다운로드**
+#### 에이전트 파일 다운로드
 
 에이전트 설치 페이지 상단에 위치한 OS 탭에서 Windows를 클릭합니다. 이후 Whatap\_infra.exe 를 클릭하여 설치파일을 다운로드 합니다.
 
 * 보안상 .exe 형식의 파일이 받아지지 않는 사용자를 위하여 .zip 형식의 파일도 제공됩니다.
 * 보안을 위해 브라우저를 통한 직접 설치보단 다운로드 받은 파일 실행을 권장합니다.
 
-**에이전트 파일 업로드**
+#### 에이전트 파일 업로드
 
 다운로드 받은 인프라 에이전트 설치파일을 설치하고자 하는 서버에 접속하여 업로드 합니다.
 
-**라이선스 발급**
+#### 라이선스 발급
 
-설치 페이지에서 라이선스 키와 IP를 발급받습니다.[![1220](https://github.com/jinronara/IntegratedManual/raw/master/images/1220.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1220.png)
+설치 페이지에서 라이선스 키와 IP를 발급받습니다.
+[![1220](https://github.com/jinronara/IntegratedManual/raw/master/images/1220.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1220.png)
 
-**에이전트 설치**
+#### 에이전트 설치
 
 서버에서 업로드 받은 인프라 에이전트 설치파일을 실행합니다.
 
-실행 시 다음과 같은 화면을 볼 수 있습니다. 입력란에 발급받은 라이선스 키와 IP를 입력하고 진행합니다.[![1230](https://github.com/jinronara/IntegratedManual/raw/master/images/1230.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1230.png)
+실행 시 다음과 같은 화면을 볼 수 있습니다. 입력란에 발급받은 라이선스 키와 IP를 입력하고 진행합니다.
+[![1230](https://github.com/jinronara/IntegratedManual/raw/master/images/1230.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1230.png)
 
-정상적으로 설치가 완료된 경우 다음과 같은 화면을 볼 수 있으며, 에이전트가 자동적으로 모니터링을 시작합니다. 완료 버튼을 눌러 설치를 완료합니다.[![1240](https://github.com/jinronara/IntegratedManual/raw/master/images/1240.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1240.png)
+정상적으로 설치가 완료된 경우 다음과 같은 화면을 볼 수 있으며, 에이전트가 자동적으로 모니터링을 시작합니다. 완료 버튼을 눌러 설치를 완료합니다.
+[![1240](https://github.com/jinronara/IntegratedManual/raw/master/images/1240.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1240.png)
 
 * 데이터 전송을 위하여 6600 PORT가 열려 있어야 합니다. \(TCP 아웃바운드\)
 
-**프로젝트 관리**
+## 프로젝트 관리
 
-**사용자 관리**
+### 사용자 관리
 
-프로젝트를 생성하였거나 SuperAdmin 권한을 이전 받았을 경우 프로젝트 설정에서 해당 프로젝트의 기본 정보\(이름, 알림 표시 시간대, API토큰\) 입력/수정 및 사용자 초대를 통하여 서버 모니터링 현황을 공유할 수 있습니다.[![1250](https://github.com/jinronara/IntegratedManual/raw/master/images/1250.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1250.png)
+프로젝트를 생성하였거나 SuperAdmin 권한을 이전 받았을 경우 프로젝트 설정에서 해당 프로젝트의 기본 정보\(이름, 알림 표시 시간대, API토큰\) 입력/수정 및 사용자 초대를 통하여 서버 모니터링 현황을 공유할 수 있습니다.
+[![1250](https://github.com/jinronara/IntegratedManual/raw/master/images/1250.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1250.png)
 
 | 이름 | 설명 |
 | :--- | :--- |
@@ -120,11 +122,12 @@ $ sudo service whatap-infra restart
 
 * 주의: Api 토큰은 노출되지 않도록 사용자가 주의하여 관리하여야 하며, 노출 의심 시 재발급 버튼을 눌러 갱신할 수 있습니다.
 
-**알림 설정**
+## 알림 설정
 
-**알림 설정 개요**
+### 알림 설정 개요
 
-서버 임계 상황에서 알림이 발생 시 Email / SMS / Mobile App으로 알림을 수신할 수 있게 됩니다. 알림 메시지 언어 설정 및 미디어 별 수신 여부 / 수신 시간 / 수신 요일 등을 설정할 수 있습니다.[![1260](https://github.com/jinronara/IntegratedManual/raw/master/images/1260.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1260.png)
+서버 임계 상황에서 알림이 발생 시 Email / SMS / Mobile App으로 알림을 수신할 수 있게 됩니다. 알림 메시지 언어 설정 및 미디어 별 수신 여부 / 수신 시간 / 수신 요일 등을 설정할 수 있습니다.
+[![1260](https://github.com/jinronara/IntegratedManual/raw/master/images/1260.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1260.png)
 
 | 이름 | 설명 |
 | :--- | :--- |
@@ -132,42 +135,47 @@ $ sudo service whatap-infra restart
 | 알림 시간 | 설정한 시간에만 알림이 옵니다. |
 | 알림 요일 | 설정한 요일에만 알림이 옵니다. |
 
-**이메일 알림 설정**
+### 이메일 알림 설정
 
 알림이 발생한 경우 해당 프로젝트에 등록된 이메일로 알림 메일이 발송됩니다. 만약 알림을 받고 싶지 않은 경우 “이메일로 알림을 받겠습니다.”의 체크를 해제해주시면 됩니다.
 
-**문자 알림 설정**
+### 문자 알림 설정
 
 알림이 발생한 경우 해당 프로젝트에 등록된 휴대폰 번호로 알림 메시지가 발송됩니다. 만약 알림을 받고 싶지 않은 경우 “문자로 알림을 받겠습니다.”의 체크를 해제해주시면 됩니다.
 
 * SMS 알림 기능은 유료 서버에 한정됩니다.
 
-**모바일 알림 설정**
+### 모바일 알림 설정
 
 알림이 발생한 경우 해당 프로젝트에 등록된 모바일 APP으로 알림이 발송됩니다. 만약 알림을 받고 싶지 않은 경우 “모바일로 알림을 받겠습니다.”의 체크를 해제해주시면 됩니다.
 
-**모바일 앱 설치**
+#### 모바일 앱 설치
 
-Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![1270](https://github.com/jinronara/IntegratedManual/raw/master/images/1270.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1270.png)
+Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.
+[![1270](https://github.com/jinronara/IntegratedManual/raw/master/images/1270.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1270.png)
 
-**모바일 앱 활용**
+#### 모바일 앱 활용
 
-[![1280](https://github.com/jinronara/IntegratedManual/raw/master/images/1280.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1280.png)[![1290](https://github.com/jinronara/IntegratedManual/raw/master/images/1290.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1290.png)[![1300](https://github.com/jinronara/IntegratedManual/raw/master/images/1300.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1300.png)
+[![1280](https://github.com/jinronara/IntegratedManual/raw/master/images/1280.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1280.png)
+[![1290](https://github.com/jinronara/IntegratedManual/raw/master/images/1290.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1290.png)
+[![1300](https://github.com/jinronara/IntegratedManual/raw/master/images/1300.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1300.png)
 
-**다운 체크 설정**
+## 다운 체크 설정
 
-**다운 체크 개요**
+### 다운 체크 개요
 
-같은 내부 네트워크에 존재하는 서버들이 서로의 포트 작동 여부를 확인하여 수집 서버로 전송합니다. 해당 방식은 가용성 기능을 사용할 때 모니터링 서버와 수집 서버간 네트워크 문제로 인하여 발생하는 오탐을 줄이기 위하여 내부 서버 서로 감시를 하여 서버의 다운 여부를 확인하여 수집 서버로 전송합니다.[![1310](https://github.com/jinronara/IntegratedManual/raw/master/images/1310.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1310.png)
+같은 내부 네트워크에 존재하는 서버들이 서로의 포트 작동 여부를 확인하여 수집 서버로 전송합니다. 해당 방식은 가용성 기능을 사용할 때 모니터링 서버와 수집 서버간 네트워크 문제로 인하여 발생하는 오탐을 줄이기 위하여 내부 서버 서로 감시를 하여 서버의 다운 여부를 확인하여 수집 서버로 전송합니다.
+[![1310](https://github.com/jinronara/IntegratedManual/raw/master/images/1310.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1310.png)
 
 * 탐지 역할을 하는 서버를 선택할 수 있습니다. 클릭 시 드롭다운 메뉴가 나와 현재 서버 목록을 보여줍니다.
 * 탐지할 서버를 추가할 수 있습니다.
 * 현재 탐지되는 서버의 이름, IP, 포트에 대한 정보를 목록으로 보여줍니다.
 * 등록 된 서버를 수정 / 삭제할 수 있습니다.
 
-**다운 체크 설정**
+### 다운 체크 설정
 
-다운 체크 설정 화면에서 추가 혹은 EDIT 버튼을 클릭 시 설정창이 발생합니다.[![1320](https://github.com/jinronara/IntegratedManual/raw/master/images/1320.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1320.png)
+다운 체크 설정 화면에서 추가 혹은 EDIT 버튼을 클릭 시 설정창이 발생합니다.
+[![1320](https://github.com/jinronara/IntegratedManual/raw/master/images/1320.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1320.png)
 
 | 이름 | 설명 |
 | :--- | :--- |
@@ -176,9 +184,9 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![127
 | Port | 탐지역할 서버가 확인할 포트를 입력합니다. |
 | SSH | RDP Port를 포함한 서버가 작동하면 반드시 접속가능한 Port를 입력하실 수 있습니다. |
 
-### 실시간 모니터링 {#user-content-실시간-모니터링-1}
+# 실시간 모니터링 {#user-content-실시간-모니터링-1}
 
-**서버 목록**
+## 서버 목록
 
 [![1330](https://github.com/jinronara/IntegratedManual/raw/master/images/1330.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1330.png)
 
@@ -194,7 +202,7 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![127
 9. 새로운 서버를 등록할 수 있습니다.
 10. 서버를 검색할 수 있습니다. 서버 이름, IP를 포함한 키워드를 입력하여 목록에서 원하는 서버만을 볼 수 있습니다.
 
-**컬럼 데이터**
+### 컬럼 데이터**
 
 | 이름 | 설명 |
 | :--- | :--- |
@@ -219,9 +227,9 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![127
 | DISK BPS%\(all\) | 디스크 장치가 IO에 사용한 대역폭 전부 출력 |
 | DISK BPS%\(max\) | 디스크 장치가 IO에 사용한 대역폭 중 최대값 출력 |
 
-**서버 상세 정보**
+## 서버 상세 정보
 
-**상세 정보 개요**
+### 상세 정보 개요
 
 [![1340](https://github.com/jinronara/IntegratedManual/raw/master/images/1340.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1340.png)
 
@@ -249,9 +257,10 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![127
   * 3시간, 12시간, 24시간: 5분
   * 7일, 30일: 1시간
 
-**CPU 상세 정보**
+### CPU 상세 정보
 
-서버 상세 정보의 CPU Usage 우측 See Details를 통하여 상세 페이지로 들어올 수 있습니다.[![1350](https://github.com/jinronara/IntegratedManual/raw/master/images/1350.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1350.png)
+서버 상세 정보의 CPU Usage 우측 See Details를 통하여 상세 페이지로 들어올 수 있습니다.
+[![1350](https://github.com/jinronara/IntegratedManual/raw/master/images/1350.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1350.png)
 
 | 이름 | 설명 | 단위 |
 | :--- | :--- | :--- |
@@ -263,9 +272,10 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![127
 | CPU SOFTIRQ | CPU가 소프트웨어 인터럽트 처리를 위해 소비한 시간 | % |
 | CPU Load | 1분, 5분, 15분 동안 평균적으로 대기하고 있는 프로세스의 수 | 개수 |
 
-**메모리 상세 정보**
+### 메모리 상세 정보
 
-서버 상세 정보의 Memory Usage 우측 See Details를 통해 상세 페이지로 들어올 수 있습니다.[![1360](https://github.com/jinronara/IntegratedManual/raw/master/images/1360.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1360.png)
+서버 상세 정보의 Memory Usage 우측 See Details를 통해 상세 페이지로 들어올 수 있습니다.
+[![1360](https://github.com/jinronara/IntegratedManual/raw/master/images/1360.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1360.png)
 
 | 이름 | 설명 | 단위 |
 | :--- | :--- | :--- |
@@ -275,9 +285,10 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![127
 | Memory Swap Used | Swap 영역 사용량 | %, Byte |
 | Memory Page Faults | 메모리 공간에 존재하지 않는 코드나 데이터를 요청 시 발생하는 Soft Page Fault+Hard Page Fault | 개수 |
 
-**네트워크 상세 정보**
+### 네트워크 상세 정보
 
-서버 상세 정보의 Network 우측 See Details를 통해 상세 페이지로 들어올 수 있습니다.[![1370](https://github.com/jinronara/IntegratedManual/raw/master/images/1370.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1370.png)
+서버 상세 정보의 Network 우측 See Details를 통해 상세 페이지로 들어올 수 있습니다.
+[![1370](https://github.com/jinronara/IntegratedManual/raw/master/images/1370.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1370.png)
 
 | 번호 | 이름 | 설명 | 단위 |
 | :--- | :--- | :--- | :--- |
@@ -287,9 +298,10 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![127
 | 4 | Error In/Out | Network Interface에서 발생한 송/수신 전송 오류 | ps |
 | 5 | Dropped In/Out | Network Interface에서 발생한 송/수신 중 처리하지 못하고 timeout이 발생하여 손실 처리된 것 | ps |
 
-**디스크 상세 정보**
+### 디스크 상세 정보
 
-서버 상세 정보의 Disk I/O 우측 See Details를 통해 상세 페이지로 들어올 수 있습니다.[![1380](https://github.com/jinronara/IntegratedManual/raw/master/images/1380.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1380.png)
+서버 상세 정보의 Disk I/O 우측 See Details를 통해 상세 페이지로 들어올 수 있습니다.
+[![1380](https://github.com/jinronara/IntegratedManual/raw/master/images/1380.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1380.png)
 
 | 번호 | 이름 | 설명 | 단위 |
 | :--- | :--- | :--- | :--- |
@@ -301,7 +313,8 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![127
 | 6 | Free Space | 사용할 수 있는 파일 시스템 용량 | %, Byte |
 | 7 | Queue Length | 대기중인 I/O 요청 수 | 개수 |
 
-7.2.2.2.6. 프로세스 상세 정보[![1390](https://github.com/jinronara/IntegratedManual/raw/master/images/1390.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1390.png)
+### 프로세스 상세 정보
+[![1390](https://github.com/jinronara/IntegratedManual/raw/master/images/1390.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1390.png)
 
 1. 정렬 기준: 프로세스들의 정렬 기준 및 개수를 결정할 수 있습니다. CPU / Memory / Name / IO / Count를 기준으로 정렬할 수 있습니다.
 
@@ -311,9 +324,10 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![127
 2. 프로세스 세부 정보: 해당 프로세스 클릭 시 프로세스에 대한 세부정보를 볼 수 있습니다. 자세한 내용은 개별 프로세스 정보를 참고하시길 바랍니다.
 3. 더 보기: 현재 화면상에 보이지 않는 프로세스들 역시 확인할 수 있습니다.
 
-**개별 프로세스 정보**
+#### 개별 프로세스 정보**
 
-각각의 프로세스를 클릭할 경우 개별 프로세스 정보를 확인할 수 있습니다.[![1410](https://github.com/jinronara/IntegratedManual/raw/master/images/1410.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1410.png)
+각각의 프로세스를 클릭할 경우 개별 프로세스 정보를 확인할 수 있습니다.
+[![1410](https://github.com/jinronara/IntegratedManual/raw/master/images/1410.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1410.png)
 
 | 번호 | 이름 | 설명 | 단위 |
 | :--- | :--- | :--- | :--- |
@@ -324,13 +338,15 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.[![127
 | 5 | IP Used \(Count\) | 같은 이름의 프로세스에서 사용 중인 Listen Port 및 연결 개수 | count |
 | 6 | File Used \(Byte\) | 같은 이름의 프로세스에서 Open한 파일 이름과 크기 | byte |
 
-### 대시보드 {#user-content-대시보드}
+# 대시보드 {#user-content-대시보드}
 
-**Compound Eye**
+## Compound Eye
 
-**Compound Eye 개요**
+### Compound Eye 개요
 
-Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서버들을 빈틈없이 볼 수 있게 해줍니다.[![1420](https://github.com/jinronara/IntegratedManual/raw/master/images/1420.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1420.png)[![1430](https://github.com/jinronara/IntegratedManual/raw/master/images/1430.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1430.png)
+Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서버들을 빈틈없이 볼 수 있게 해줍니다.
+[![1420](https://github.com/jinronara/IntegratedManual/raw/master/images/1420.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1420.png)
+[![1430](https://github.com/jinronara/IntegratedManual/raw/master/images/1430.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1430.png)
 
 하나의 눈\(Eye\) 입니다. 총 5가지의 정보를 제공합니다.
 
@@ -351,23 +367,26 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 추가적으로 서버 위에 마우스를 위치하게 될 경우 개별 정보가 수치화 된 팝업 메시지가 뜨게 되며, 서버 클릭 시 해당 서버의 요약 페이지로 이동하게 되어 서버에 대한 더욱 자세한 내용들을 파악할 수 있습니다.
 
-**Traffic Max Value 옵션**
+### Traffic Max Value 옵션
 
-네트워크 환경에 따라 트래픽 양이 변화할 수 있기 때문에 트래픽의 최대값을 조정할 수 있습니다. 희망하는 트래픽 최대값을 설정하면 값에 따라 Rx/Tx 그래프가 변경됩니다.[![1450](https://github.com/jinronara/IntegratedManual/raw/master/images/1450.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1450.png)
+네트워크 환경에 따라 트래픽 양이 변화할 수 있기 때문에 트래픽의 최대값을 조정할 수 있습니다. 희망하는 트래픽 최대값을 설정하면 값에 따라 Rx/Tx 그래프가 변경됩니다.
+[![1450](https://github.com/jinronara/IntegratedManual/raw/master/images/1450.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1450.png)
 
-**가용성**
+## 가용성
 
-가용성 기능은 여러 서버들의 서버 상태 기록을 그래프로 보여 한눈에 파악할 수 있도록 합니다.[![1460](https://github.com/jinronara/IntegratedManual/raw/master/images/1460.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1460.png)
+가용성 기능은 여러 서버들의 서버 상태 기록을 그래프로 보여 한눈에 파악할 수 있도록 합니다.
+[![1460](https://github.com/jinronara/IntegratedManual/raw/master/images/1460.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1460.png)
 
 가용성 차트는 다운 체크에서 추가한 IP들의 가용성 차트를 표시합니다. 기본으로 오늘 날짜의 00:00부터 현재까지의 가용성 차트를 표시합니다. 1일, 7일, 30일 등 범위를 지정할 수 있으며 화살표 클릭으로 차트의 날짜를 변경할 수 있습니다.
 
-### 알림 정책 {#user-content-알림-정책}
+# 알림 정책 {#user-content-알림-정책}
 
-**알림 정책 설정**
+## 알림 정책 설정
 
-**알림 정책 개요**
+### 알림 정책 개요
 
-서버 및 프로세스 알림 정책을 생성, 수정, 삭제할 수 있습니다.[![1470](https://github.com/jinronara/IntegratedManual/raw/master/images/1470.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1470.png)
+서버 및 프로세스 알림 정책을 생성, 수정, 삭제할 수 있습니다.
+[![1470](https://github.com/jinronara/IntegratedManual/raw/master/images/1470.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1470.png)
 
 | 이름 | 설명 |
 | :--- | :--- |
@@ -377,9 +396,10 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 | 요약 | 지정된 정책을 간략하게 보여줍니다. |
 | 서버 대수 | 해당 정책을 사용하는 서버의 수를 표시합니다. |
 
-**모니터링 알림 정책**
+### 모니터링 알림 정책
 
-서버의 재시작 여부, 에이전트의 통신 장애 지속시간, 자원 사용량에 따라 알림 발생 여부를 설정할 수 있습니다.[![1480](https://github.com/jinronara/IntegratedManual/raw/master/images/1480.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1480.png)
+서버의 재시작 여부, 에이전트의 통신 장애 지속시간, 자원 사용량에 따라 알림 발생 여부를 설정할 수 있습니다.
+[![1480](https://github.com/jinronara/IntegratedManual/raw/master/images/1480.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1480.png)
 
 | 이름 | 설명 |
 | :--- | :--- |
@@ -391,11 +411,12 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 * 주의 : 하나의 서버는 하나의 알림 정책만을 할당 받을 수 있습니다.
 
-**프로세스 알림 정책**
+### 프로세스 알림 정책
 
-**프로세스 알림 정책 설정**
+#### 프로세스 알림 정책 설정
 
-특정 프로세스에 대한 알림 정책을 설정할 수 있습니다.[![1490](https://github.com/jinronara/IntegratedManual/raw/master/images/1490.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1490.png)
+특정 프로세스에 대한 알림 정책을 설정할 수 있습니다.
+[![1490](https://github.com/jinronara/IntegratedManual/raw/master/images/1490.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1490.png)
 
 1. 프로세스명: 선택한 프로세스명이 표기됩니다.
 2. Enable as Project-Wide: 해당 프로젝트에 있는 모든 서버들에 해당 알람 정책을 적용합니다.
@@ -406,11 +427,11 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 6. 알림 정책 적용: 해당 프로세스에 대한 알림을 단일 서버가 아닌 다중 서버에 대한 정책으로 설정할 수 있습니다.
 7. 임계값 지속 시간: 해당 설정된 임계값의 지속시간 이후 서버 상태가 Warning 혹은 Fatal로 변경됩니다.
 
-**로그 알림 정책**
+### 로그 알림 정책
 
 로그 정책은 애플리케이션에서 발생하는 여러 로그들의 감시 설정을 편리하게 관리할 수 있도록 만들어졌습니다.
 
-**로그 알림 정책 설정**
+#### 로그 알림 정책 설정
 
 [![1500](https://github.com/jinronara/IntegratedManual/raw/master/images/1500.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1500.png)
 
@@ -420,24 +441,27 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 4. 삭제하거나 적용될 규칙을 선택합니다.
 5. 적용될 서버를 선택합니다.
 
-**파일 로그**
+##### 파일 로그
 
 [![1510](https://github.com/jinronara/IntegratedManual/raw/master/images/1510.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1510.png)
 
 파일 로그를 감시하기 위해 파일 경로, 키워드를 입력할 수 있습니다. \* 파일 경로: 감시할 파일의 경로 \* 키워드: 해당 파일의 로그에서 해당 키워드가 발생시 알림을 발생시킵니다. \* 위험도: 알림이 발생하였을 때 위험도를 지정합니다.
 
-**이벤트 로그**
+##### 이벤트 로그
 
 [![1520](https://github.com/jinronara/IntegratedManual/raw/master/images/1520.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1520.png)
 
-이벤트 로그를 감시하기 위해 로그명, 수준을 선택할 수 있으며, 이벤트 소스, 이벤트 ID, 키워드를 입력할 수 있습니다. 각각의 빈칸에는 아래의 사진들에서 지정된 영역에 해당하는 값들 중에서 모니터링 하고자 하는 값을 골라 기입하시면 됩니다.[![1530](https://github.com/jinronara/IntegratedManual/raw/master/images/1530.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1530.png)[![1540](https://github.com/jinronara/IntegratedManual/raw/master/images/1540.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1540.png)
+이벤트 로그를 감시하기 위해 로그명, 수준을 선택할 수 있으며, 이벤트 소스, 이벤트 ID, 키워드를 입력할 수 있습니다. 각각의 빈칸에는 아래의 사진들에서 지정된 영역에 해당하는 값들 중에서 모니터링 하고자 하는 값을 골라 기입하시면 됩니다.
+[![1530](https://github.com/jinronara/IntegratedManual/raw/master/images/1530.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1530.png)
+[![1540](https://github.com/jinronara/IntegratedManual/raw/master/images/1540.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1540.png)
 
 * 위험도: 알림이 발생했을 때 해당 알림의 위험도를 지정할 수 있습니다.
 * 이벤트 로그는 Windows 환경에서만 사용 가능합니다.
 
-**알림 내역**
+## 알림 내역
 
-해당 프로젝트에 등록된 모든 서버에서 발생한 모든 알림 내역 리스트를 볼 수 있으며, 서버명을 기준으로 검색할 수 있습니다.[![1550](https://github.com/jinronara/IntegratedManual/raw/master/images/1550.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1550.png)
+해당 프로젝트에 등록된 모든 서버에서 발생한 모든 알림 내역 리스트를 볼 수 있으며, 서버명을 기준으로 검색할 수 있습니다.
+[![1550](https://github.com/jinronara/IntegratedManual/raw/master/images/1550.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1550.png)
 
 | 이름 | 설명 |
 | :--- | :--- |
@@ -449,7 +473,9 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 | 현재상태 | 해당 알림의 현재 상태 |
 | 처리내역 | 알림에 대한 처리내역 |
 
-7.2.4.3. 알림 상세 정보 알림 내역에서 하나의 알림을 선택 시 상세 정보 페이지로 이동합니다.[![1560](https://github.com/jinronara/IntegratedManual/raw/master/images/1560.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1560.png)
+## 알림 상세 정보
+알림 내역에서 하나의 알림을 선택 시 상세 정보 페이지로 이동합니다.
+[![1560](https://github.com/jinronara/IntegratedManual/raw/master/images/1560.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1560.png)
 
 1. 개요: 발생한 알림에 대한 개요를 확인할 수 있습니다.
 2. 발생한 시점의 전후로 5분씩의 CPU, Memory, Disk, Network 차트를 보여줍니다. 알림에 해당하는 부분의 Severity\(위험도\)를 표시하고 있습니다.
@@ -457,11 +483,12 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
    * 해당 화면에서도 각각의 프로세스에 대한 알림 정책을 설정할 수 있습니다.
 4. 알림에 대한 처리 내역 리스트를 보여줍니다. Acknowledge Add버튼을 눌러 처리내역을 추가적으로 기입 후 저장할 수 있습니다.
 
-### 보고서 {#user-content-보고서-1}
+# 보고서 {#user-content-보고서-1}
 
-**일일 보고서 \(전체 요약\)**
+## 일일 보고서 \(전체 요약\)
 
-하루 동안 수집한 데이터를 토대로 보고서를 작성해 보여줍니다.[![1570](https://github.com/jinronara/IntegratedManual/raw/master/images/1570.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1570.png)
+하루 동안 수집한 데이터를 토대로 보고서를 작성해 보여줍니다.
+[![1570](https://github.com/jinronara/IntegratedManual/raw/master/images/1570.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1570.png)
 
 * 보고서를 작성할 데이터 기간을 설정합니다. 시간 설정 버튼을 눌러 시작~종료 시간을 설정할 수 있습니다.
 * 이메일 수신을 체크면 매일 오전 중 일일 보고서를 이메일로 전달 받을 수 있습니다.
@@ -471,9 +498,10 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 * 서버 이름, CPU/메모리 평균, 알림 개수를 요약해서 보여줍니다.
 * 당일 발생한 알림의 발생 시간, 위험도, 서버명, 설명, 스냅샷을 최대 50개까지 보여줍니다.
 
-**주간 보고서**
+## 주간 보고서
 
-일주일 동안 수집한 데이터를 토대로 보고서를 작성해 보여줍니다.[![1580](https://github.com/jinronara/IntegratedManual/raw/master/images/1580.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1580.png)
+일주일 동안 수집한 데이터를 토대로 보고서를 작성해 보여줍니다.
+[![1580](https://github.com/jinronara/IntegratedManual/raw/master/images/1580.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1580.png)
 
 * 보고서를 작성할 데이터 기간을 설정합니다.
 * 내보내기 버튼을 누를 경우 .CSV 형식으로 보고서를 저장합니다.
@@ -494,18 +522,20 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 * 인쇄 버튼을 누를 경우 해당 보고서를 인쇄할 수 있습니다.
 * 서버 이름, CPU Avg\(%\), Memory Avg\(%\)를 요약해서 보여줍니다.
 
-**월간 보고서 \(디스크\)**
+## 월간 보고서 \(디스크\)
 
-한달간 수집한 데이터 중 디스크 정보만 추출하여 월간 보고서를 작성하여 보여줍니다.[![1610](https://github.com/jinronara/IntegratedManual/raw/master/images/1610.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1610.png)
+한달간 수집한 데이터 중 디스크 정보만 추출하여 월간 보고서를 작성하여 보여줍니다.
+[![1610](https://github.com/jinronara/IntegratedManual/raw/master/images/1610.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1610.png)
 
 * 보고서를 작성할 데이터 기간을 설정합니다. 설정한 기간 이후의 1달간 데이터를 보고서로 작성합니다.
 * 내보내기 버튼을 누를 경우 .CSV 형식으로 보고서를 저장합니다.
 * 인쇄 버튼을 누를 경우 해당 보고서를 인쇄할 수 있습니다.
 * 서버 이름, 사용 경로, Disk\(%\)를 요약해서 보여줍니다.
 
-**월간 보고서 \(애플리케이션 상세\)**
+## 월간 보고서 \(애플리케이션 상세\)
 
-한달간 수집한 데이터를 토대로 애플리케이션 별 월간 보고서를 작성하여 보여줍니다.[![1620](https://github.com/jinronara/IntegratedManual/raw/master/images/1620.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1620.png)
+한달간 수집한 데이터를 토대로 애플리케이션 별 월간 보고서를 작성하여 보여줍니다.
+[![1620](https://github.com/jinronara/IntegratedManual/raw/master/images/1620.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1620.png)
 
 * 보고서를 작성할 데이터 기간을 설정합니다.
 * 내보내기 버튼을 누를 경우 .CSV 형식으로 보고서를 저장합니다.
@@ -522,4 +552,3 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
   * SWAP
 * DISK I/O
 * Network
-
