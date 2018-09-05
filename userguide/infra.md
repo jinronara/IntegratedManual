@@ -20,7 +20,7 @@ INFRA STRUCTURE 아이콘 선택 후 각 입력란에 해당하는 정보를 입
 
 새롭게 생성한 인프라 모니터링 프로젝트를 클릭하여 아래와 같은 에이전트 설치 화면에 진입합니다.
 
-* 해당 화면은 프로젝트 관리 → 에이전트 설치 부분에서 확인 가능합니다. 
+* 해당 화면은 프로젝트 관리 → 에이전트 설치 부분에서 확인 가능합니다.
 
 ![](../.gitbook/assets/1200.png)
 
@@ -138,10 +138,63 @@ $ sudo service whatap-infra restart
 
 #### Open API
 
-수집중인 모니터링 정보를 별도로 활용하거나, 서버의 Scale Up/Out의 자동화를 위해 적용하고자 하는 경우 Open API를 통해 해당 정보를 추출할 수 있는 기능을 제공합니다. 관리 &gt; 프로젝트 관리에서 프로젝트 정보 영역의 API Token 값을 Open API 호출 시 HTTP Header 정보로 전송하여 수집된 정보를 획득할 수 있습니다.
+수집중인 모니터링 정보를 별도로 활용하거나, 서버의 Scale Up/Out의 자동화를 위해 적용하고자 하는 경우 Open API를 통해 해당 정보를 추출할 수 있는 기능을 제공합니다. 관리 > 프로젝트 관리에서 프로젝트 정보 영역의 API Token 값을 Open API 호출 시 HTTP Header 정보로 전송하여 수집된 정보를 획득할 수 있습니다.
 
-\#\#\#\# Open API 확인
+##### Open API 확인
 
+그림있어요
+
+* API Token 변경이 필요한 경우 “재발급” 버튼을 통하여 신규 발급 Token으로 갱신할 수 있습니다.
+
+##### Open API 호출
+
+Open API 호출 시에는 Header 정보로 API Token 값과 Project Code를 전송합니다.
+```text
+curl -w "\n" -H "x-whatap-token: J************************A" -H "x-whatap-pcode: 1**1" "https://apm.whatap.io/open/json/host"
+````
+
+##### Open API Spec
+
+표 있어요
+
+##### Open API 응답 예시
+
+```text
+$ curl -w "\n" -H "x-whatap-token: YGK3Z2JEQTPYGUS9KSHLGWWU" -H "x-whatap-pcode: 1" "http://127.0.0.1:8080/open/json/host"
+{"pname":"LOCAL_INFRA","values":"1.0"}
+
+$ curl -w "\n" -H "x-whatap-token: YGK3Z2JEQTPYGUS9KSHLGWWU" -H "x-whatap-pcode: 1" "http://127.0.0.1:8080/open/json/act_agent"
+{"pname":"LOCAL_INFRA","values":"1.0"}
+
+$ curl -w "\n" -H "x-whatap-token: YGK3Z2JEQTPYGUS9KSHLGWWU" -H "x-whatap-pcode: 1" "http://127.0.0.1:8080/open/json/inact_agent"
+{"pname":"LOCAL_INFRA","values":"0.0"}
+
+$ curl -w "\n" -H "x-whatap-token: YGK3Z2JEQTPYGUS9KSHLGWWU" -H "x-whatap-pcode: 1" "http://127.0.0.1:8080/open/json/host"
+{"pname":"LOCAL_INFRA","values":"1.0"}
+
+$ curl -w "\n" -H "x-whatap-token: YGK3Z2JEQTPYGUS9KSHLGWWU" -H "x-whatap-pcode: 1" "http://127.0.0.1:8080/open/json/cpucore"
+{"pname":"LOCAL_INFRA","values":"1.0"}
+
+$ curl -w "\n" -H "x-whatap-token: YGK3Z2JEQTPYGUS9KSHLGWWU" -H "x-whatap-pcode: 1" "http://127.0.0.1:8080/open/json/infra_cpu"
+{"pname":"LOCAL_INFRA","values":{"DESKTOP8Q9LROV":96.69688}}
+
+$ curl -w "\n" -H "x-whatap-token: YGK3Z2JEQTPYGUS9KSHLGWWU" -H "x-whatap-pcode: 1" "http://127.0.0.1:8080/open/json/infra_disk_iops"
+{"pname":"LOCAL_INFRA","values":{"DESKTOP8Q9LROV":{"bps":1221976.9,"iops":19.974352}}}
+
+$ curl -w "\n" -H "x-whatap-token: YGK3Z2JEQTPYGUS9KSHLGWWU" -H "x-whatap-pcode: 1" "http://127.0.0.1:8080/open/json/infra_net_traffic"
+{"pname":"LOCAL_INFRA","values":{"DESKTOP8Q9LROV":13664.335287828831}}
+
+$ curl -w "\n" -H "x-whatap-token: YGK3Z2JEQTPYGUS9KSHLGWWU" -H "x-whatap-pcode: 1" "http://127.0.0.1:8080/open/json/infra_proc"
+{
+  "pname":"LOCAL_INFRA",
+  "values":{
+    "DESKTOP8Q9LROV":[
+      {"memoryBytes":15134720,"bps":0,"cmd2":null,"cmd1":"lsass.exe","cpu":0.625},
+      {"memoryBytes":3543040,"bps":0,"cmd2":null,"cmd1":"java.exe","cpu":0.26041666},
+      {"memoryBytes":31088640,"bps":0,"cmd2":null,"cmd1":"InstallAgent","cpu":0},
+      …
+      {"memoryBytes":27889664,"bps":0,"cmd2":null,"cmd1":"svchost.exe","cpu":3.90625}]}}
+```
 
 
 ### 알림 설정
@@ -152,7 +205,7 @@ $ sudo service whatap-infra restart
 
 ![](../.gitbook/assets/1260.png)
 
- 
+
 
 | 이름 | 설명 |
 | :--- | :--- |
@@ -353,11 +406,11 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.
 
 #### 프로세스 상세 정보
 
-[![1390](https://github.com/jinronara/IntegratedManual/raw/master/images/1390.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1390.png)
+[![1390](../.gitbook/assets/1390.png)
 
 1. 정렬 기준: 프로세스들의 정렬 기준 및 개수를 결정할 수 있습니다. CPU / Memory / Name / IO / Count를 기준으로 정렬할 수 있습니다.
 
-[![1400](https://github.com/jinronara/IntegratedManual/raw/master/images/1400.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1400.png)
+[![1400](../.gitbook/assets/1400.png)
 
 1. 알림 정책 설정: 개별 프로세스에 대해 Alert 정책을 설정할 수 있습니다. 자세한 내용은 프로세스 알림 정책을 참고하시길 바랍니다.
 2. 프로세스 세부 정보: 해당 프로세스 클릭 시 프로세스에 대한 세부정보를 볼 수 있습니다. 자세한 내용은 개별 프로세스 정보를 참고하시길 바랍니다.
@@ -367,7 +420,7 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.
 
 각각의 프로세스를 클릭할 경우 개별 프로세스 정보를 확인할 수 있습니다.
 
-[![1410](https://github.com/jinronara/IntegratedManual/raw/master/images/1410.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1410.png)
+[![1410](../.gitbook/assets/1410.png)
 
 | 번호 | 이름 | 설명 | 단위 |
 | :--- | :--- | :--- | :--- |
@@ -386,9 +439,9 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.
 
 Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서버들을 빈틈없이 볼 수 있게 해줍니다.
 
-[![1420](https://github.com/jinronara/IntegratedManual/raw/master/images/1420.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1420.png)
+[![1420](../.gitbook/assets/1420.png)
 
-[![1430](https://github.com/jinronara/IntegratedManual/raw/master/images/1430.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1430.png)
+[![1430](../.gitbook/assets/1430.png)
 
 하나의 눈\(Eye\) 입니다. 총 5가지의 정보를 제공합니다.
 
@@ -399,7 +452,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 * 네트워크의 Tx \(송신량\)
   * 특히 네트워크 사용량에서 Rx/Tx 를 추가함으로 DDoS와 같이 외부 공격이 여러 서버에서 일제히 발생하는지 확인할 수 있습니다.
 
-[![1440](https://github.com/jinronara/IntegratedManual/raw/master/images/1440.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1440.png)
+[![1440](../.gitbook/assets/1440.png)
 
 서버에 이상 현상이 발생한 경우 개별 아이\(Eye, 눈\)는 색상으로 그 상태를 표현합니다.
 
@@ -413,13 +466,13 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 네트워크 환경에 따라 트래픽 양이 변화할 수 있기 때문에 트래픽의 최대값을 조정할 수 있습니다. 희망하는 트래픽 최대값을 설정하면 값에 따라 Rx/Tx 그래프가 변경됩니다.
 
-[![1450](https://github.com/jinronara/IntegratedManual/raw/master/images/1450.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1450.png)
+[![1450](../.gitbook/assets/1450.png)
 
 ### 가용성
 
 가용성 기능은 여러 서버들의 서버 상태 기록을 그래프로 보여 한눈에 파악할 수 있도록 합니다.
 
-[![1460](https://github.com/jinronara/IntegratedManual/raw/master/images/1460.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1460.png)
+[![1460](../.gitbook/assets/1460.png)
 
 가용성 차트는 다운 체크에서 추가한 IP들의 가용성 차트를 표시합니다. 기본으로 오늘 날짜의 00:00부터 현재까지의 가용성 차트를 표시합니다. 1일, 7일, 30일 등 범위를 지정할 수 있으며 화살표 클릭으로 차트의 날짜를 변경할 수 있습니다.
 
@@ -431,7 +484,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 서버 및 프로세스 알림 정책을 생성, 수정, 삭제할 수 있습니다.
 
-[![1470](https://github.com/jinronara/IntegratedManual/raw/master/images/1470.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1470.png)
+[![1470](../.gitbook/assets/1470.png)
 
 | 이름 | 설명 |
 | :--- | :--- |
@@ -445,7 +498,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 서버의 재시작 여부, 에이전트의 통신 장애 지속시간, 자원 사용량에 따라 알림 발생 여부를 설정할 수 있습니다.
 
-[![1480](https://github.com/jinronara/IntegratedManual/raw/master/images/1480.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1480.png)
+[![1480](../.gitbook/assets/1480.png)
 
 | 이름 | 설명 |
 | :--- | :--- |
@@ -463,7 +516,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 특정 프로세스에 대한 알림 정책을 설정할 수 있습니다.
 
-[![1490](https://github.com/jinronara/IntegratedManual/raw/master/images/1490.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1490.png)
+[![1490](../.gitbook/assets/1490.png)
 
 1. 프로세스명: 선택한 프로세스명이 표기됩니다.
 2. Enable as Project-Wide: 해당 프로젝트에 있는 모든 서버들에 해당 알람 정책을 적용합니다.
@@ -480,7 +533,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 **로그 알림 정책 설정**
 
-[![1500](https://github.com/jinronara/IntegratedManual/raw/master/images/1500.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1500.png)
+[![1500](../.gitbook/assets/1500.png)
 
 1. 해당 정책의 이름을 지정합니다.
 2. 새로운 규칙을 생성합니다.
@@ -490,19 +543,19 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 **파일 로그**
 
-[![1510](https://github.com/jinronara/IntegratedManual/raw/master/images/1510.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1510.png)
+[![1510](../.gitbook/assets/1510.png)
 
 파일 로그를 감시하기 위해 파일 경로, 키워드를 입력할 수 있습니다. \* 파일 경로: 감시할 파일의 경로 \* 키워드: 해당 파일의 로그에서 해당 키워드가 발생시 알림을 발생시킵니다. \* 위험도: 알림이 발생하였을 때 위험도를 지정합니다.
 
 **이벤트 로그**
 
-[![1520](https://github.com/jinronara/IntegratedManual/raw/master/images/1520.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1520.png)
+[![1520](../.gitbook/assets/1520.png)
 
 이벤트 로그를 감시하기 위해 로그명, 수준을 선택할 수 있으며, 이벤트 소스, 이벤트 ID, 키워드를 입력할 수 있습니다. 각각의 빈칸에는 아래의 사진들에서 지정된 영역에 해당하는 값들 중에서 모니터링 하고자 하는 값을 골라 기입하시면 됩니다.
 
-[![1530](https://github.com/jinronara/IntegratedManual/raw/master/images/1530.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1530.png)
+[![1530](../.gitbook/assets/1530.png)
 
-[![1540](https://github.com/jinronara/IntegratedManual/raw/master/images/1540.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1540.png)
+[![1540](../.gitbook/assets/1540.png)
 
 * 위험도: 알림이 발생했을 때 해당 알림의 위험도를 지정할 수 있습니다.
 * 이벤트 로그는 Windows 환경에서만 사용 가능합니다.
@@ -511,7 +564,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 해당 프로젝트에 등록된 모든 서버에서 발생한 모든 알림 내역 리스트를 볼 수 있으며, 서버명을 기준으로 검색할 수 있습니다.
 
-[![1550](https://github.com/jinronara/IntegratedManual/raw/master/images/1550.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1550.png)
+[![1550](../.gitbook/assets/1550.png)
 
 | 이름 | 설명 |
 | :--- | :--- |
@@ -527,7 +580,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 알림 내역에서 하나의 알림을 선택 시 상세 정보 페이지로 이동합니다.
 
-[![1560](https://github.com/jinronara/IntegratedManual/raw/master/images/1560.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1560.png)
+[![1560](../.gitbook/assets/1560.png)
 
 1. 개요: 발생한 알림에 대한 개요를 확인할 수 있습니다.
 2. 발생한 시점의 전후로 5분씩의 CPU, Memory, Disk, Network 차트를 보여줍니다. 알림에 해당하는 부분의 Severity\(위험도\)를 표시하고 있습니다.
@@ -541,7 +594,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 하루 동안 수집한 데이터를 토대로 보고서를 작성해 보여줍니다.
 
-[![1570](https://github.com/jinronara/IntegratedManual/raw/master/images/1570.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1570.png)
+[![1570](../.gitbook/assets/1570.png)
 
 * 보고서를 작성할 데이터 기간을 설정합니다. 시간 설정 버튼을 눌러 시작~종료 시간을 설정할 수 있습니다.
 * 이메일 수신을 체크면 매일 오전 중 일일 보고서를 이메일로 전달 받을 수 있습니다.
@@ -555,21 +608,21 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 일주일 동안 수집한 데이터를 토대로 보고서를 작성해 보여줍니다.
 
-[![1580](https://github.com/jinronara/IntegratedManual/raw/master/images/1580.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1580.png)
+[![1580](../.gitbook/assets/1580.png)
 
 * 보고서를 작성할 데이터 기간을 설정합니다.
 * 내보내기 버튼을 누를 경우 .CSV 형식으로 보고서를 저장합니다.
 * 인쇄 버튼을 누를 경우 해당 보고서를 인쇄할 수 있습니다.
 * 서버 이름, CPU Avg\(%\), Memory Avg\(%\)를 요약해서 보여줍니다.   ==== 주간 보고서 \(디스크\) 일주일간 수집한 데이터 중 디스크만 추출하여 보고서를 작성해 보여줍니다.
 
-[![1590](https://github.com/jinronara/IntegratedManual/raw/master/images/1590.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1590.png)
+[![1590](../.gitbook/assets/1590.png)
 
 * 보고서를 작성할 데이터 기간을 설정합니다, 설정한 날짜의 이후 7일간의 데이터를 보여줍니다.
 * 내보내기 버튼을 누를 경우 .CSV 형식으로 보고서를 저장합니다.
 * 인쇄 버튼을 누를 경우 해당 보고서를 인쇄할 수 있습니다.
 * 서버 이름, Disk\(%\)를 요약해서 보여줍니다.   ==== 월간 보고서 한달 동안 수집한 데이터를 토대로 보고서를 작성해 보여줍니다.
 
-[![1600](https://github.com/jinronara/IntegratedManual/raw/master/images/1600.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1600.png)
+[![1600](../.gitbook/assets/1600.png)
 
 * 보고서를 작성할 데이터 기간을 설정합니다.
 * 내보내기 버튼을 누를 경우 .CSV 형식으로 보고서를 저장합니다.
@@ -580,7 +633,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 한달간 수집한 데이터 중 디스크 정보만 추출하여 월간 보고서를 작성하여 보여줍니다.
 
-[![1610](https://github.com/jinronara/IntegratedManual/raw/master/images/1610.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1610.png)
+[![1610](../.gitbook/assets/1610.png)
 
 * 보고서를 작성할 데이터 기간을 설정합니다. 설정한 기간 이후의 1달간 데이터를 보고서로 작성합니다.
 * 내보내기 버튼을 누를 경우 .CSV 형식으로 보고서를 저장합니다.
@@ -591,7 +644,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 한달간 수집한 데이터를 토대로 애플리케이션 별 월간 보고서를 작성하여 보여줍니다.
 
-[![1620](https://github.com/jinronara/IntegratedManual/raw/master/images/1620.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1620.png)
+[![1620](../.gitbook/assets/1620.png)
 
 * 보고서를 작성할 데이터 기간을 설정합니다.
 * 내보내기 버튼을 누를 경우 .CSV 형식으로 보고서를 저장합니다.
@@ -608,4 +661,3 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
   * SWAP
 * DISK I/O
 * Network
-
