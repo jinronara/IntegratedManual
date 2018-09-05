@@ -32,7 +32,7 @@ INFRA STRUCTURE 아이콘 선택 후 각 입력란에 해당하는 정보를 입
 
 Debian / Ubuntu
 
-```text
+```bash
 $ wget http://repo.whatap.io/debian/release.gpg -O -|sudo apt-key add -
 $ wget http://repo.whatap.io/debian/whatap-repo_1.0_all.deb
 $ sudo dpkg -i whatap-repo_1.0_all.deb
@@ -41,7 +41,7 @@ $ sudo apt-get update
 
 CentOS / Amazon Linux
 
-```text
+```bash
 $ sudo rpm --import http://repo.whatap.io/centos/release.gpg
 $ sudo rpm -Uvh http://repo.whatap.io/centos/5/noarch/whatap-repo-1.0-1.noarch.rpm
 ```
@@ -52,13 +52,13 @@ $ sudo rpm -Uvh http://repo.whatap.io/centos/5/noarch/whatap-repo-1.0-1.noarch.r
 
 Debian / Ubuntu
 
-```text
+```bash
 $ sudo apt-get install whatap-infra
 ```
 
 CentOS / Amazon Linux
 
-```text
+```bash
 $ sudo yum install whatap-infra
 ```
 
@@ -66,7 +66,7 @@ $ sudo yum install whatap-infra
 
 설치 페이지에 존재하는 “설정 스크립트를 실행하여 서버 모니터 데몬을 시작하십시오.” 밑에 있는 박스를 클릭하여 라이선스를 발급받습니다. 이후 생성되는 명령어를 copy 버튼을 눌러 복사하거나 아래의 명령어에 라이선스키와 서버 IP를 추가하여 설치하고자 하는 서버에 입력합니다.
 
-```text
+```bash
 $ echo "license=[발급된 라이선스키]" |sudo tee /usr/whatap/infra/conf/whatap.conf
 $ echo "whatap.server.host=[할당된 와탭 서버 IP]" |sudo tee -a /usr/whatap/infra/conf/whatap.conf
 $ echo "createdtime=`date +%s%N`" |sudo tee -a /usr/whatap/infra/conf/whatap.conf
@@ -148,7 +148,7 @@ $ sudo service whatap-infra restart
 
 Open API 호출 시에는 Header 정보로 API Token 값과 Project Code를 전송합니다.
 
-```text
+```bash
 curl -w "\n" -H "x-whatap-token: J************************A" -H "x-whatap-pcode: 1**1" "https://apm.whatap.io/open/json/host"
 ```
 
@@ -172,7 +172,7 @@ curl -w "\n" -H "x-whatap-token: J************************A" -H "x-whatap-pcode:
 
 **Open API 응답 예시**
 
-```text
+```bash
 $ curl -w "\n" -H "x-whatap-token: YGK3Z2JEQTPYGUS9KSHLGWWU" -H "x-whatap-pcode: 1" "http://127.0.0.1:8080/open/json/host"
 {"pname":"LOCAL_INFRA","values":"1.0"}
 
@@ -290,7 +290,6 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.
 오른쪽 메뉴를 클릭하면 사용자 계정을 수정 할 수 있습니다.
 
 ![](../.gitbook/assets/1830.png)
-
 
 사용자 비밀번호 사용자 비밀번호를 변경할 수 있습니다. 현재 비밀번호를 입력 후 변경하려는 새로운 비밀번호를 입력하고, 다시 한번 더 입력한 후 비밀번호 수정 버튼을 누릅니다.
 
@@ -447,11 +446,9 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.
 
 ![](../.gitbook/assets/1400.png)
 
-2. 알림 정책 설정: 개별 프로세스에 대해 Alert 정책을 설정할 수 있습니다. 자세한 내용은 프로세스 알림 정책을 참고하시길 바랍니다.
-
-3. 프로세스 세부 정보: 해당 프로세스 클릭 시 프로세스에 대한 세부정보를 볼 수 있습니다. 자세한 내용은 개별 프로세스 정보를 참고하시길 바랍니다.
-
-4. 더 보기: 현재 화면상에 보이지 않는 프로세스들 역시 확인할 수 있습니다.
+1. 알림 정책 설정: 개별 프로세스에 대해 Alert 정책을 설정할 수 있습니다. 자세한 내용은 프로세스 알림 정책을 참고하시길 바랍니다.
+2. 프로세스 세부 정보: 해당 프로세스 클릭 시 프로세스에 대한 세부정보를 볼 수 있습니다. 자세한 내용은 개별 프로세스 정보를 참고하시길 바랍니다.
+3. 더 보기: 현재 화면상에 보이지 않는 프로세스들 역시 확인할 수 있습니다.
 
 **개별 프로세스 정보**
 
@@ -461,7 +458,7 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.
 
 | 번호 | 이름 | 설명 | 단위 |
 | :--- | :--- | :--- | :--- |
-| 1 | 프로세스 개요 | \* PID, 프로세스명, CPU/Memory/RSS 사용률 및 사용자 권한을 확인 \* 해당 프로세스가 한 개 이상 실행될 경우 추가적으로 리스트업 \* RSS: 메모리 내부에서 프로세스가 차지하는 메모리의 양 |  |
+| 1 | 프로세스 개요 | PID, 프로세스명, CPU/Memory/RSS 사용률 및 사용자 권한을 확인 해당 프로세스가 한 개 이상 실행될 경우 추가적으로 리스트업 RSS: 메모리 내부에서 프로세스가 차지하는 메모리의 양 |  |
 | 2 | CPU Used\(%\) | 프로세스가 사용한 CPU 시간의 백분율 | % |
 | 3 | Memory Used\(%\) | 프로세스가 사용한 메모리 비율 | % |
 | 4 | I/O Used \(Bps\) | Windows: File, Network, Device로부터 발생한 IO 대역폭 | bps |
@@ -511,8 +508,8 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 ![](../.gitbook/assets/1460.png)
 
-가용성 차트는 다운 체크에서 추가한 IP들의 가용성 차트를 표시합니다.   
-기본으로 오늘 날짜의 00:00부터 현재까지의 가용성 차트를 표시합니다.   
+가용성 차트는 다운 체크에서 추가한 IP들의 가용성 차트를 표시합니다.  
+기본으로 오늘 날짜의 00:00부터 현재까지의 가용성 차트를 표시합니다.  
 1일, 7일, 30일 등 범위를 지정할 수 있으며 화살표 클릭으로 차트의 날짜를 변경할 수 있습니다.
 
 ## 알림 정책 {#user-content-알림-정책}
@@ -594,7 +591,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 ![](../.gitbook/assets/1520.png)
 
-이벤트 로그를 감시하기 위해 로그명, 수준을 선택할 수 있으며, 이벤트 소스, 이벤트 ID, 키워드를 입력할 수 있습니다.   
+이벤트 로그를 감시하기 위해 로그명, 수준을 선택할 수 있으며, 이벤트 소스, 이벤트 ID, 키워드를 입력할 수 있습니다.  
 각각의 빈칸에는 아래의 사진들에서 지정된 영역에 해당하는 값들 중에서 모니터링 하고자 하는 값을 골라 기입하시면 됩니다.
 
 ![](../.gitbook/assets/1530.png)
@@ -634,7 +631,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 ### 알림 확대
 
-알림 확대는 알림이 발생한 후 임계점 및 지속시간 조건을 충족하는 시간이 지속되면 사용자에게 알림 내용을 지속적으로 주지하기 위해 반복적으로 발송하는 기능입니다.   
+알림 확대는 알림이 발생한 후 임계점 및 지속시간 조건을 충족하는 시간이 지속되면 사용자에게 알림 내용을 지속적으로 주지하기 위해 반복적으로 발송하는 기능입니다.  
 알림 확대는 모든 사용자 – super admin, admin, user – 에 적용됩니다.
 
 **알림 확대 단계**
@@ -750,7 +747,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 ### 알림 설정
 
-\[알림 정책 추가\]  클릭하면 알림 정책을 입력할 수 있습니다.
+\[알림 정책 추가\] 클릭하면 알림 정책을 입력할 수 있습니다.
 
 **웹 URL offline 알림**
 
@@ -758,7 +755,6 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 아래와 같이 입력 후 저장을 클릭합니다.
 
 ![](../.gitbook/assets/1870.png)
-
 
 **웹 URL 응답시간 알림**
 
@@ -769,7 +765,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 
 ### MySQL 서버 목록
 
-DB 모니터링에 통합 되었습니다.   
+DB 모니터링에 통합 되었습니다.  
 MySQL/MariaDB 모니터링에서 이용 할 수 있습니다.
 
 ![](../.gitbook/assets/1890.png)
@@ -777,22 +773,21 @@ MySQL/MariaDB 모니터링에서 이용 할 수 있습니다.
 ### 웹 URL 서버 목록
 
 * 개발 된 기능
- * 웹 체크 URL 추가 기능
- * 등록된 URL 리스트업
- * up/down 상태 표시
- * 최근 응답시간 (2초 넘어가는 경우 빨간색으로 표시)
- * 응답 코드 (400 이상인 경우 빨간색으로 표시)
-
+  * 웹 체크 URL 추가 기능
+  * 등록된 URL 리스트업
+  * up/down 상태 표시
+  * 최근 응답시간 \(2초 넘어가는 경우 빨간색으로 표시\)
+  * 응답 코드 \(400 이상인 경우 빨간색으로 표시\)
 * down check rule
- * URL 요청의 응답코드가 400 이상이고 응답시간이 2초 이상인 경우, 3번 재시도하여 정상인 경우 평균 응답시간을 표시하고, 3번 모두 정상이 아닌 경우 online 속성이 0(offline) 으로  변경 됩니다.
+  * URL 요청의 응답코드가 400 이상이고 응답시간이 2초 이상인 경우, 3번 재시도하여 정상인 경우 평균 응답시간을 표시하고, 3번 모두 정상이 아닌 경우 online 속성이 0\(offline\) 으로  변경 됩니다.
 
 ![](../.gitbook/assets/1900.png)
 
-
 #### 설치 방법
-인프라스트럭처 모니터링 최신 에이전트(1.0.8 이상) 및 인터넷 접속이 필요합니다.
 
-```text
+인프라스트럭처 모니터링 최신 에이전트\(1.0.8 이상\) 및 인터넷 접속이 필요합니다.
+
+```bash
 sudo apt-get install python git python-pip
 sudo mkdir /usr/whatap/infra/ext
 cd /usr/whatap/infra/ext
@@ -804,15 +799,16 @@ sudo pip install -r requirements.txt
 
 webcheck.conf에 모니터링 할 URL을 등록합니다. 아래 예제와 같이 enter로 url을 구분합니다
 
-```text
+```bash
 http://www.whatap.io
 http://blog.whatap.io
 ```
 
-스크립트를 등록하는 커맨드를 입력합니다. 웹 인프라 체크 스크립트를 실행할 root아닌 계정이 필요합니다.
-아래 {user to execute webcheck monitor}를 치환하여 실행하실 수 있습니다.
-```text
+스크립트를 등록하는 커맨드를 입력합니다. 웹 인프라 체크 스크립트를 실행할 root아닌 계정이 필요합니다. 아래 {user to execute webcheck monitor}를 치환하여 실행하실 수 있습니다.
+
+```bash
 cd /usr/whatap/infra
 sudo WHATAP_HOME=/usr/whatap/infra/conf /usr/whatap/infra/whatap_infrad --user={user to execute webcheck monitor} init-script
 sudo service whatap-infra restart
 ```
+
