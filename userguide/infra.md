@@ -151,7 +151,7 @@ $ sudo service whatap-infra restart
 Open API 호출 시에는 Header 정보로 API Token 값과 Project Code를 전송합니다.
 ```text
 curl -w "\n" -H "x-whatap-token: J************************A" -H "x-whatap-pcode: 1**1" "https://apm.whatap.io/open/json/host"
-````
+```
 
 ##### Open API Spec
 
