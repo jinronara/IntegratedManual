@@ -1,13 +1,15 @@
+# NodeJs
+
 본 가이드는 사용자가 Linux Ubuntu 16.04 환경에서 Node.js와 Express를 기반으로 생성된 애플리케이션 서버를 구동하고 있을 때 와탭 Node.js 모니터링을 설치하는 방법에 대해 다룹니다. 별도의 세부적인 가이드를 필요로 하는 여타 다른 프레임워크를 이용하는 경우 사용자 가이드를 참고해주시기 바랍니다. 와탭 Node.js APM 모니터링 서비스를 사용하기 위해서는 모니터링 대상 애플리케이션에 모니터링 에이전트를 설치해야 합니다. 와탭 Node.js APM 모니터링 에이전트는 npm 서비스를 통해 다운받을 수 있으며, 홈페이지에서 발급 받은 라이선스 키를 입력하여 등록할 수 있습니다.
 
-# 설치 환경 {#user-content-설치-환경-1}
+## 설치 환경 {#user-content-설치-환경-1}
 
 * OS: Linux Ubuntu 16.04
 * Framework: Express
 * Node.js Version: v5.1.1
 * NPM Version: v3.3.12
 
-# 프로젝트 생성
+## 프로젝트 생성
 
 ![](https://github.com/jinronara/IntegratedManual/tree/93fdbbf61f0cb8cedae22fdbf4c1e9e88904c19c/QuickStartGuide/.gitbook/assets/20.png)
 
@@ -17,13 +19,13 @@
 
 이후, 생성된 프로젝트를 클릭하여 관리 화면에 진입합니다
 
-# 라이선스 발급
+## 라이선스 발급
 
 ![](https://github.com/jinronara/IntegratedManual/tree/93fdbbf61f0cb8cedae22fdbf4c1e9e88904c19c/QuickStartGuide/.gitbook/assets/40.png)
 
 프로젝트 관리화면에서는 우선적으로 라이선스를 발급 받습니다. 라이선스 키는 프로젝트별로 귀속되기 때문에, 유출되거나 배포되어서는 안됩니다. 반드시 본인 프로젝트에 서버를 등록할 때에만 이용하시기 바랍니다.
 
-# 에이전트 설치
+## 에이전트 설치
 
 와탭 Node.js 모니터링 서비스는 npm을 통하여 설치할 수 있습니다. 우선, 설치할 애플리케이션 프로젝트의 최상위 폴더로 이동 한 후, 아래의 npm 명령어를 통하여 와탭 Node.js 모니터링 을 설치합니다.
 
@@ -37,7 +39,7 @@ $ npm install whatap –save
 $ cp ./node_modules/whatap/whatap.conf ./
 ```
 
-# 라이선스 및 수집 서버 설정
+## 라이선스 및 수집 서버 설정
 
 whatap.conf 파일을 열어 프로젝트 생성시 발급 받은 라이선스와 수집서버 정보를 입력한 후 저장합니다.
 
@@ -46,7 +48,7 @@ $ echo "license={라이선스 키}" >> whatap.conf
 $ echo "whatap.server.host={수집서버 정보}" >> whatap.conf
 ```
 
-# 애플리케이션 기동 옵션 추가
+## 애플리케이션 기동 옵션 추가
 
 Node.js 애플리케이션 실행 시 가장 먼저 실행되는 파일에 다음과 같이 입력합니다.
 
@@ -66,7 +68,7 @@ var https = require('https');
 var fs = require('fs');
 ```
 
-# 로그 확인
+## 로그 확인
 
 Node.js 애플리케이션을 시작 혹은 재시작을 하면 다음과 같이 와탭 로고와 표시되며 모니터링이 시작됩니다.
 
@@ -86,6 +88,7 @@ Just Tap, Always Monitoring
 WhaTap Node Agent version 0.1.26, 20170626
 ```
 
-# 모니터링 확인
+## 모니터링 확인
 
 {text 모니터링 확인에 대한 부분 확인 필요}
+
