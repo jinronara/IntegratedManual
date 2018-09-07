@@ -32,5 +32,7 @@
   * [인프라 모니터링](userguide/infra.md)
   * [DB 모니터링](userguide/db.md)
   * [빌링](userguide/billing.md)
+* [활용](usecase/README.md)
+  * [END-POINT 설정](usecase/java_endpoint.md)
 * [용어정의](glossary.md)
 
