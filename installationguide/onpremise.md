@@ -14,7 +14,22 @@
 
 이벤트 알림을 위한 설정은 계약 완료 시점 이후 별도의 절차로 진행합니다. 단 본 문서에는 이벤트 알림용 notihub 서버와 관련한 사항도 기술합니다.
 
-## 수집 서버 권장 사양
+### 수집 서버 권장 사양
+
+#### 수집서버 \(설치형, SaaS형의 경우 불필요\)
+
+* OS : Ubuntu / CentOS 안정화 버전
+* CPU : 4Core 이상 \(최소 2Core\)
+* Memory : 16G 이상 \(최소 8G\)
+* Disk : 200G 이상 \(100TPS 기준 1GB/\)
+
+| 구분 | 데이터 보관기 | Disk 용 |
+| :---: | :---: | :---: |
+| Infra  Monitoring | 1 년 | 8.2G / Year \(1EA \* Raw Data 30일 \* 100M\) + \(Summary Data 14M \* 365일\) |
+| ApplicationMonitoring | 30 일 | 30G / 월\(1EA \* 30일 \* 1Gb\) |
+
+* JDK : Oracle JDK 1.7 이상
+* 높은 File I/O로 인한 운영체제 file descriptor 설정 조정 
 
 ### 방화벽 오픈
 
@@ -63,11 +78,13 @@ $ sysctl -a | grep file-max fs.file-max = 999999
 * Oracle JDK 1.7 이상
 * 라이센스 파일: 텍스트 파일로 준
 
-와탭 모니터링 패키지를 압축 해제하면 whatap\_package 라는 디렉토리로 압축이 해제됩니다. 본 문서에서 이후 해당 경로를 $WHATAP\_PACKAGE로 기술합니다.
+와탭 모니터링 패키지를 압축 해제하면 whatap\_package 라는 디렉토리로 압축이 해제됩니다.   
+본 문서에서 이후 해당 경로를 $WHATAP\_PACKAGE로 기술합니다.
 
 ### JDK 설치
 
-Oracle JDK 1.7 이상의 버전이 사전에 설치되어 있는 경우 이를 활용합니다. 설치되어 있지 않은 경우, JDK를 설치합니다. 본 문서에서 이후 JDK 설치 경로를 $JDK로 기술합니다.
+Oracle JDK 1.7 이상의 버전이 사전에 설치되어 있는 경우 이를 활용합니다. 설치되어 있지 않은 경우, JDK를 설치합니다.   
+본 문서에서 이후 JDK 설치 경로를 $JDK로 기술합니다.
 
 ### 실행 파일 편집
 
@@ -81,6 +98,8 @@ $ chmod +x *.sh
 이후 쉘 스크립트를 편집하여 JAVA\_HOME 경로를 지정합니다.  
 \(예시 front.sh\)
 
+{% code-tabs %}
+{% code-tabs-item title="front.sh" %}
 ```bash
 #!/usr/bin/env bash
 SERVICE_NAME=front.apm
@@ -88,13 +107,16 @@ JAVA_HOME=$JDK
 SERVER_HOME=cd ..;pwd LIB_HOME=$SERVER_HOME/lib CONF_PATH=$SERVER_HOME/conf
 EXE_JAR=ls $LIB_HOME/*.${SERVICE_NAME}.boot* | sort | tail -1 $JAVA_HOME/bin/java -Djava.security.egd=/dev/./urandom -Dwhatap.log.path=. -Xmx512m -jar $EXE_JAR
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 최소형 설치의 경우 front.sh, keeper.sh, yard.sh, proxy.sh 가 사용되고, 확장형 설치의 경우 eureka.sh, account.sh, front.sh / keeper.sh, yard.sh, proxy.sh, gateway.sh 가 사용됩니다.  
 부가적으로 이벤트 알림 설정을 추가할 경우 notihub.sh가 사용됩니다.
 
 ### 설정편집
 
-$WHATAP\_PACKAGE/lib 하위에는 어플리케이션 라이브러리\(jar\), $WHATAP\_PACKAGE/conf 하위에는 설정 파일\(conf\)이 존재합니다. 설정 파일을 편집합니다. 실행 파일 편집 시 개행 코드로 인한 문제 발생 시에는 vi에디터에서 :set ff=unix 로 지정하고 편집합니다.
+$WHATAP\_PACKAGE/lib 하위에는 어플리케이션 라이브러리\(jar\), $WHATAP\_PACKAGE/conf 하위에는 설정 파일\(conf\)이 존재합니다.   
+실행 파일 편집시 개행코드로 인한 문제 발생 시에는 vi에디터에서 :set ff=unix 로 지정하고 편집합니다.
 
 각 설정 파일에는 필수로 설정해야 하는 정보를 수정합니다.
 
@@ -166,7 +188,8 @@ $WHATAP\_PACKAGE/lib 하위에는 어플리케이션 라이브러리\(jar\), $WH
 
 ### 로그 경로 변경
 
-실행 시 로그는 $WHATAP\_PACKAGE /logs/{server명}.log 로 출력됩니다. 로그를 외부 경로에 출력할 경우 다음과 같이 지정합니다.
+실행 시 로그는 $WHATAP\_PACKAGE /logs/{server명}.log 로 출력됩니다.   
+로그를 외부 경로에 출력할 경우 다음과 같이 지정합니다.
 
 ```bash
 $ cd $WHATAP\_PACKAGE
@@ -178,7 +201,8 @@ $ ln -s {외부경로} logs
 
 ### 실행
 
-서버 실행은 $WHATAP\_PACKAGE /bin/control.sh를 통해 실행하게 된다. 최소형 설치본의 경우 $WHATAP\_PACKAGE /bin/start.sh, $WHATAP\_PACKAGE /bin/stop.sh 파일을 통해서도 실행/정지가 가능합니다.
+서버 실행은 $WHATAP\_PACKAGE /bin/control.sh를 통해 실행하게 됩니다.   
+최소형 설치본의 경우 $WHATAP\_PACKAGE /bin/start.sh, $WHATAP\_PACKAGE /bin/stop.sh 파일을 통해서도 실행/정지가 가능합니다.
 
 #### control.sh 를 통한 실행
 
@@ -392,8 +416,7 @@ front 서버의 기동이 정상 완료되면, admin@whatap.io / admin 계정으
 
 ### 재설치 
 
-설정 오류 혹은 설정 변경을 통해 문제를 해결할 수 없는 경우, 재설치 하는 과정을 안내합니다.
-
+설정 오류 혹은 설정 변경을 통해 문제를 해결할 수 없는 경우, 재설치 하는 과정을 안내합니다.  
 재설치 시, 기존 모니터링 정보는 폐기합니다. 
 
 * 로그 삭제 
@@ -418,7 +441,8 @@ $ cd $WHATAP_PACKAGE $ rm -rf db/*.db
 
 ### 사이트 관리자 패스워드 
 
-사이트 관리자 계정\(admin@whatap.io\) 은 변경 불가합니다. 사이트 관리자 계정의 패스워드는 front.conf의 admin.password 를 통해 설정 가능합니다.
+사이트 관리자 계정\(admin@whatap.io\) 은 변경 불가합니다.   
+사이트 관리자 계정의 패스워드는 front.conf의 admin.password 를 통해 설정 가능합니다.
 
 ### 포트 변경 
 
