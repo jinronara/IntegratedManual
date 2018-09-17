@@ -23,12 +23,35 @@
 * Memory : 16G 이상 \(최소 8G\)
 * Disk : 200G 이상 \(100TPS 기준 1GB/\)
 
-| 구분 | 데이터 보관기 | Disk 용 |
-| :---: | :---: | :---: |
-| Infra  Monitoring | 1 년 | 8.2G / Year \(1EA \* Raw Data 30일 \* 100M\) + \(Summary Data 14M \* 365일\) |
-| ApplicationMonitoring | 30 일 | 30G / 월\(1EA \* 30일 \* 1Gb\) |
-
-* JDK : Oracle JDK 1.7 이상
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center">구분</th>
+      <th style="text-align:center">데이터 보관기</th>
+      <th style="text-align:center">Disk 용</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center">Infra
+        <br />Monitoring</td>
+      <td style="text-align:center">1 년</td>
+      <td style="text-align:center">8.2G / Year
+        <br />(1EA * Raw Data 30일 * 100M) + (Summary Data 14M * 365일)</td>
+    </tr>
+    <tr>
+      <td style="text-align:center">
+        <p>Application</p>
+        <p>Monitoring</p>
+      </td>
+      <td style="text-align:center">30 일</td>
+      <td style="text-align:center">
+        <p>30G / 월</p>
+        <p>(1EA * 30일 * 1Gb)</p>
+      </td>
+    </tr>
+  </tbody>
+</table>* JDK : Oracle JDK 1.7 이상
 * 높은 File I/O로 인한 운영체제 file descriptor 설정 조정 
 
 ### 방화벽 오픈

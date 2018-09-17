@@ -10,8 +10,12 @@
 
 사용자 애플리케이션 환경에 따라 “javaagent”, “javaagent+onetime attach” 방식 중 택일하여 에이전트를 설치 할 수 있습니다.
 
-* 와탭은 애플리케이션 서버 기동 상태에서 최초 설치 시에는 attach 방식을 활용하고 재기동 이후 “javaagent” 방식을 활용하는 “javaagent+onetime attach” 방식을 권장합니다.
-* IBM JDK의 경우 “watcher” 방식으로 에이전트를 실행시킬 경우 트랜잭션 정보가 수집되지 않으므로 “javaagent” 방식으로 에이전트를 실행해야 하는 제약이 있습니다.
+> 와탭은 애플리케이션 서버 기동 상태에서 최초 설치 시에는 attach 방식을 활용하고 재기동 이후 “javaagent” 방식을 활용하는 “javaagent+onetime attach” 방식을 권장합니다.
+
+{% hint style="warning" %}
+attach 방식은 com.sun.tools.attach.VirtualMachine API를 활용하므로 Java6 이상에서 동작합니다.  
+IBM JDK 의 경우 attach 방식에서 트랜잭션 정보가 수집되지 않는 제약이 있습니다. 
+{% endhint %}
 
 ### **javaagent + onetime attach 방식**
 
@@ -21,7 +25,7 @@
 
 * 애플리케이션 서버 재기동에 민감한 환경에 APM 모니터링을 적용할 경우 유용한 방식이며, 애플리케이션 서버 재기동 이후에는 와탭의 권장 방식으로 모니터링이 수행되는 방식입니다.
 
-[![200](https://github.com/jinronara/IntegratedManual/raw/master/images/200.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/200.png)
+![](../.gitbook/assets/200.png)
 
 * javaagent + onetime attach 적용법
   * 애플리케이션 서버 실행 스크립트에 JVM 옵션으로 -javaagent 옵션에 Tracer의 파일 경로를 추가합니다.
@@ -31,7 +35,7 @@
 
 애플리케이션 서버 부팅 시에 성능 데이터 수집을 위한 모듈을 주입하는 방식입니다.
 
-[![210](https://github.com/jinronara/IntegratedManual/raw/master/images/210.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/210.png)
+![](../.gitbook/assets/210.png)
 
 javaagent 적용법
 
@@ -77,29 +81,28 @@ javaagent 적용법
 
 ## 에이전트 설치/실행/업데이트/중지 {#user-content-에이전트-설치-실행-업데이트-중지}
 
-와탭 APM 모니터링 서비스를 사용하기 위해서는 모니터링 대상 애플리케이션 서버에 와탭 APM 모니터링 에이전트를 설치해야 합니다.
-
+와탭 APM 모니터링 서비스를 사용하기 위해서는 모니터링 대상 애플리케이션 서버에 와탭 APM 모니터링 에이전트를 설치해야 합니다.  
 와탭 APM 모니터링 에이전트 설치 방법은 whatap.io 사이트에서 압축된 에이전트 파일을 다운로드 받아 서버 임의의 위치에 압축을 풀어 실행하는 것만으로 설치가 완료됩니다.
 
 ### **공통**
 
 #### **프로젝트 생성**
 
-[![220](https://github.com/jinronara/IntegratedManual/raw/master/images/220.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/220.png)
+![](../.gitbook/assets/220.png)
 
 서버를 등록하기 위해 우선 프로젝트를 생성합니다. 추가 버튼을 선택하면 아래와 같이 프로젝트 생성 창이 나타납니다. JAVA 아이콘을 선택한 뒤, 희망하는 프로젝트명과 데이터 서버 지역\(Region\), 소속하게 될 그룹을 선택한 뒤 프로젝트를 생성합니다.
 
-[![230](https://github.com/jinronara/IntegratedManual/raw/master/images/230.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/230.png)
+![](../.gitbook/assets/230.png)
 
 #### **라이선스 발급**
 
-[![240](https://github.com/jinronara/IntegratedManual/raw/master/images/240.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/240.png)
+![](../.gitbook/assets/240.png)
 
-프로젝트 관리화면에서는 우선적으로 라이선스를 발급 받습니다. 라이선스 키는 프로젝트별로 귀속되기 때문에, 유출되거나 배포되어서는 안됩니다. 반드시 본인 프로젝트에 서버를 등록할 때에만 이용하시기 바랍니다.
+프로젝트 관리화면에서는 우선적으로 라이선스를 발급 받습니다. 라이선스 키는 프로젝트별로 귀속되기 때문에, 유출되거나 배포 되어서는 안됩니다. 반드시 본인 프로젝트에 서버를 등록할 때에만 이용하시기 바랍니다.
 
 #### **에이전트 다운로드**
 
-[![250](https://github.com/jinronara/IntegratedManual/raw/master/images/250.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/250.png)
+![](../.gitbook/assets/250.png)
 
 라이선스를 발급 받은 후에는 ‘에이전트 파일 다운로드’ 버튼이 활성화 되었음을 확인할 수 있습니다. 해당 버튼을 눌러 와탭 에이전트 파일을 다운로드 받습니다.
 
@@ -276,7 +279,7 @@ WhaTap Agent version 0.3.9 20161115
 
 서버에서 정상적으로 로그가 올라온 것을 확인한 뒤, 콘솔에 정상적으로 등록되어 있는 여부를 확인하기 위해 해당 프로젝트의 ‘서버’ 메뉴에 올라온 해당 애플리케이션 서버의 명칭을 확인합니다.
 
-[![260](https://github.com/jinronara/IntegratedManual/raw/master/images/260.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/260.png)
+![](../.gitbook/assets/260.png)
 
 * 애플리케이션명은 {type}-{ip2}-{ip3}-{port\] 의 형태의 식별ID가 부여됩니다. 마지막 요소가 {port}가 아닌 {pid}인 경우 애플리케이션 서버의 서비스 포트가 인식되지 않은 것으로 애플리케이션의 마지막 항목에 표시되는 PID\(프로세스 ID\)를 참조하여 설치 문제에 대응합니다.
 
@@ -341,7 +344,7 @@ Windows 계열 OS에 binary로 설치하여 SYSTEM 계정으로 실행한 경우
 
 * “Configure Tomcat” 프로그램을 실행하여 Java 탭 선택 &gt; Java Options에 -javaagent 옵션을 지정합니다.
 
-[![270](https://github.com/jinronara/IntegratedManual/raw/master/images/270.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/270.png)
+![](../.gitbook/assets/270.png)
 
 #### **JBoss**
 
@@ -421,45 +424,51 @@ $WEBLOGIC\_HOME/user\_projects/domains/사용자도메인/bin/startWebLogic.sh\(
 * javaagent 프로퍼티 설정을 추가합니다.
   * $WEBLOGIC\_HOME은 WebLogic 설치 경로를 가리킵니다.
 
-[![280](https://github.com/jinronara/IntegratedManual/raw/master/images/280.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/280.png)Figure 1. 예시
+![](../.gitbook/assets/280.png)
 
 #### **WebSphere**
 
 에이전트 방식만 지원하며, Web Console을 통한 설정 방법을 제시합니다.
 
-1. 먼저 웹브라우저를 통해 admin console에 로그인 합니다.
+1.먼저 웹브라우저를 통해 admin console에 로그인 합니다.
 
-[![290](https://github.com/jinronara/IntegratedManual/raw/master/images/290.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/290.png)
+![](../.gitbook/assets/290.png)
 
-1. Servers &gt; Server Type &gt; WebSphere application servers 메뉴를 통해 에이전트를 설치할 서버를 선택합니다.
+2. Servers &gt; Server Type &gt; WebSphere application servers 메뉴를 통해 에이전트를 설치할 서버를 선택합니다.
 
-[![300](https://github.com/jinronara/IntegratedManual/raw/master/images/300.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/300.png)
+![](../.gitbook/assets/300.png)
 
-1. 선택된 서버 Configuration 탭에 Server Infrastructure의 Java and Process Management - Process definition 메뉴를 선택합니다.
+3. 선택된 서버 Configuration 탭에 Server Infrastructure의 Java and Process Management - Process definition 메뉴를 선택합니다.
 
-[![310](https://github.com/jinronara/IntegratedManual/raw/master/images/310.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/310.png)
+![](../.gitbook/assets/310.png)
 
-1. Additional Properties의 Java Virtual Machine 메뉴를 선택합니다.
+4. Additional Properties의 Java Virtual Machine 메뉴를 선택합니다.
 
-[![320](https://github.com/jinronara/IntegratedManual/raw/master/images/320.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/320.png)
+![](../.gitbook/assets/320.png)
 
-1. WEBSHERE의 서비스 포트를 확인합니다.
+5. WEBSHERE의 서비스 포트를 확인합니다.
 
-[![330](https://github.com/jinronara/IntegratedManual/raw/master/images/330.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/330.png)
+![](../.gitbook/assets/330.png)
 
-1. Configuration 탭의 Generic JVM arguments에 -javaagent와 -Dwhatap.port를 추가합니다.
+6. Configuration 탭의 Generic JVM arguments에 -javaagent와 -Dwhatap.port를 추가합니다.
 
-[![340](https://github.com/jinronara/IntegratedManual/raw/master/images/340.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/340.png)리눅스 계열
+![](../.gitbook/assets/340.png)
 
--javaagent:/home/wasadmin/whatap/whatap.agent.tracer-\#.\#.\#.jar -Dwhatap.port=9443윈도우 계열
 
--javaagent:C:\whatap\whatap.agent.tracer-\#.\#.\#.jar -Dwhatap.port=9443
+
+**리눅스 계열**
+
+> -javaagent:/home/wasadmin/whatap/whatap.agent.tracer-\#.\#.\#.jar -Dwhatap.port=9443
+
+**윈도우 계열**
+
+> -javaagent:C:\whatap\whatap.agent.tracer-\#.\#.\#.jar -Dwhatap.port=9443
 
 #### **Jeus**
 
 ‘javaagent’ 방식을 적용하는 경우, 다음 절차를 통해 설치합니다.
 
-1. Jeus 설정 파일에서 JVM 옵션을 설정합니다
+1.Jeus 설정 파일에서 JVM 옵션을 설정합니다
 
 |  | 설정 파일 위치 |
 | :--- | :--- |
@@ -488,13 +497,13 @@ $WEBLOGIC\_HOME/user\_projects/domains/사용자도메인/bin/startWebLogic.sh\(
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-[![350](https://github.com/jinronara/IntegratedManual/raw/master/images/350.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/350.png)Figure 2. Jeus 6 예시
+![](../.gitbook/assets/350.png)
 
-1. 애플리케이션 서버를 재기동 시킵니다.
+2. 애플리케이션 서버를 재기동 합니다. 
 
-[![360](https://github.com/jinronara/IntegratedManual/raw/master/images/360.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/360.png)
+![](../.gitbook/assets/360.png)
 
-1. 애플리케이션 서버 로그와 에이전트 로그를 통해 에이전트가 정상적으로 기동하였는지, 에러가 발생하지 않았는지 확인합니다.
+3. 애플리케이션 서버 로그와 에이전트 로그를 통해 에이전트가 정상적으로 기동하였는지, 에러가 발생하지 않았는지 확인합니다.
 
 |  | 로그 파일 위치 |
 | :--- | :--- |
@@ -502,17 +511,17 @@ $WEBLOGIC\_HOME/user\_projects/domains/사용자도메인/bin/startWebLogic.sh\(
 | JEUS6 | $JEUS\_HOME/logs/$NODE\_NAME/JeusServer.log |
 | JEUS7 | $JEUS\_HOME/domains/$HOST\_NAME/servers/$NODE\_NAME/logs/JeusServer.log |
 
-JEUS7 예시
+**JEUS7 예시**
 
-\($JEUS\_HOME/domains/$HOST\_NAME/servers/$NODE\_NAME/logs/JeusServer.log\)[![370](https://github.com/jinronara/IntegratedManual/raw/master/images/370.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/370.png)
+> $JEUS\_HOME/domains/$HOST\_NAME/servers/$NODE\_NAME/logs/JeusServer.log
 
-1. 에이전트가 애플리케이션 서버의 종류와 애플리케이션 서버의 서비스 container명을 인식했는지 확인합니다.
+![](../.gitbook/assets/370.png)
 
-와탭 사이트에서 whatap.name과 whatap.type을 확인합니다. whatap.io 사이트에 로그인 &gt; “APM” 제품 선택 &gt; 프로젝트의 Application Servers 메뉴 선택 &gt; 설치한 JEUS 서버 &gt; Boot Environment 메뉴 선택을 통해 확인합니다.
+4. 에이전트가 애플리케이션 서버의 종류와 애플리케이션 서버의 서비스 container명을 인식했는지 확인합니다.
 
-whatap.type에는 애플리케이션 서버의 종류가 명시되어야 하며, whatap.name의 마지막 요소가 container이름 이어야 합니다.
+와탭 사이트에서 whatap.name과 whatap.type을 확인합니다. whatap.io 사이트에 로그인 &gt; “APM” 제품 선택 &gt; 프로젝트의 Application Servers 메뉴 선택 &gt; 설치한 JEUS 서버 &gt; Boot Environment 메뉴 선택을 통해 확인합니다. whatap.type에는 애플리케이션 서버의 종류가 명시되어야 하며, whatap.name의 마지막 요소가 container이름 이어야 합니다.
 
-[![380](https://github.com/jinronara/IntegratedManual/raw/master/images/380.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/380.png)
+![](../.gitbook/assets/380.png)
 
 #### **Jetty**
 
@@ -523,7 +532,7 @@ Jetty 실행 스크립트
 * $JETTY\_HOME/bin/jetty.sh 파일에 JVM 파일 옵션을 추가합니다.
   * 이후 본 문서에서 $JETTY\_HOME은 Jetty 설치 경로를 가리킵니다.
 
-[![390](https://github.com/jinronara/IntegratedManual/raw/master/images/390.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/390.png)
+![](../.gitbook/assets/390.png)
 
 * java 실행 옵션에 설정
   * $JETTY\_HOME/bin 경로로 이동 후, 하기 옵션을 적용하여 Jetty를 기동합니다.
@@ -566,6 +575,10 @@ Resin4.x 예시
 | RESIN4.x | $RESIN\_HOME/log/jvm-app-\#.log |
 
 #### Play framework
+
+$PLAY\_HOME/framework/build 에 에이전트 옵션을 설정합니다. 
+
+> Play 의 경우 기본 설정 이외에  -Dwhatap.play2=2.2.6 옵션이 추가됩니다.
 
 play2.2.6 예시
 
@@ -818,7 +831,7 @@ cypher_level=256
 
 설정을 추가한 후 WAS를 재기동합니다.
 
-#### **에이전트 Ping**
+### **에이전트 Ping**
 
 모니터링 기능을 적용하기 앞서 Tracer와 서버 간의 통신에 문제가 없는지 확인하기 위한 기능을 제공합니다. 사용자는 ping.sh를 실행하여 에이전트를 통해 가상의 모니터링 정보를 서버로 송신할 수 있으며, whatap.io 사이트에 정보가 정상 송신되는 지의 여부를 확인할 수 있습니다.
 
@@ -839,19 +852,17 @@ WhaTap Agent version 0.4.5 20161207
 (생략)
 ```
 
-5.3.7.2.2. 확인 에이전트가 설치된 서버와 수집 서버 간의 통신이 정상적으로 수행되었다면 whatap.io 사이트에서 하기와 같은 화면을 확인할 수 있습니다.
+#### 확인 
 
-* 대시보드
+에이전트가 설치된 서버와 수집 서버 간의 통신이 정상적으로 수행 다면 whatap.io 사이트에서 하기와 같은 화면을 확인할 수 있습니다.
 
-가상의 액티브 트랜잭션 수가 30으로 나타납니다.
+* 대시보드 : 가상의 액티브 트랜잭션 수가 30으로 나타납니다.
 
-[![470](https://github.com/jinronara/IntegratedManual/raw/master/images/470.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/470.png)
+![](../.gitbook/assets/2018-09-17-6.15.19.png)
 
-* 애플리케이션 서버
+* 애플리케이션 서버 : 서버로 데이터를 송신중인 가상의 에이전트가 NET-PING-{PID}의 애플리케이션 명으로 등록되어 있는 것을 확인할 수 있습니다.
 
-서버로 데이터를 송신중인 가상의 에이전트가 NET-PING-{PID}의 애플리케이션 명으로 등록되어 있는 것을 확인할 수 있습니다.
-
-[![480](https://github.com/jinronara/IntegratedManual/raw/master/images/480.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/480.png)
+![](../.gitbook/assets/480.png)
 
 ## 제약 사항
 

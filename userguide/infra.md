@@ -400,15 +400,55 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.
 
 ![](../.gitbook/assets/1360.png)
 
-| 이름 | 설명 | 단위 |
-| :--- | :--- | :--- |
-| Memory Usage | Windows: Total Memory - Available Memory Linux: Total Memory - \(buffer + cache + free\) CentOS7: 100 - Memory Available | %, Byte |
-| Memory Free | Windows: Available Memory Linux: Process가 사용가능한 메모리 중 buffer, cache를 제외한 용량 CentOS7 계열: SWAP 증가 없이 프로세스가 사용할 수 있는 메모리 | % |
-| Memory Available | Windows: 시스템 상에서 사용 가능한 메모리 Linux: 사용 가능한 메모리 CentOS: SWAP 증가 없이 프로세스가 사용할 수 있는 메모리 | % |
-| Memory Swap Used | Swap 영역 사용량 | %, Byte |
-| Memory Page Faults | 메모리 공간에 존재하지 않는 코드나 데이터를 요청 시 발생하는 Soft Page Fault+Hard Page Fault | 개수 |
-
-#### 네트워크 상세 정보
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">이름</th>
+      <th style="text-align:left">설명</th>
+      <th style="text-align:left">단위</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">Memory Usage</td>
+      <td style="text-align:left">
+        <p>Windows: Total Memory - Available Memory</p>
+        <p>Linux: Total Memory - (buffer + cache + free)</p>
+        <p>CentOS7: 100 - Memory Available</p>
+      </td>
+      <td style="text-align:left">%, Byte</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Memory Free</td>
+      <td style="text-align:left">
+        <p>Windows: Available Memory</p>
+        <p>Linux: Process가 사용가능한 메모리 중 buffer, cache를 제외한 용량</p>
+        <p>CentOS7 계열: SWAP 증가 없이 프로세스가 사용할 수 있는 메모리</p>
+      </td>
+      <td style="text-align:left">%</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Memory Available</td>
+      <td style="text-align:left">
+        <p>Windows: 시스템 상에서 사용 가능한 메모리</p>
+        <p>Linux: 사용 가능한 메모리</p>
+        <p>CentOS: SWAP 증가 없이 프로세스가 사용할 수 있는 메모리</p>
+      </td>
+      <td style="text-align:left">%</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Memory Swap Used</td>
+      <td style="text-align:left">Swap 영역 사용량</td>
+      <td style="text-align:left">%, Byte</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Memory Page Faults</td>
+      <td style="text-align:left">메모리 공간에 존재하지 않는 코드나 데이터를 요청 시 발생하는 Soft Page Fault+Hard Page Fault</td>
+      <td
+      style="text-align:left">개수</td>
+    </tr>
+  </tbody>
+</table>#### 네트워크 상세 정보
 
 서버 상세 정보의 Network 우측 See Details를 통해 상세 페이지로 들어올 수 있습니다.
 
@@ -456,16 +496,58 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.
 
 ![](../.gitbook/assets/1410.png)
 
-| 번호 | 이름 | 설명 | 단위 |
-| :--- | :--- | :--- | :--- |
-| 1 | 프로세스 개요 | PID, 프로세스명, CPU/Memory/RSS 사용률 및 사용자 권한을 확인 해당 프로세스가 한 개 이상 실행될 경우 추가적으로 리스트업 RSS: 메모리 내부에서 프로세스가 차지하는 메모리의 양 |  |
-| 2 | CPU Used\(%\) | 프로세스가 사용한 CPU 시간의 백분율 | % |
-| 3 | Memory Used\(%\) | 프로세스가 사용한 메모리 비율 | % |
-| 4 | I/O Used \(Bps\) | Windows: File, Network, Device로부터 발생한 IO 대역폭 | bps |
-| 5 | IP Used \(Count\) | 같은 이름의 프로세스에서 사용 중인 Listen Port 및 연결 개수 | count |
-| 6 | File Used \(Byte\) | 같은 이름의 프로세스에서 Open한 파일 이름과 크기 | byte |
-
-## 대시보드 {#user-content-대시보드}
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">번호</th>
+      <th style="text-align:left">이름</th>
+      <th style="text-align:left">설명</th>
+      <th style="text-align:left">단위</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">1</td>
+      <td style="text-align:left">프로세스 개요</td>
+      <td style="text-align:left">
+        <p>PID, 프로세스명, CPU/Memory/RSS 사용률 및 사용자 권한을 확인</p>
+        <p>해당 프로세스가 한 개 이상 실행될 경우 추가적으로 리스트업</p>
+        <p>RSS: 메모리 내부에서 프로세스가 차지하는 메모리의 양</p>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">2</td>
+      <td style="text-align:left">CPU Used(%)</td>
+      <td style="text-align:left">프로세스가 사용한 CPU 시간의 백분율</td>
+      <td style="text-align:left">%</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">3</td>
+      <td style="text-align:left">Memory Used(%)</td>
+      <td style="text-align:left">프로세스가 사용한 메모리 비율</td>
+      <td style="text-align:left">%</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">4</td>
+      <td style="text-align:left">I/O Used (Bps)</td>
+      <td style="text-align:left">Windows: File, Network, Device로부터 발생한 IO 대역폭</td>
+      <td style="text-align:left">bps</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">5</td>
+      <td style="text-align:left">IP Used (Count)</td>
+      <td style="text-align:left">같은 이름의 프로세스에서 사용 중인 Listen Port 및 연결 개수</td>
+      <td style="text-align:left">count</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">6</td>
+      <td style="text-align:left">File Used (Byte)</td>
+      <td style="text-align:left">같은 이름의 프로세스에서 Open한 파일 이름과 크기</td>
+      <td style="text-align:left">byte</td>
+    </tr>
+  </tbody>
+</table>## 대시보드 {#user-content-대시보드}
 
 ### Compound Eye
 
