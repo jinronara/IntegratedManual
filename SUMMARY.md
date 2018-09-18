@@ -2,7 +2,7 @@
 
 * [와탭 모니터링 통합 가이드](README.md)
 * [문서 기본 \(준비 중\)](basicofdoc.md)
-* [와탭 모니터링 소개 \(준비 중\)](introducetowhatapmonitoring.md)
+* [와탭 모니터링 소개](introducetowhatapmonitoring.md)
 * [모니터링 서비스 개요](summaryofmonitoringsvc.md)
 * [퀵스타트 가이드](quickstartguide/README.md)
   * [Java](quickstartguide/java.md)
