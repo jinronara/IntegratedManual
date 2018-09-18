@@ -309,6 +309,48 @@ WhaTap Agent version 0.3.9 20161115
 
 ### **애플리케이션 서버 별 JVM 옵션 설정 위치**
 
+{% tabs %}
+{% tab title="SpringBoot" %}
+java -javaagent:{whatap.agent.tracer-x.x.x.jar의 full path} -jar {application jar}
+{% endtab %}
+
+{% tab title="Tomcat" %}
+$CATALINA\_HOME/bin/catalina.sh\(bat\)
+{% endtab %}
+
+{% tab title="Jboss < v5.0" %}
+$JBOSS\_HOME/bin/run.conf
+{% endtab %}
+
+{% tab title="Jboss > v6.0" %}
+$JBOSS\_HOME/bin/standalone.conf\(domain.conf\)
+{% endtab %}
+
+{% tab title="WebLogic" %}
+$WEBLOGIC\_HOME/user\_projects/domains/_{domain\_name}_/bin/startWebLogic.sh\(bat\)
+{% endtab %}
+
+{% tab title="WebSphere" %}
+Admin  Console 사용 
+{% endtab %}
+
+{% tab title="Jeus < v6.0" %}
+$JEUS\_HOME/config/$hostname/JEUSMain.xml
+{% endtab %}
+
+{% tab title="Jeus > v7.0" %}
+$JEUS\_HOME/domains/jeus\_domain/config.xml
+{% endtab %}
+
+{% tab title="Jetty" %}
+watch\_jetty.sh\(bat\)
+{% endtab %}
+
+{% tab title="Play2" %}
+$PLAY\_HOME/framework/build
+{% endtab %}
+{% endtabs %}
+
 | 애플리케이션 서버 | 설정 위치 |
 | :--- | :--- |
 | SpringBoot | java -javaagent:{whatap.agent.tracer-x.x.x.jar의 full path} -jar {application jar} |
