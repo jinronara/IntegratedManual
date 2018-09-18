@@ -14,7 +14,7 @@
 
 {% hint style="warning" %}
 attach 방식은 com.sun.tools.attach.VirtualMachine API를 활용하므로 Java6 이상에서 동작합니다.  
-IBM JDK 의 경우 attach 방식에서 트랜잭션 정보가 수집되지 않는 제약이 있습니다. 
+IBM JDK 의 경우 attach 방식에서 트랜잭션 정보가 수집되지 않는 제약이 있습니다.
 {% endhint %}
 
 ### **javaagent + onetime attach 방식**
@@ -318,19 +318,17 @@ WhaTap Agent version 0.3.9 20161115
 | JBoss 7.0 이상 EAP 6.0이상 | $JBOSS\_HOME/bin/standalone.conf\(domain.conf\) |
 | WebLogic | $WEBLOGIC\_HOME/user\_projects/domains/사용자도메인/bin/startWebLogic.sh\(bat\) |
 | WebSphere | admin console 통해 |
-
+|
 1. Server &gt; Server Types &gt; WebSphere application servers &gt; 서버 선택
 2. 서버 Configuration탭 &gt; Server Infrastructure의 Java and Process Management &gt; Process definition 선택
 3. Additional Properties의 Java Virtual Machine 선택
-4. Generic JVM arguments 편집 \|
+4. Generic JVM arguments 편집
+|
 
-   \| Jeus7 \| $JEUS\_HOME/domains/jeus\_domain/config.xml \|
-
-   \| Jeus6 \| $JEUS\_HOME/config/$hostname/JEUSMain.xml \|
-
-   \| Jetty \| watch\_jetty.sh\(bat\) \|
-
-   \| play2 \| $PLAY\_HOME/framework/build \|
+| Jeus7 | $JEUS\_HOME/domains/jeus\_domain/config.xml |
+| Jeus6 | $JEUS\_HOME/config/$hostname/JEUSMain.xml |
+| Jetty | watch\_jetty.sh\(bat\) |
+| play2 | $PLAY\_HOME/framework/build |
 
 #### **SpringBoot**
 
@@ -501,7 +499,7 @@ $WEBLOGIC\_HOME/user\_projects/domains/사용자도메인/bin/startWebLogic.sh\(
 
 ![](../.gitbook/assets/350.png)
 
-2. 애플리케이션 서버를 재기동 합니다. 
+2. 애플리케이션 서버를 재기동 합니다.
 
 ![](../.gitbook/assets/360.png)
 
@@ -578,7 +576,7 @@ Resin4.x 예시
 
 #### Play framework
 
-$PLAY\_HOME/framework/build 에 에이전트 옵션을 설정합니다. 
+$PLAY\_HOME/framework/build 에 에이전트 옵션을 설정합니다.
 
 > Play 의 경우 기본 설정 이외에  -Dwhatap.play2=2.2.6 옵션이 추가됩니다.
 
@@ -854,7 +852,7 @@ WhaTap Agent version 0.4.5 20161207
 (생략)
 ```
 
-#### 확인 
+#### 확인
 
 에이전트가 설치된 서버와 수집 서버 간의 통신이 정상적으로 수행 다면 whatap.io 사이트에서 하기와 같은 화면을 확인할 수 있습니다.
 
@@ -1041,4 +1039,3 @@ JDK 6 이상 버전에서 지원되는 JBOSS Comunity, EAP, Wildfly의 모든 �
 | :--- | :--- | :--- | :--- | :--- |
 | Mysql | mysql-connector-java-5.1.39-bin.jar | 5.1.39 | JDK 1.7.0\_80 | ok |
 | Oracle | ojdbc6-11.2.0.2.0.jar | 11.2.0.2.0 | JDK 1.7.0\_80 | ok |
-
