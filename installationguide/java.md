@@ -317,14 +317,7 @@ WhaTap Agent version 0.3.9 20161115
 | JBoss 5.0 이하 | $JBOSS\_HOME/bin/run.conf |
 | JBoss 7.0 이상 EAP 6.0이상 | $JBOSS\_HOME/bin/standalone.conf\(domain.conf\) |
 | WebLogic | $WEBLOGIC\_HOME/user\_projects/domains/사용자도메인/bin/startWebLogic.sh\(bat\) |
-| WebSphere | admin console 통해 |
-|
-1. Server &gt; Server Types &gt; WebSphere application servers &gt; 서버 선택
-2. 서버 Configuration탭 &gt; Server Infrastructure의 Java and Process Management &gt; Process definition 선택
-3. Additional Properties의 Java Virtual Machine 선택
-4. Generic JVM arguments 편집
-|
-
+| WebSphere | Admin console 사용 |
 | Jeus7 | $JEUS\_HOME/domains/jeus\_domain/config.xml |
 | Jeus6 | $JEUS\_HOME/config/$hostname/JEUSMain.xml |
 | Jetty | watch\_jetty.sh\(bat\) |
