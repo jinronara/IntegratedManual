@@ -246,24 +246,6 @@ Debian 6.0 이상
 
 ![](.gitbook/assets/2018-09-18-2.04.43.png)
 
-## 성공사례 {#user-content-성공사례}
-
-### 클라우드 지원 사례 {#user-content-클라우드-지원-사례}
-
-### 은행권 사례 {#user-content-은행권-사례}
-
-### 통신사 사례 {#user-content-통신사-사례}
-
-## 경쟁사 비교 {#user-content-경쟁사-비교}
-
-## 설치 방식 {#user-content-설치-방식}
-
-### SaaS {#user-content-saas}
-
-### On-Premise {#user-content-on-premise}
-
-### Hybrid {#user-content-hybrid}
-
 ## 서비스 소개
 
 ### 어플리케이션 모니터링
