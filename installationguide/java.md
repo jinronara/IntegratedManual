@@ -42,8 +42,7 @@ IBM JDK 의 경우 attach 방식에서 트랜잭션 정보가 수집되지 않�
 
 1. 애플리케이션 서버 실행 스크립트에 JVM 옵션으로 -javaagent 옵션에 Tracer의 파일 경로를 추가합니다.
 2. 애플리케이션 서버를 재기동 시 Tracer 가 애플리케이션 서버의 하위 프로세스로 실행되어 성능 수집 코드를 주입합니다.
-
-* Tracer: 성능 데이터 수집을 위한 모듈
+3. Tracer: 성능 데이터 수집을 위한 모듈
 
 ## **구성 파일**
 
@@ -323,7 +322,7 @@ WhaTap Agent version 0.3.9 20161115
 | Jetty | watch\_jetty.sh\(bat\) |
 | play2 | $PLAY\_HOME/framework/build |
 
-#### **SpringBoot**
+### **SpringBoot**
 
 jar 형태로 패키징하여 실행하는 경우 jvm 옵션에 -javaagent를 추가합니다.
 
@@ -331,7 +330,7 @@ jar 형태로 패키징하여 실행하는 경우 jvm 옵션에 -javaagent를 �
 java -javaagent:{whatap.agent.tracer-x.x.x.jar의 full path} -jar {application jar}
 ```
 
-#### **Tomcat on Windows Service**
+### **Tomcat on Windows Service**
 
 Windows 계열 OS에 binary로 설치하여 SYSTEM 계정으로 실행한 경우, ‘javaagent’ 방식으로 Tomcat을 실행합니다.
 
@@ -339,11 +338,11 @@ Windows 계열 OS에 binary로 설치하여 SYSTEM 계정으로 실행한 경우
 
 ![](../.gitbook/assets/270.png)
 
-#### **JBoss**
+### **JBoss**
 
-**javaagent + onetime attach 방식**
+#### **javaagent + onetime attach 방식**
 
-1. javaagent 방식과 동일하게 JVM 옵션을 추가합니다.
+1.javaagent 방식과 동일하게 JVM 옵션을 추가합니다.
 
 standalone.sh 설정 추가 예
 
@@ -356,14 +355,14 @@ JAVA_OPTS="${JAVA_OPTS} -javaagent:${WHATAP_JAR} -Djboss.modules.system.pkgs=wha
 ########## WHATAP ############
 ```
 
-1. JBOSS의 PID\(프로세스 ID\)를 확인합니다.
+2. JBOSS의 PID\(프로세스 ID\)를 확인합니다.
 
 ```text
 $ ps -ef | grep jboss | grep -v 'grep'
 ec2-user 27757 27714 13 12:21 pts/2    00:00:03 /jdk1.7.0_79/bin/java -D[Standalone] -server -XX:+UseCompressedOops -XX:+TieredCompilation -Djboss.modules.system.pkgs=whatap -Dorg.jboss.boot.log.file=/jboss-as-7.1.1.Final/standalone/log/boot.log -Dlogging.configuration=file:/jboss-as-7.1.1.Final/standalone/configuration/logging.properties -jar /jboss-as-7.1.1.Final/jboss-modules.jar -mp /jboss-as-7.1.1.Final/modules -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -Djboss.home.dir=/jboss-as-7.1.1.Final
 ```
 
-1. attach.sh 스크립트를 실행합니다.
+3. attach.sh 스크립트를 실행합니다.
 
 ```text
 $ ./attach.sh 27757
@@ -382,16 +381,16 @@ Java Version: 1.7.0_79
 AttachAgent Success :  [27757] /jboss-as-7.1.1.Final/jboss-modules.jar -mp /jboss-as-7.1.1.Final/modules -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -Djboss.home.dir=/jboss-as-7.1.1.Final
 ```
 
-**javaagent 방식**
+#### **javaagent 방식**
 
-JVM 옵션에 -javaagent 및 -Djboss.modules.system.pkgs에 설정을 추가합니다.
+1.JVM 옵션에 -javaagent 및 -Djboss.modules.system.pkgs에 설정을 추가합니다.
 
 | 애플리케이션 서버 버전 | JVM 옵션 |
 | :--- | :--- |
 | 공통 | JVM 옵션의 -javaagent에 Tracer 설정 |
 | JBOSS 7.0 이상 EAP 6.0이상 | JVM 옵션의 -Djboss.modules.system.pkgs 환경 변수에 “whatap” prefix 추가 |
 
-standalone.sh 설정 추가 예
+2. standalone.sh 설정 추가 예
 
 ```text
 #!/bin/sh
@@ -402,24 +401,26 @@ JAVA_OPTS="${JAVA_OPTS} -javaagent:${WHATAP_JAR} -Djboss.modules.system.pkgs=wha
 ########## WHATAP ############
 ```
 
-“-Djboss.modules.system.pkgs=whatap” 미설정 시 에러 메세지
+3. “-Djboss.modules.system.pkgs=whatap” 미설정 시 에러 메세지
 
 ```text
 11:38:46,148 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/].[default]] (http--0.0.0.0-8080-1) Servlet.service() for servlet default threw exception: java.lang.ClassNotFoundException: whatap.agent.trace.TraceMain from [Module "javax.servlet.api:main" from local module loader @67d7d474 (roots: /jboss-as-7.1.1.Final/modules)]
 ```
 
-#### **WebLogic**
+### **WebLogic**
 
-javaagnet 방식 적용 시의 설정 예시를 제시합니다.설정 위치
+1.javaagnet 방식 적용 시의 설정 예시를 제시합니다.
 
+설정 위치  
 $WEBLOGIC\_HOME/user\_projects/domains/사용자도메인/bin/startWebLogic.sh\(bat\)
 
-* javaagent 프로퍼티 설정을 추가합니다.
-  * $WEBLOGIC\_HOME은 WebLogic 설치 경로를 가리킵니다.
+2. javaagent 프로퍼티 설정을 추가합니다.
+
+* $WEBLOGIC\_HOME은 WebLogic 설치 경로를 가리킵니다.
 
 ![](../.gitbook/assets/280.png)
 
-#### **WebSphere**
+### **WebSphere**
 
 에이전트 방식만 지원하며, Web Console을 통한 설정 방법을 제시합니다.
 
@@ -447,17 +448,15 @@ $WEBLOGIC\_HOME/user\_projects/domains/사용자도메인/bin/startWebLogic.sh\(
 
 ![](../.gitbook/assets/340.png)
 
-
-
-**리눅스 계열**
+#### **리눅스 계열**
 
 > -javaagent:/home/wasadmin/whatap/whatap.agent.tracer-\#.\#.\#.jar -Dwhatap.port=9443
 
-**윈도우 계열**
+#### **윈도우 계열**
 
 > -javaagent:C:\whatap\whatap.agent.tracer-\#.\#.\#.jar -Dwhatap.port=9443
 
-#### **Jeus**
+### **Jeus**
 
 ‘javaagent’ 방식을 적용하는 경우, 다음 절차를 통해 설치합니다.
 
@@ -516,7 +515,7 @@ $WEBLOGIC\_HOME/user\_projects/domains/사용자도메인/bin/startWebLogic.sh\(
 
 ![](../.gitbook/assets/380.png)
 
-#### **Jetty**
+### **Jetty**
 
 JVM 옵션에 -javaagent와 -Dwhatap.port를 추가합니다.
 
@@ -534,7 +533,7 @@ Jetty 실행 스크립트
 $ java -javaagent:/home/vagrant/whatap/whatap.agent.tracer-0.3.0.jar -Dwhatap.port=8080 -jar start.jar &
 ```
 
-#### **Resin**
+### **Resin**
 
 ‘javaagent’ 방식을 적용하는 경우, 다음 절차를 통해 설치합니다.
 
@@ -567,11 +566,11 @@ Resin4.x 예시
 | 에이전트 | $WHATAP\_HOME/logs/whatap-{SERVER\_NAME}-{DATE}.log |
 | RESIN4.x | $RESIN\_HOME/log/jvm-app-\#.log |
 
-#### Play framework
+### Play framework
 
 $PLAY\_HOME/framework/build 에 에이전트 옵션을 설정합니다.
 
-> Play 의 경우 기본 설정 이외에  -Dwhatap.play2=2.2.6 옵션이 추가됩니다.
+> Play 의 경우 기본 설정 이외에 -Dwhatap.play2=2.2.6 옵션이 추가됩니다.
 
 play2.2.6 예시
 
@@ -1032,3 +1031,4 @@ JDK 6 이상 버전에서 지원되는 JBOSS Comunity, EAP, Wildfly의 모든 �
 | :--- | :--- | :--- | :--- | :--- |
 | Mysql | mysql-connector-java-5.1.39-bin.jar | 5.1.39 | JDK 1.7.0\_80 | ok |
 | Oracle | ojdbc6-11.2.0.2.0.jar | 11.2.0.2.0 | JDK 1.7.0\_80 | ok |
+
