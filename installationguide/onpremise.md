@@ -3,7 +3,7 @@
 ## 안내사항
 
 수집 서버가 설치될 장비의 IP 및 수집 규모에 따른 라이센스 발급을 진행합니다.  
-라이센스 발급은 license@whatap.io에 필요사항을 기술하여 요청합니다.
+라이센스 발급은 license@whatap.io 에 필요사항을 기술하여 요청합니다.
 
 * 설치 환경 식별을 위한 명칭: 고객사 + 사업명
 * 고객사 담당자: 이름, 전화번호, 이메일
@@ -27,7 +27,7 @@
   <thead>
     <tr>
       <th style="text-align:center">구분</th>
-      <th style="text-align:center">데이터 보관기</th>
+      <th style="text-align:center">데이터 보관기간</th>
       <th style="text-align:center">Disk 용</th>
     </tr>
   </thead>
@@ -941,6 +941,78 @@ $ cd $WHATAP_PACKAGE $ rm -rf db/*.db
 ### 설치 파일 다운로드 
 
 문의처로 요청시 Google Drive 및 AWS S3를 통해 제공 \(라이선스 요청 시 별도 제공\)
+
+### MySQL DB 사용
+
+수집된 모니터링 데이터는 RDB 를 사용하지 않고 와탭 만의 독자적인 저장구조를 가지지만 이외 계정 정보, 구성 정보, 알림 발송 이력은 내장 DB인 H2를 사용합니다. 이를 MySQL DB로 변경하는 방법 입니다. 
+
+1.계정 정보 및 구성 정보의 MySQL 사용
+
+${WHATAP\_HOME}/conf/account.conf 에서 DB 항목을  다음과 같이 변경합니다. 
+
+_MySQL에서 account 명의 DB와 CRUD 권한이 있는 {whatap\_dbuser} 가 존재 해야 합니다._ 
+
+{% code-tabs %}
+{% code-tabs-item title="/apps/whatap/conf/account.conf" %}
+```bash
+...
+
+# DB
+# Relative path from Home or Absolute path
+#h2.file.path=./db
+#db_driver=org.h2.Driver
+#h2_auto_server=true
+#h2_bind_address=127.0.0.1
+#jpa_ddl_auto=update
+#db_name=account
+#db_name_project=account
+
+# DB for MySQL
+db_driver=com.mysql.jdbc.Driver
+jdbc_url=jdbc:mysql://127.0.0.1:3306
+db_username={whatap_dbuser}
+db_password={whatap_dbpassword}
+db_name=account
+db_name_project=account
+
+...
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+2. 알람발송 이력의 MySQL 사용
+
+${WHATAP\_HOME}/conf/notihub.conf 에서 DB 항목을 다음과 같이 변경합니다.
+
+{% code-tabs %}
+{% code-tabs-item title="/apps/whatap/conf/notihub.conf" %}
+```bash
+...
+
+# H2 DB
+# Relative path from Home or Absolute path
+#h2.file.path=./db
+#h2_auto_server=true
+#db_driver_event=org.h2.Driver
+#h2_bind_address=0.0.0.0
+
+db_driver_event=com.mysql.jdbc.Driver
+jdbc_url_event=jdbc:mysql://192.168.122.201:3306
+db_username_event=whatap
+db_password_event=userpassword
+db_name_event=account
+
+...
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+3. 관련 서비스를 재기동 합니다. 
+
+```bash
+$ ./control.sh account restart
+$ ./control.sh notihub restart
+```
 
 ### 문의처 
 
