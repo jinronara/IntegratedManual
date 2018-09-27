@@ -430,6 +430,467 @@ front 서버의 기동이 정상 완료되면, admin@whatap.io / admin 계정으
 * 프로젝트 라이선스 발급 : 프로젝트 카드 클릭 시의 설치 안내 페이지에서 라이선스 발급 버튼을 클릭하고, 이상 현상 발생 여부를 확인합니다. 
 * 에이전트를 적용하고 기능 체크를 수행합니다.
 
+## 확장형 설치 예제
+
+### 환경
+
+예제에 사용 되는 환경은 다음과 같습니다. 
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">호스트명</th>
+      <th style="text-align:left">항목</th>
+      <th style="text-align:left">내</th>
+      <th style="text-align:left">비</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">vmsvr01</td>
+      <td style="text-align:left">용도</td>
+      <td style="text-align:left">front 서버</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">vmsvr01</td>
+      <td style="text-align:left">OS</td>
+      <td style="text-align:left">X86 Linux</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">vmsvr01</td>
+      <td style="text-align:left">IP</td>
+      <td style="text-align:left">192.168.122.21</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">vmsvr01</td>
+      <td style="text-align:left">구동 서비스</td>
+      <td style="text-align:left">
+        <p>Eureka</p>
+        <p>Front</p>
+        <p>Account</p>
+        <p>Notihub</p>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">vmsvr02</td>
+      <td style="text-align:left">용도</td>
+      <td style="text-align:left">yard 서버</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">vmsvr02</td>
+      <td style="text-align:left">OS</td>
+      <td style="text-align:left">X86 Linux</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">vmsvr02</td>
+      <td style="text-align:left">IP</td>
+      <td style="text-align:left">192.168.122.22</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">vmsvr02</td>
+      <td style="text-align:left">구동 서비스</td>
+      <td style="text-align:left">
+        <p>Keeper
+          <br />Gateway</p>
+        <p>Proxy</p>
+        <p>Yard</p>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+  </tbody>
+</table>### 설치 절차
+
+예제 환경의 설치 절차는 다음과  같습니다. 방화벽, JDK 와 같은 제반 환경은 사전 구성되어 있어야 합니다.  
+
+#### Front 서버 설치
+
+1.설치 파일 업로드
+
+```bash
+whatap@vmsvr01:/apps$ ls -alrt
+합계 769828
+drwxr-xr-x 25 root   root        4096  8월 14 17:15 ..
+drwxr-xr-x  2 whatap whatap      4096  9월 27 12:08 .
+-rw-r--r--  1 whatap whatap 788295680  9월 27 12:08 whatap_multi-1.1.4.2092.tar
+```
+
+2. 압축 해제 
+
+```bash
+whatap@vmsvr01:/apps$ tar -xvf whatap_multi-1.1.4.2092.tar
+```
+
+3. 실행 파일 권한 추가
+
+```bash
+whatap@vmsvr01:/apps/whatap/bin$ chmod +x *sh
+```
+
+4. Linux 환경에서 불필요 파일 제거
+
+```bash
+whatap@vmsvr01:/apps/whatap/bin$ rm -f *.bat *.exe *solaris.sh
+```
+
+5. Yard 관련 모듈 제거 - \(선택사항\)
+
+_운영 과정에서 발생 할 수 있는 오류요소 제거를 위해 Front 에서 사용 되지 않는 실행 파일을 삭제합니다._ 
+
+```bash
+whatap@vmsvr01:/apps/whatap/bin$ rm -f gateway.sh keeper.sh *yard* proxy.sh billing.sh billing.sh adaptor.sh start.sh stop.sh noti.sh
+```
+
+6. Account 설정
+
+{} 내 항목을 아래 값으로 변경합니다. 
+
+| 항목 | 값 |
+| :--- | :--- |
+| {EUREKA\_IP\_accessable\_from\_ACCOUNT} | 192.168.122.21 |
+| {ACCOUNT} | ACCOUNT |
+| {ACCOUNT\_IP\_accessable\_from\_GATEWAY} | 192.168.122.21 |
+| {FIRST\_REGION\_ID/NAME} | REGION-01 |
+| {FIRST\_REGION\_DISPLAY\_NAME} | REGION-01 |
+| {PROXY\_IPs\_accessable\_from\_AGENTS} | 192.168.122.22 |
+| {ip address can be showed by ifconfig/ipconfig} | 192.168.122.21 |
+| {server license} | 발급된 라이센스  |
+
+{% code-tabs %}
+{% code-tabs-item title="/apps/whatap/conf/account.conf" %}
+```bash
+# Eureka
+# eureka.addr=http://whatap:1qaz$RFV@{EUREKA_IP_accessable_from_ACCOUNT}:6761/eureka/
+# eureka.hostname={ACCOUNT}
+# eureka_client_ip_address={ACCOUNT_IP_accessable_from_GATEWAY}
+eureka.addr=http://whatap:1qaz$RFV@192.168.122.21:6761/eureka/
+eureka.hostname=ACCOUNT
+eureka_client_ip_address=192.168.122.21
+ribbon_protocol=http
+prefer_ip_address=true
+
+# Region Proxy
+#region.id={FIRST_REGION_ID/NAME}
+#region.name={FIRST_REGION_DISPLAY_NAME}
+#region.proxy.address={PROXY_IPs_accessable_from_AGENTS}
+region.id=REGION-01
+region.name=REGION-01
+region.proxy.address=192.168.122.22
+prefer_ip_address=true
+
+# DB
+# Relative path from Home or Absolute path
+h2.file.path=./db
+db_driver=org.h2.Driver
+h2_auto_server=true
+h2_bind_address=127.0.0.1
+jpa_ddl_auto=update
+db_name=account
+db_name_project=account
+
+# Admin Account
+domain=apm.whatap.io
+database.init=true
+admin.email=admin@whatap.io
+admin.password=admin
+
+# License
+owner=192.168.122.21
+license=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+7. Front 설정
+
+{} 내 항목을 아래 값으로 변경합니다. 
+
+| 항목 | 값 |
+| :--- | :--- |
+| {EUREKA\_IP\_accessable\_from\_FRONT} | 192.168.122.21 |
+| {FRONT} | FRONT |
+| {FRONT\_IP} | 192.168.122.21 |
+
+{% code-tabs %}
+{% code-tabs-item title="/apps/whatap/conf/front.conf" %}
+```bash
+# Eureka
+#eureka.addr=http://whatap:1qaz$RFV@{EUREKA_IP_accessable_from_FRONT}:6761/eureka/
+#eureka.hostname={FRONT}
+#eureka_client_ip_address={FRONT_IP}
+eureka.addr=http://whatap:1qaz$RFV@192.168.122.21:6761/eureka/
+eureka.hostname=FRONT
+eureka_client_ip_address=192.168.122.21
+ribbon_protocol=http
+prefer_ip_address=true
+
+# Front Control
+standalone=false
+domain=apm.whatap.io
+whatap.admin=admin@whatap.io
+loginable=true
+sessionTimeoutSecs=-1
+login_footer_visible=false
+
+# NotiHub
+notihub.enable=true
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+8. Notihub 설정
+
+{} 내 항목을 아래 값으로 변경합니다. 
+
+| 항목 | 값 |
+| :--- | :--- |
+| {EUREKA\_IP\_accessable\_from\_FRONT} | 192.168.122.21 |
+| {NOTIHUB} | NOTIHUB |
+| {NOTIHUB\_IP} | 192.168.122.21 |
+
+{% code-tabs %}
+{% code-tabs-item title="/apps/whatap/conf/notihub.conf" %}
+```bash
+# Eureka
+eureka.enable=true
+#eureka.addr=http://whatap:1qaz$RFV@{EUREKA_IP_accessable_from_NOTI}:6761/eureka/
+#eureka.hostname={NOTIHUB}
+#eureka_client_ip_address={NOTIHUB_ADDRESS}
+eureka.addr=http://whatap:1qaz$RFV@192.168.122.21:6761/eureka/
+eureka.hostname=NOTIHUB
+eureka_client_ip_address=192.168.122.21
+ribbon_protocol=http
+prefer_ip_address=true
+
+# H2 DB
+# Relative path from Home or Absolute path
+h2.file.path=./db
+h2_auto_server=true
+db_driver_event=org.h2.Driver
+h2_bind_address=0.0.0.0
+
+jpa_show_sql=false
+jpa_generate_ddl=true
+jpa_ddl_auto=update
+
+# Mail
+mail.sender=no-reply@whatap.io
+mail.smtp.debug=false
+mail.host=
+mail.username=
+mail.password=
+mail.smtp.protocol=smtp
+mail.port=25
+mail.smtp.auth=true
+mail.smtp.ssl.enable=false
+mail.smtp.starttls.enable=true
+mail.smtp.starttls.required=true
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+#### Yard 서버 설치
+
+1.설치 파일 업로드
+
+```bash
+whatap@vmsvr02:/apps$ ls -alrt
+합계 769828
+drwxr-xr-x 25 root   root        4096  8월 14 17:15 ..
+drwxr-xr-x  2 whatap whatap      4096  9월 27 12:08 .
+-rw-r--r--  1 whatap whatap 788295680  9월 27 12:08 whatap_multi-1.1.4.2092.tar
+```
+
+2. 압축 해제 
+
+```bash
+whatap@vmsvr02:/apps$ tar -xvf whatap_multi-1.1.4.2092.tar
+```
+
+3. 실행 파일 권한 추가
+
+```bash
+whatap@vmsvr02:/apps/whatap/bin$ chmod +x *sh
+```
+
+4. Linux 환경에서 불필요 파일 제거
+
+```bash
+whatap@vmsvr02:/apps/whatap/bin$ rm -rf *.bat *.exe *solaris.sh
+```
+
+5. Front 관련 항목 제거 - \(선택사항\)
+
+_운영 과정에서 발생 할 수 있는 오류요소 제거를 위해 Yard 에서 사용 되지 않는 실행 파일을 삭제합니다._ 
+
+```bash
+whatap@vmsvr02:/apps/whatap/bin$ rm -f account.sh eureka.sh adaptor.sh billing.sh noti* start.sh *front.sh
+```
+
+6. Gateway 설정
+
+{} 내 항목을 아래 값으로 변경합니다. 
+
+| 항목 | 값 |
+| :--- | :--- |
+| {EUREKA\_IP\_accessable\_from\_GATEWAY} | 192.168.122.21 |
+| {GATEWAY} | GATEWAY |
+| {GATEWAY\_IP\_accessable\_from\_ACCOUNT} | 192.168.122.22 |
+| {KEEPER\_IP\_accessable\_from\_GATEWAY} | 192.168.122.22 |
+| {REGION\_NAME\_displayed\_by\_SiteAdminPage} | REGION-01 |
+
+{% code-tabs %}
+{% code-tabs-item title="/apps/whatap/conf/gateway.conf" %}
+```bash
+# Eureka
+#eureka.addr=http://whatap:1qaz$RFV@{EUREKA_IP_accessable_from_GATEWAY}:6761/eureka/
+#eureka.hostname={GATEWAY}
+#eureka_client_ip_address={GATEWAY_IP_accessable_from_ACCOUNT}
+eureka.addr=http://whatap:1qaz$RFV@192.168.122.21:6761/eureka/
+eureka.hostname=GATEWAY
+eureka_client_ip_address=192.168.122.22
+prefer_ip_address=true
+
+# Keeper
+#keeper={KEEPER_IP_accessable_from_GATEWAY}:6789
+keeper=192.168.122.22:6789
+
+# Account 의 Region Value
+#region.name={REGION_NAME_displayed_by_SiteAdminPage}
+region.name=REGION-01
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+7. Proxy 설정
+
+{} 내 항목을 아래 값으로 변경합니다. 
+
+| 항목 | 값 |
+| :--- | :--- |
+| {KEEPER\_IP\_accessable\_from\_PROXY} | 192.168.122.22 |
+| {PROXY-01} | PROXY-01 |
+
+{% code-tabs %}
+{% code-tabs-item title="/apps/whatap/conf/proxy.conf" %}
+```bash
+# Keeper
+#keeper={KEEPER_IP_accessable_from_PROXY}:6789
+#server.name={PROXY-01}
+keeper=192.168.122.22:6789
+server.name=PROXY-01
+secure_file_name=secure.conf
+
+# Self Monitoring
+selfmon.enabled=false
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+8. Yard 설정
+
+{} 내 항목을 아래 값으로 변경합니다. 
+
+| 항목 | 값 |
+| :--- | :--- |
+| {KEEPER\_IP\_accessable\_from\_YARD} | 192.168.122.22 |
+| {YARD-01} | YARD-01 |
+| notihub=127.0.0.1:6500 | notihub=192.168.122.21:6500 |
+
+{% code-tabs %}
+{% code-tabs-item title="/apps/whatap/conf/yard.conf" %}
+```bash
+# Keeper
+keeper={KEEPER_IP_accessable_from_YARD}:6789
+server.name={YARD-01}
+
+# Port
+web.port=7710
+data.port=6610
+
+# Self Monitoring
+selfmon.enabled=false
+
+# Noti
+#net_noti_ip={NOTI_IP_accessable_from_YARD}
+#net_noti_port=6500
+
+# NotiHub
+notihub_enabled=true
+#notihub=127.0.0.1:6500
+notihub=192.168.122.21:6500
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+### 기동
+
+#### Front 서버 기동
+
+1.Eureka, Front, Account 기동
+
+```bash
+whatap@vmsvr01:/apps/whatap/bin$ ./control.sh eureka start
+whatap@vmsvr01:/apps/whatap/bin$ ./control.sh front start
+whatap@vmsvr01:/apps/whatap/bin$ ./control.sh account start
+```
+
+또는
+
+```bash
+whatap@vmsvr01:/apps/whatap/bin$ ./start_front.sh
+```
+
+2. Notihub 기동
+
+```bash
+whatap@vmsvr01:/apps/whatap/bin$ ./control.sh notihub start
+```
+
+#### Yard 서버 기동
+
+1.Keeper, Gateway, Proxy, Yard 기동
+
+```bash
+whatap@vmsvr02:/apps/whatap/bin$ ./control.sh keeper start
+whatap@vmsvr02:/apps/whatap/bin$ ./control.sh gateway start
+whatap@vmsvr02:/apps/whatap/bin$ ./control.sh proxy start
+whatap@vmsvr02:/apps/whatap/bin$ ./control.sh yard start
+```
+
+또는
+
+```bash
+whatap@vmsvr02:/apps/whatap/bin$ ./start_yard.sh
+```
+
+### 설치 확인
+
+브라우저에서 http://192.168.122.21:8080 에 admin@whatap.io 로 접속 후 확인합니다. 
+
+1.우측 상단의 계정명 클릭해 "사이트 관리" 메뉴로 이동
+
+![](../.gitbook/assets/2018-09-27-3.08.19.png)
+
+  
+2. 등록항목 확인 및 REGION-01 정보 확인
+
+NOTIHUB, REGION-01, FRONT, ACCOUNT 항목이 보여지는지 확인 후 REGION-01의 화살표 버튼을 클릭해 이
+
+![](../.gitbook/assets/2018-09-27-3.11.52.png)
+
+3. REGION-01 세부 정보 확인
+
+KEEPER, PROXY, YARD 정보가 확인되면 정상
+
+![](../.gitbook/assets/2018-09-27-3.17.40.png)
+
 ## FAQ 
 
 ### 라이선스 만기 및 연장 요청 
@@ -477,9 +938,9 @@ $ cd $WHATAP_PACKAGE $ rm -rf db/*.db
 | proxy.conf | data.port | 모니터링 데이터 수신 \(서버측\) | 6600 |
 | whatap.conf | whatap.server.port | 모니터링 데이터 전송\(에이전트\)  | 6600 |
 
-### 설치 자원 
+### 설치 파일 다운로드 
 
-Google Drive 및 AWS S3를 통해 제공 \(라이선스 요청 시 별도 제공\)
+문의처로 요청시 Google Drive 및 AWS S3를 통해 제공 \(라이선스 요청 시 별도 제공\)
 
 ### 문의처 
 
