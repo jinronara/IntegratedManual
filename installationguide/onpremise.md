@@ -21,7 +21,7 @@
 * OS : Ubuntu / CentOS 안정화 버전
 * CPU : 4Core 이상 \(최소 2Core\)
 * Memory : 16G 이상 \(최소 8G\)
-* Disk : 200G 이상 \(100TPS 기준 1GB/\)
+* Disk : 200G 이상 \(100TPS 기준 1GB/일\)
 
 <table>
   <thead>
@@ -134,7 +134,7 @@ EXE_JAR=ls $LIB_HOME/*.${SERVICE_NAME}.boot* | sort | tail -1 $JAVA_HOME/bin/jav
 {% endcode-tabs %}
 
 최소형 설치의 경우 front.sh, keeper.sh, yard.sh, proxy.sh 가 사용되고, 확장형 설치의 경우 eureka.sh, account.sh, front.sh / keeper.sh, yard.sh, proxy.sh, gateway.sh 가 사용됩니다.  
-부가적으로 이벤트 알림 설정을 추가할 경우 notihub.sh가 사용됩니다.
+부가적으로 이벤트 알림 설정을 추가할 경우 notihub.sh 가 사용됩니다.
 
 ### 설정편집
 
@@ -436,13 +436,15 @@ front 서버의 기동이 정상 완료되면, admin@whatap.io / admin 계정으
 
 예제에 사용 되는 환경은 다음과 같습니다. 
 
+#### UI 용도 Front \#1
+
 <table>
   <thead>
     <tr>
       <th style="text-align:left">호스트명</th>
       <th style="text-align:left">항목</th>
-      <th style="text-align:left">내</th>
-      <th style="text-align:left">비</th>
+      <th style="text-align:left">내용</th>
+      <th style="text-align:left">비고</th>
     </tr>
   </thead>
   <tbody>
@@ -475,6 +477,19 @@ front 서버의 기동이 정상 완료되면, admin@whatap.io / admin 계정으
       </td>
       <td style="text-align:left"></td>
     </tr>
+  </tbody>
+</table>#### 수집데이터 저장용도 Yard \#1
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">호스트명</th>
+      <th style="text-align:left">항목</th>
+      <th style="text-align:left">내용</th>
+      <th style="text-align:left">비고</th>
+    </tr>
+  </thead>
+  <tbody>
     <tr>
       <td style="text-align:left">vmsvr02</td>
       <td style="text-align:left">용도</td>
@@ -881,13 +896,13 @@ whatap@vmsvr02:/apps/whatap/bin$ ./start_yard.sh
   
 2. 등록항목 확인 및 REGION-01 정보 확인
 
-NOTIHUB, REGION-01, FRONT, ACCOUNT 항목이 보여지는지 확인 후 REGION-01의 화살표 버튼을 클릭해 이
+NOTIHUB, REGION-01, FRONT, ACCOUNT 항목이 보여지는지 확인 후 REGION-01의 화살표 버튼을 클릭해 이동
 
 ![](../.gitbook/assets/2018-09-27-3.11.52.png)
 
 3. REGION-01 세부 정보 확인
 
-KEEPER, PROXY, YARD 정보가 확인되면 정상
+KEEPER, PROXY, YARD 정보가 확인되면 정상 입니다
 
 ![](../.gitbook/assets/2018-09-27-3.17.40.png)
 
