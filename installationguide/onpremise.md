@@ -822,8 +822,10 @@ selfmon.enabled=false
 {% code-tabs-item title="/apps/whatap/conf/yard.conf" %}
 ```bash
 # Keeper
-keeper={KEEPER_IP_accessable_from_YARD}:6789
-server.name={YARD-01}
+#keeper={KEEPER_IP_accessable_from_YARD}:6789
+#server.name={YARD-01}
+keeper=192.168.122.22:6789
+server.name=YARD-01
 
 # Port
 web.port=7710
