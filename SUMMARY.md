@@ -33,5 +33,7 @@
   * [빌링](userguide/billing.md)
 * [활용](usecase/README.md)
   * [END-POINT 설정](usecase/java_endpoint.md)
+  * [멀티 트랜잭션 추적](usecase/mtrace.md)
+  * [오픈API](usecase/openapi.md)
 * [용어정의](glossary.md)
 
