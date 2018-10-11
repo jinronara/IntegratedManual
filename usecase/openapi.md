@@ -17,7 +17,7 @@ Get act\_agent
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="x-whatap-pcode" type="string" required=true %}
-대상 프로젝트 코드 사
+대상 프로젝트 코드 사용
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}
@@ -58,7 +58,7 @@ Get inact\_agent
 {% endapi-method-summary %}
 
 {% api-method-description %}
-비활성화 상태인 에이전트 수 를 얻는
+비활성화 상태인 에이전트 수 를 얻는다. 
 {% endapi-method-description %}
 
 {% api-method-spec %}
