@@ -7,7 +7,7 @@ description: >-
 
 # 오픈API - 통계
 
-{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/exception" %}
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/exception/{stime}/{etime}" %}
 {% api-method-summary %}
 Exception List
 {% endapi-method-summary %}
@@ -20,11 +20,11 @@ Exception 발생 내역을 얻는다.
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="stime" type="string" %}
+{% api-method-parameter name="{stime}" type="string" %}
 조회 시작 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="etime" type="string" required=false %}
+{% api-method-parameter name="{etime}" type="string" required=false %}
 조회 끝 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -70,7 +70,7 @@ Exception 발생 내역을 얻는다.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/httpc" %}
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/httpc/{stime}/{etime}" %}
 {% api-method-summary %}
 HttpClient List
 {% endapi-method-summary %}
@@ -83,11 +83,11 @@ HTTP 외부 호출 내역을 얻는다.
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="stime" type="string" %}
+{% api-method-parameter name="{stime}" type="string" %}
 조회 시작 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="etime" type="string" required=false %}
+{% api-method-parameter name="{etime}" type="string" required=false %}
 조회 끝 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -137,7 +137,7 @@ HTTP 외부 호출 내역을 얻는다.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/remote" %}
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/remote/{stime}/{etime}" %}
 {% api-method-summary %}
 Remote IP List
 {% endapi-method-summary %}
@@ -150,11 +150,11 @@ Remote IP List
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="stime" type="string" %}
+{% api-method-parameter name="{stime}" type="string" %}
 조회 시작 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="etime" type="string" required=false %}
+{% api-method-parameter name="{etime}" type="string" required=false %}
 조회 끝 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -195,7 +195,7 @@ Remote IP List
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/sql" %}
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/sql/{stime}/{etime}" %}
 {% api-method-summary %}
 SQL List
 {% endapi-method-summary %}
@@ -208,11 +208,11 @@ SQL List
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="stime" type="string" %}
+{% api-method-parameter name="{stime}" type="string" %}
 조회 시작 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="etime" type="string" required=false %}
+{% api-method-parameter name="{etime}" type="string" required=false %}
 조회 끝 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -264,7 +264,7 @@ SQL List
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/transaction" %}
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/transaction/{stime}/{etime}" %}
 {% api-method-summary %}
 Transaction List
 {% endapi-method-summary %}
@@ -277,11 +277,11 @@ Transaction List
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="stime" type="string" %}
+{% api-method-parameter name="{stime}" type="string" %}
 조회 시작 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="etime" type="string" required=false %}
+{% api-method-parameter name="{etime}" type="string" required=false %}
 조회 끝 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -333,7 +333,7 @@ Transaction List
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/thread\_count" %}
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/thread\_count/{stime}/{etime}/{avg}/{oids}" %}
 {% api-method-summary %}
 Thread Count
 {% endapi-method-summary %}
@@ -346,19 +346,19 @@ Trhead Count 를 얻는다.
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="stime" type="string" %}
+{% api-method-parameter name="{stime}" type="string" %}
 조회 시작 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="etime" type="string" required=false %}
+{% api-method-parameter name="{etime}" type="string" required=false %}
 조회 끝 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="avg" type="string" required=false %}
+{% api-method-parameter name="{avg}" type="string" required=false %}
 stime, etime 구간 평균값을 얻고자 할때 사용
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="oids" type="string" required=false %}
+{% api-method-parameter name="{oids}" type="string" required=false %}
 에이전트를 특정하는 경우 사용
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -456,7 +456,7 @@ stime, etime 구간 평균값을 얻고자 할때 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/thread\_daemon" %}
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/thread\_daemon/{stime}/{etime}/{avg}/{oids}" %}
 {% api-method-summary %}
 Daemon Thread Count
 {% endapi-method-summary %}
@@ -469,19 +469,19 @@ Daemon Thread Count 를 얻는다.
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="stime" type="string" %}
+{% api-method-parameter name="{stime}" type="string" %}
 조회 시작 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="etime" type="string" required=false %}
+{% api-method-parameter name="{etime}" type="string" required=false %}
 조회 끝 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="avg" type="string" required=false %}
+{% api-method-parameter name="{avg}" type="string" required=false %}
 stime, etime 구간 평균값을 얻고자 할때 사용
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="oids" type="string" required=false %}
+{% api-method-parameter name="{oids}" type="string" required=false %}
 에이전트를 특정하는 경우 사용
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -511,7 +511,7 @@ stime, etime 구간 평균값을 얻고자 할때 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/thread\_peak\_count" %}
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/thread\_peak\_count/{stime}/{etime}/{avg}/{oids}" %}
 {% api-method-summary %}
 Thread Peak Count
 {% endapi-method-summary %}
@@ -524,19 +524,19 @@ Thread Peak Count 를 얻는다.
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="stime" type="string" %}
+{% api-method-parameter name="{stime}" type="string" %}
 조회 시작 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="etime" type="string" required=false %}
+{% api-method-parameter name="{etime}" type="string" required=false %}
 조회 끝 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="avg" type="string" required=false %}
+{% api-method-parameter name="{avg}" type="string" required=false %}
 stime, etime 구간 평균값을 얻고자 할때 사용
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="oids" type="string" required=false %}
+{% api-method-parameter name="{oids}" type="string" required=false %}
 에이전트를 특정하는 경우 사용
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -566,7 +566,7 @@ stime, etime 구간 평균값을 얻고자 할때 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/threadpool\_active" %}
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/threadpool\_active/{stime}/{etime}/{avg}/{oids}" %}
 {% api-method-summary %}
 Active Thread Pool Count
 {% endapi-method-summary %}
@@ -579,19 +579,19 @@ Active Thread Pool Count 를 얻는다.
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="stime" type="string" %}
+{% api-method-parameter name="{stime}" type="string" %}
 조회 시작 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="etime" type="string" required=false %}
+{% api-method-parameter name="{etime}" type="string" required=false %}
 조회 끝 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="avg" type="string" required=false %}
+{% api-method-parameter name="{avg}" type="string" required=false %}
 stime, etime 구간 평균값을 얻고자 할때 사용
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="oids" type="string" required=false %}
+{% api-method-parameter name="{oids}" type="string" required=false %}
 에이전트를 특정하는 경우 사용
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -621,7 +621,7 @@ stime, etime 구간 평균값을 얻고자 할때 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/threadpool\_queue" %}
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/threadpool\_queue/{stime}/{etime}/{avg}/{oids}" %}
 {% api-method-summary %}
 Thread Pool Queue Count
 {% endapi-method-summary %}
@@ -634,19 +634,19 @@ Thread Pool Queue Count 를 얻는다.
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="stime" type="string" %}
+{% api-method-parameter name="{stime}" type="string" %}
 조회 시작 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="etime" type="string" required=false %}
+{% api-method-parameter name="{etime}" type="string" required=false %}
 조회 끝 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="avg" type="string" required=false %}
+{% api-method-parameter name="{avg}" type="string" required=false %}
 stime, etime 구간 평균값을 얻고자 할때 사용
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="oids" type="string" required=false %}
+{% api-method-parameter name="{oids}" type="string" required=false %}
 에이전트를 특정하는 경우 사용
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -676,7 +676,7 @@ stime, etime 구간 평균값을 얻고자 할때 사용
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/tx\_caller" %}
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/tx\_caller/{stime}/{etime}/{oids}/filter/{filterkey}/{filterval}" %}
 {% api-method-summary %}
 Tx Caller
 {% endapi-method-summary %}
@@ -688,15 +688,15 @@ Caller 호출 통계를 조회한다. 조회범위는 1일을 초과 할 수 없
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="stime" type="string" required=true %}
+{% api-method-parameter name="{stime}" type="string" required=true %}
 조회 시작 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="etime" type="string" required=true %}
+{% api-method-parameter name="{etime}" type="string" required=true %}
 조회 끝 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="oids" type="string" required=false %}
+{% api-method-parameter name="{oids}" type="string" required=false %}
 에이전트를 특정하는 경우 사용
 {% endapi-method-parameter %}
 
@@ -704,13 +704,13 @@ Caller 호출 통계를 조회한다. 조회범위는 1일을 초과 할 수 없
 Filter 조건을 지정하는 경우 사용
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="filterkey" type="string" required=false %}
+{% api-method-parameter name="{filterkey}" type="string" required=false %}
 Filter 로 사용할 Key 를 지정   
   
 \[caller\_pcode\|caller\_spec\|caller\_url\|spec\|url\]
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="filterval" type="string" required=false %}
+{% api-method-parameter name="{filterval}" type="string" required=false %}
 Filter 로 사용할 값 을 지정 Key 가 caller\_url, url 인 경우 BASE64 인코딩값을 사용   
   
 \[caller\_pcode value \|caller\_spec value \|caller\_url value \|spec value \|url value \]
@@ -742,7 +742,7 @@ Filter 로 사용할 값 을 지정 Key 가 caller\_url, url 인 경우 BASE64 �
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/tx\_domain" %}
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/tx\_domain/{stime}/{etime}/{oids}/filter/{filterkey}/{filterval}" %}
 {% api-method-summary %}
 Tx Domain
 {% endapi-method-summary %}
@@ -754,15 +754,15 @@ Tx Domain
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="stime" type="string" required=true %}
+{% api-method-parameter name="{stime}" type="string" required=true %}
 조회 시작 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="etime" type="string" required=true %}
+{% api-method-parameter name="{etime}" type="string" required=true %}
 조회 끝 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="oids" type="string" required=false %}
+{% api-method-parameter name="{oids}" type="string" required=false %}
 에이전트를 특정하는 경우 사용
 {% endapi-method-parameter %}
 
@@ -770,13 +770,13 @@ Tx Domain
 Filter 조건을 지정하는 경우 사용
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="filterkey" type="string" required=false %}
+{% api-method-parameter name="{filterkey}" type="string" required=false %}
 Filter 로 사용할 Key 를 지정   
   
 \[domain\|url\]
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="filterval" type="string" required=false %}
+{% api-method-parameter name="{filterval}" type="string" required=false %}
 Filter 로 사용할 값 을 지정 Key 가 url 인 경우 BASE64 인코딩값을 사용   
   
 \[domain value \|url value \]
@@ -808,7 +808,7 @@ Filter 로 사용할 값 을 지정 Key 가 url 인 경우 BASE64 인코딩값�
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/fullgclog" %}
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/fullgclog/{stime}/{etime}" %}
 {% api-method-summary %}
 FullGC Log
 {% endapi-method-summary %}
@@ -820,11 +820,11 @@ Full GC 로그를 조회한다. 조회범위는 1일을 초과 할 수 없다.
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="stime" type="string" required=true %}
+{% api-method-parameter name="{stime}" type="string" required=true %}
 조회 시작 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="etime" type="string" required=true %}
+{% api-method-parameter name="{etime}" type="string" required=true %}
 조회 끝 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
