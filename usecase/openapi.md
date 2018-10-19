@@ -13,7 +13,7 @@ Active Agent
 {% endapi-method-summary %}
 
 {% api-method-description %}
-활성화 상태인 에이전트 수 를 얻는다. 
+활성화 상태인 에이전트 수 를 얻는다.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -49,7 +49,7 @@ Inactive Agent
 {% endapi-method-summary %}
 
 {% api-method-description %}
-비활성화 상태인 에이전트 수 를 얻는다. 
+비활성화 상태인 에이전트 수 를 얻는다.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -68,7 +68,7 @@ Inactive Agent
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-비활성화 상태인 에이전트 수를 반환한 
+비활성화 상태인 에이전트 수를 반환한
 {% endapi-method-response-example-description %}
 
 ```
@@ -85,7 +85,7 @@ Hosts Count
 {% endapi-method-summary %}
 
 {% api-method-description %}
- 물리 호스트 수를 얻는다. 
+ 물리 호스트 수를 얻는다.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -96,7 +96,7 @@ Hosts Count
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="x-whatap-token" type="string" required=true %}
- 관리 - 프로젝트 관리 메뉴를 통해 확인된 Token 사용 
+ 관리 - 프로젝트 관리 메뉴를 통해 확인된 Token 사용
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}
@@ -104,7 +104,7 @@ Hosts Count
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
- 프로젝트내의 물리 호스트 수를 반환한다. 
+ 프로젝트내의 물리 호스트 수를 반환한다.
 {% endapi-method-response-example-description %}
 
 ```
@@ -121,7 +121,7 @@ Cpu Core Count
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Cpu Core 수를 얻는다. 
+Cpu Core 수를 얻는다.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -132,7 +132,7 @@ Cpu Core 수를 얻는다.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="x-whatap-token" type="string" required=false %}
- 관리 - 프로젝트 관리 메뉴를 통해 확인된 Token 사용 
+ 관리 - 프로젝트 관리 메뉴를 통해 확인된 Token 사용
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}
@@ -140,7 +140,7 @@ Cpu Core 수를 얻는다.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-프로젝트내의 Cpu Core 수 합계를 반환환다. 
+프로젝트내의 Cpu Core 수 합계를 반환환다.
 {% endapi-method-response-example-description %}
 
 ```
@@ -153,7 +153,7 @@ Cpu Core 수를 얻는다.
 
 {% api-method method="get" host="https://apm.whatap.io" path="/open/api/txcount" %}
 {% api-method-summary %}
-Transaction Count 
+Transaction Count
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -164,7 +164,7 @@ Transaction Count
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="x-whatap-pcode" type="string" required=true %}
- 대상 프로젝트 코드 사
+ 대상 프로젝트 코드 사용
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="x-whatap-token" type="string" required=true %}
@@ -176,7 +176,7 @@ Transaction Count
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
- 직전 5초내 종료된 트랜잭션 수를 반환한다. 
+ 직전 5초내 종료된 트랜잭션 수를 반환한다.
 {% endapi-method-response-example-description %}
 
 ```
@@ -187,22 +187,26 @@ Transaction Count
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://apm.whatap.io" path="/open/api/txcount" %}
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/tps" %}
 {% api-method-summary %}
 TPS
 {% endapi-method-summary %}
 
 {% api-method-description %}
- 현재 TPS 를 구한다. 
+ 현재 TPS 를 구한다.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-headers %}
+{% api-method-parameter name="x-whatap-pcode" type="string" required=true %}
+ 대상 프로젝트 코드 사용
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="x-whatap-token" type="string" required=true %}
+ 관리 - 프로젝트 관리 메뉴를 통해 확인된 Token 사용
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -219,3 +223,110 @@ TPS
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/user" %}
+{% api-method-summary %}
+User Count
+{% endapi-method-summary %}
+
+{% api-method-description %}
+ 최근 5분간 집계된 고유 사용자 수를 구한다.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="x-whatap-pcode" type="string" required=true %}
+ 대상 프로젝트 코드 사용
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="x-whatap-token" type="string" required=true %}
+ 관리 - 프로젝트 관리 메뉴를 통해 확인된 Token 사용
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/actx" %}
+{% api-method-summary %}
+Active Transaction Count
+{% endapi-method-summary %}
+
+{% api-method-description %}
+ 액티브 트랜잭션 수를 구한다.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="x-whatap-pcode" type="string" required=true %}
+ 대상 프로젝트 코드 사용
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="x-whatap-token" type="string" required=true %}
+ 관리 - 프로젝트 관리 메뉴를 통해 확인된 Token 사용
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/rtime" %}
+{% api-method-summary %}
+Average Response Time
+{% endapi-method-summary %}
+
+{% api-method-description %}
+ 현재 평균 응답시간을 구한다. 
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="x-whatap-pcode" type="string" required=true %}
+ 대상 프로젝트 코드 사용
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="x-whatap-token" type="string" required=true %}
+ 관리 - 프로젝트 관리 메뉴를 통해 확인된 Token 사용
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
