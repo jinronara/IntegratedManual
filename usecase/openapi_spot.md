@@ -216,7 +216,7 @@ TPS
 {% endapi-method-response-example-description %}
 
 ```text
-
+92.03
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -252,7 +252,7 @@ User Count
 {% endapi-method-response-example-description %}
 
 ```text
-
+1007
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -288,7 +288,7 @@ Active Transaction Count
 {% endapi-method-response-example-description %}
 
 ```text
-
+171
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -360,7 +360,7 @@ CPU Usage
 {% endapi-method-response-example-description %}
 
 ```text
-
+9.62
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -396,7 +396,7 @@ Active ThreadPool Count
 {% endapi-method-response-example-description %}
 
 ```text
-
+10
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -432,7 +432,7 @@ Queuing ThreadPool Count
 {% endapi-method-response-example-description %}
 
 ```text
-
+50
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -468,7 +468,7 @@ DB Connection Pool Count
 {% endapi-method-response-example-description %}
 
 ```text
-
+25
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -504,7 +504,7 @@ DB Connection Pool Active Count
 {% endapi-method-response-example-description %}
 
 ```
-
+2
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -540,7 +540,7 @@ Idle 상태의 DB Connection Pool 수를 구한다.
 {% endapi-method-response-example-description %}
 
 ```text
-
+23
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
