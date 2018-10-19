@@ -331,3 +331,223 @@ Average Response Time
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/cpu" %}
+{% api-method-summary %}
+CPU Usage
+{% endapi-method-summary %}
+
+{% api-method-description %}
+현재 CPU 사용률을 구한다.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="x-whatap-pcode" type="string" required=true %}
+대상 프로젝트 코드 사용
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="x-whatap-token" type="string" required=true %}
+관리 - 프로젝트 관리 메뉴를 통해 확인된 Token 사용
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```text
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/threadpool_active" %}
+{% api-method-summary %}
+Active ThreadPool Count
+{% endapi-method-summary %}
+
+{% api-method-description %}
+사용중인 Thread Pool 수를 구한다.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="x-whatap-pcode" type="string" required=true %}
+대상 프로젝트 코드 사용
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="x-whatap-token" type="string" required=true %}
+관리 - 프로젝트 관리 메뉴를 통해 확인된 Token 사용
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```text
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/threadpool_queue" %}
+{% api-method-summary %}
+Queuing ThreadPool Count
+{% endapi-method-summary %}
+
+{% api-method-description %}
+큐잉중인 Thread Pool 수를 구한다.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="x-whatap-pcode" type="string" required=true %}
+대상 프로젝트 코드 사용
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="x-whatap-token" type="string" required=true %}
+관리 - 프로젝트 관리 메뉴를 통해 확인된 Token 사용
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```text
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/dbc_count" %}
+{% api-method-summary %}
+DB Connection Pool Count
+{% endapi-method-summary %}
+
+{% api-method-description %}
+전체 DB Connection Pool 수를 구한다.  
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="x-whatap-pcode" type="string" required=true %}
+대상 프로젝트 코드 사용
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="x-whatap-token" type="string" required=true %}
+관리 - 프로젝트 관리 메뉴를 통해 확인된 Token 사용
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```text
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/dbc_active" %}
+{% api-method-summary %}
+DB Connection Pool Active Count
+{% endapi-method-summary %}
+
+{% api-method-description %}
+사용중인 DB Connection Pool 수를 구한다.  
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="x-whatap-pcode" type="string" required=true %}
+대상 프로젝트 코드 사용
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="x-whatap-token" type="string" required=true %}
+관리 - 프로젝트 관리 메뉴를 통해 확인된 Token 사용
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```text
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/dbc_idle" %}
+{% api-method-summary %}
+DB Connection Pool Idle Count
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Idle 상태의 DB Connection Pool 수를 구한다.  
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="x-whatap-pcode" type="string" required=true %}
+대상 프로젝트 코드 사용
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="x-whatap-token" type="string" required=true %}
+관리 - 프로젝트 관리 메뉴를 통해 확인된 Token 사용
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```text
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
