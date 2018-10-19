@@ -28,6 +28,16 @@ Exception 발생 내역을 얻는다.
  조회 시작 시간 \(Unix epoch time\)
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="x-whatap-pcode" type="string" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="x-whatap-token" type="string" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
