@@ -34,6 +34,6 @@
 * [활용](usecase/README.md)
   * [END-POINT 설정](usecase/java_endpoint.md)
   * [멀티 트랜잭션 추적](usecase/mtrace.md)
-  * [오픈API](usecase/openapi.md)
+  * [오픈API - 실시간](usecase/openapi_spot.md)
 * [용어정의](glossary.md)
 
