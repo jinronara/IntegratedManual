@@ -297,3 +297,411 @@ Trhead Count 를 얻는다.
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/thread_daemon" %}
+{% api-method-summary %}
+Daemon Thread Count
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Daemon Thread Count 를 얻는다.   
+조회범위는 1일을 초과 할 수 없으며 Path Parameter 가 없는 경우 최근 5분간의 정보를 반환한다.  
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="stime" type="string" %}
+ 조회 시작 시간 \(Unix epoch time\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="etime" type="string" required=false %}
+ 조회 끝 시간 \(Unix epoch time\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="avg" type="string" required=false %}
+ stime, etime 구간 평균값을 얻고자 할때 사용
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="oids" type="string" required=false %}
+ 에이전트를 특정하는 경우 사용
+{% endapi-method-parameter %}
+
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="x-whatap-pcode" type="string" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="x-whatap-token" type="string" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/thread_peak_count" %}
+{% api-method-summary %}
+Thread Peak Count
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Thread Peak Count 를 얻는다.   
+조회범위는 1일을 초과 할 수 없으며 Path Parameter 가 없는 경우 최근 5분간의 정보를 반환한다.  
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="stime" type="string" %}
+ 조회 시작 시간 \(Unix epoch time\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="etime" type="string" required=false %}
+ 조회 끝 시간 \(Unix epoch time\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="avg" type="string" required=false %}
+ stime, etime 구간 평균값을 얻고자 할때 사용
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="oids" type="string" required=false %}
+ 에이전트를 특정하는 경우 사용
+{% endapi-method-parameter %}
+
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="x-whatap-pcode" type="string" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="x-whatap-token" type="string" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/threadpool_active" %}
+{% api-method-summary %}
+Active Thread Pool Count
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Active Thread Pool Count 를 얻는다.   
+조회범위는 1일을 초과 할 수 없으며 Path Parameter 가 없는 경우 최근 5분간의 정보를 반환한다.  
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="stime" type="string" %}
+ 조회 시작 시간 \(Unix epoch time\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="etime" type="string" required=false %}
+ 조회 끝 시간 \(Unix epoch time\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="avg" type="string" required=false %}
+ stime, etime 구간 평균값을 얻고자 할때 사용
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="oids" type="string" required=false %}
+ 에이전트를 특정하는 경우 사용
+{% endapi-method-parameter %}
+
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="x-whatap-pcode" type="string" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="x-whatap-token" type="string" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/threadpool_queue" %}
+{% api-method-summary %}
+Thread Pool Queue Count
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Thread Pool Queue Count 를 얻는다.   
+조회범위는 1일을 초과 할 수 없으며 Path Parameter 가 없는 경우 최근 5분간의 정보를 반환한다.  
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="stime" type="string" %}
+ 조회 시작 시간 \(Unix epoch time\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="etime" type="string" required=false %}
+ 조회 끝 시간 \(Unix epoch time\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="avg" type="string" required=false %}
+ stime, etime 구간 평균값을 얻고자 할때 사용
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="oids" type="string" required=false %}
+ 에이전트를 특정하는 경우 사용
+{% endapi-method-parameter %}
+
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="x-whatap-pcode" type="string" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="x-whatap-token" type="string" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/tx_caller" %}
+{% api-method-summary %}
+Tx Caller
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Caller 호출 통계를 조회한다.
+조회범위는 1일을 초과 할 수 없으며 Path Parameter 가 없는 경우 최근 5분간의 정보를 반환한다.  
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="stime" type="string" %}
+ 조회 시작 시간 \(Unix epoch time\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="etime" type="string" required=true %}
+ 조회 끝 시간 \(Unix epoch time\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="oids" type="string" required=false %}
+ 에이전트를 특정하는 경우 사용
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="filter" type="string" required=false %}
+ Filter 조건을 지정하는 경우 사용
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="filterkey" type="string" required=false %}
+ Filter 로 사용할 Key 를 지정
+ [caller_pcode|caller_spec|caller_url|spec|url]
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="filterval" type="string" required=false %}
+ Filter 로 사용할 값 을 지정
+ Key 가 caller_url, url 인 경우 BASE64 인코딩값을 사용
+ [caller_pcode value |caller_spec value |caller_url value |spec value |url value ]
+{% endapi-method-parameter %}
+
+
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="x-whatap-pcode" type="string" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="x-whatap-token" type="string" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/tx_domain" %}
+{% api-method-summary %}
+Tx Domain
+{% endapi-method-summary %}
+
+{% api-method-description %}
+도메인 호출 통계를 조회한다.
+조회범위는 1일을 초과 할 수 없으며 Path Parameter 가 없는 경우 최근 5분간의 정보를 반환한다.  
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="stime" type="string" %}
+ 조회 시작 시간 \(Unix epoch time\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="etime" type="string" required=true %}
+ 조회 끝 시간 \(Unix epoch time\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="oids" type="string" required=false %}
+ 에이전트를 특정하는 경우 사용
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="filter" type="string" required=false %}
+ Filter 조건을 지정하는 경우 사용
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="filterkey" type="string" required=false %}
+ Filter 로 사용할 Key 를 지정
+ [domain|url]
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="filterval" type="string" required=false %}
+ Filter 로 사용할 값 을 지정
+ Key 가 url 인 경우 BASE64 인코딩값을 사용
+ [caller_pcode value |caller_spec value |caller_url value |spec value |url value ]
+{% endapi-method-parameter %}
+
+
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="x-whatap-pcode" type="string" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="x-whatap-token" type="string" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/fullgclog" %}
+{% api-method-summary %}
+FullGC Log
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Full GC 로그를 조회한다.
+조회범위는 1일을 초과 할 수 없다.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="stime" type="string" %}
+ 조회 시작 시간 \(Unix epoch time\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="etime" type="string" required=true %}
+ 조회 끝 시간 \(Unix epoch time\)
+{% endapi-method-parameter %}
+
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="x-whatap-pcode" type="string" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="x-whatap-token" type="string" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
