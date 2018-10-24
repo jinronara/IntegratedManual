@@ -7,7 +7,9 @@ description: >-
 
 # 오픈API - 통계
 
-> API 에서 사용되는 Unix Epoch Time 은 Milisecond 단위 입니다.  \(13자리\)
+> API 에서 사용되는 Unix Epoch Time 은 Milisecond 단위 입니다.  \(13자리\) 
+>
+> 변환은 [https://www.epochconverter.com/](https://www.epochconverter.com/) 를 참고 할 수 있습니다.
 
 {% api-method method="get" host="https://apm.whatap.io" path="/open/api/json/exception/{stime}/{etime}" %}
 {% api-method-summary %}
