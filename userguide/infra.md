@@ -1,6 +1,6 @@
 # 인프라 모니터링
 
-## 관리 {#user-content-관리-1}
+## 관리 <a id="user-content-&#xAD00;&#xB9AC;-1"></a>
 
 와탭 Infra 모니터링 서비스는 다수의 서버를 프로젝트로 그룹화 하여 관리합니다.
 
@@ -304,7 +304,7 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.
 * 회사 이름: 청구서에 표시될 회사 이름 \(\*필수\)
 * 직책 및 직급: 직책 또는 직급이 있는 경우 입력
 
-## 실시간 모니터링 {#user-content-실시간-모니터링-1}
+## 실시간 모니터링 <a id="user-content-&#xC2E4;&#xC2DC;&#xAC04;-&#xBAA8;&#xB2C8;&#xD130;&#xB9C1;-1"></a>
 
 ### 서버 목록
 
@@ -547,7 +547,7 @@ Google Play Store, App Store에서 WhaTap을 검색하여 설치합니다.
       <td style="text-align:left">byte</td>
     </tr>
   </tbody>
-</table>## 대시보드 {#user-content-대시보드}
+</table>## 대시보드 <a id="user-content-&#xB300;&#xC2DC;&#xBCF4;&#xB4DC;"></a>
 
 ### Compound Eye
 
@@ -594,7 +594,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 기본으로 오늘 날짜의 00:00부터 현재까지의 가용성 차트를 표시합니다.  
 1일, 7일, 30일 등 범위를 지정할 수 있으며 화살표 클릭으로 차트의 날짜를 변경할 수 있습니다.
 
-## 알림 정책 {#user-content-알림-정책}
+## 알림 정책 <a id="user-content-&#xC54C;&#xB9BC;-&#xC815;&#xCC45;"></a>
 
 ### 알림 정책 설정
 
@@ -731,7 +731,7 @@ Compound Eye는 사용자들에게 와탭 에이전트가 설치된 모든 서�
 * 임계점 해소 및 지속시간 경과
 * 알림에 처리내역 추가
 
-## 보고서 {#user-content-보고서-1}
+## 보고서 <a id="user-content-&#xBCF4;&#xACE0;&#xC11C;-1"></a>
 
 ### 일일 보고서 \(전체 요약\)
 

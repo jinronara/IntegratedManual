@@ -1,8 +1,8 @@
 # 설치 가이드
 
-## 공통 {#user-content-공통}
+## 공통 <a id="user-content-&#xACF5;&#xD1B5;"></a>
 
-### 회원 가입 {#user-content-회원-가입}
+### 회원 가입 <a id="user-content-&#xD68C;&#xC6D0;-&#xAC00;&#xC785;"></a>
 
 ![](../.gitbook/assets/join.png)
 

@@ -3,7 +3,7 @@
 해당 가이드는 Python 애플리케이션 모니터링을 할 때에 설정할 수 있는 옵션에 대해 설명합니다.  
 \(\*\) 표시가 있는 옵션은 애플리케이션을 재시작 하여야만 적용되는 옵션입니다.
 
-## 에이전트 네트워크 {#user-content-에이전트-네트워크-통신에-관한-설정}
+## 에이전트 네트워크 <a id="user-content-&#xC5D0;&#xC774;&#xC804;&#xD2B8;-&#xB124;&#xD2B8;&#xC6CC;&#xD06C;-&#xD1B5;&#xC2E0;&#xC5D0;-&#xAD00;&#xD55C;-&#xC124;&#xC815;"></a>
 
 ### license
 
@@ -61,7 +61,7 @@
 * Default: \[**1024**\]
 * Type: byte
 
-## 애플리케이션 등록 {#user-content-애플리케이션-등록에-관한-설정}
+## 애플리케이션 등록 <a id="user-content-&#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;-&#xB4F1;&#xB85D;&#xC5D0;-&#xAD00;&#xD55C;-&#xC124;&#xC815;"></a>
 
 ### object\_name
 
@@ -113,7 +113,7 @@
 * Default : \[**0**\]
 * Type : Int
 
-## 에이전트 기능 제어 {#user-content-에이전트-기능-제어에-관한-설정}
+## 에이전트 기능 제어 <a id="user-content-&#xC5D0;&#xC774;&#xC804;&#xD2B8;-&#xAE30;&#xB2A5;-&#xC81C;&#xC5B4;&#xC5D0;-&#xAD00;&#xD55C;-&#xC124;&#xC815;"></a>
 
 ### enabled
 
@@ -167,7 +167,7 @@ TODO: 지원 예정입니다.
 * Default : \[**true**\]
 * Type : Boolean
 
-## 보안 설정에 관한 설정 {#user-content-보안-설정에-관한-설정}
+## 보안 설정에 관한 설정 <a id="user-content-&#xBCF4;&#xC548;-&#xC124;&#xC815;&#xC5D0;-&#xAD00;&#xD55C;-&#xC124;&#xC815;"></a>
 
 ### cypher\_level
 
@@ -191,7 +191,7 @@ TODO: 지원 예정입니다.
 * Default : \[**2**\]
 * Type : encrypt\_level \[1\|2\|3\]
 
-## 트랜잭션 프로파일 데이터에 관한 설정 {#user-content-트랜잭션-프로파일-데이터에-관한-설정}
+## 트랜잭션 프로파일 데이터에 관한 설정 <a id="user-content-&#xD2B8;&#xB79C;&#xC7AD;&#xC158;-&#xD504;&#xB85C;&#xD30C;&#xC77C;-&#xB370;&#xC774;&#xD130;&#xC5D0;-&#xAD00;&#xD55C;-&#xC124;&#xC815;"></a>
 
 ### profile\_http\_header\_enabled
 
@@ -386,7 +386,7 @@ SQL 수행후 수행시간이 여기서 지정한 값을 초과하면 TOO SLOW �
 * Default : \[**30000**\]
 * Type : MiliSecond
 
-## 사용자 추적을 위한 설정 {#user-content-사용자-추적을-위한-설정}
+## 사용자 추적을 위한 설정 <a id="user-content-&#xC0AC;&#xC6A9;&#xC790;-&#xCD94;&#xC801;&#xC744;-&#xC704;&#xD55C;-&#xC124;&#xC815;"></a>
 
 ### trace\_user\_enabled\(\*\)
 
@@ -434,7 +434,7 @@ WEB/WAS 앞에 L4와 같은 로드밸런서가 위치한 경우 Client의 IP가 
 * Type : String
 * Ex : trace\_http\_client\_ip\_header\_key=x-fowarded-for
 
-## 백그라운드 트랜잭션 추적을 위한 설정 {#user-content-백그라운드-트랜잭션-추적을-위한-설정}
+## 백그라운드 트랜잭션 추적을 위한 설정 <a id="user-content-&#xBC31;&#xADF8;&#xB77C;&#xC6B4;&#xB4DC;-&#xD2B8;&#xB79C;&#xC7AD;&#xC158;-&#xCD94;&#xC801;&#xC744;-&#xC704;&#xD55C;-&#xC124;&#xC815;"></a>
 
 ### trace\_auto\_transaction\_enabled
 
@@ -467,7 +467,7 @@ TODO: 지원 예정입니다.
 * Default : \[**true**\]
 * Type : Boolean
 
-## 트랜잭션 추적을 위한 설정 {#user-content-트랜잭션-추적을-위한-설정}
+## 트랜잭션 추적을 위한 설정 <a id="user-content-&#xD2B8;&#xB79C;&#xC7AD;&#xC158;-&#xCD94;&#xC801;&#xC744;-&#xC704;&#xD55C;-&#xC124;&#xC815;"></a>
 
 ### trace\_transaction\_name\_header\_key
 
@@ -567,7 +567,7 @@ TODO: 지원 예정입니다.
 * Default : \[**js, htm, html, gif, png, jpg, css, swf, ico**\]
 * Type : String
 
-## 운영을 위한 설정 {#user-content-운영을-위한-설정}
+## 운영을 위한 설정 <a id="user-content-&#xC6B4;&#xC601;&#xC744;-&#xC704;&#xD55C;-&#xC124;&#xC815;"></a>
 
 ### active\_stack\_second
 
@@ -678,7 +678,7 @@ SQL문에서 리터럴 부분을 추출하여 SQL문을 정규화 하는 기능�
 * Default : \[**true**\]
 * Type : Boolean
 
-## 로그 설정 {#user-content-로그를-위한-설정}
+## 로그 설정 <a id="user-content-&#xB85C;&#xADF8;&#xB97C;-&#xC704;&#xD55C;-&#xC124;&#xC815;"></a>
 
 ### log\_rotation\_enabled
 

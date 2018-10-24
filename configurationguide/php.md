@@ -1,6 +1,6 @@
 # PHP
 
-## 에이전트 기능제어 {#user-content-에이전트-기능제어-2}
+## 에이전트 기능제어 <a id="user-content-&#xC5D0;&#xC774;&#xC804;&#xD2B8;-&#xAE30;&#xB2A5;&#xC81C;&#xC5B4;-2"></a>
 
 ### whatap.stat\_enabled
 
@@ -16,7 +16,7 @@
 * Default : \[**NONE**\]
 * Type : String
 
-## PHP Extension 기능제어 {#user-content-php-extension-기능제어}
+## PHP Extension 기능제어 <a id="user-content-php-extension-&#xAE30;&#xB2A5;&#xC81C;&#xC5B4;"></a>
 
 ### whatap.ext.error\_enabled
 
@@ -34,7 +34,7 @@ PHP 확장 모듈\(PHP Extension module\) 에서 예외 처리\(Exception\) 정�
 * Type : Boolean
 * remark: 재기동 필요 \(Apache 및 PHP-FPM\)
 
-## 수집 서버 연결 설정 {#user-content-수집-서버-연결-설정}
+## 수집 서버 연결 설정 <a id="user-content-&#xC218;&#xC9D1;-&#xC11C;&#xBC84;-&#xC5F0;&#xACB0;-&#xC124;&#xC815;"></a>
 
 ### whatap.server.host
 
@@ -78,7 +78,7 @@ PHP 확장 모듈\(PHP Extension module\) 에서 예외 처리\(Exception\) 정�
 * Default: \[**1024**\]
 * Type: byte
 
-## 내부 UDP 서버 연결 설정 {#user-content-내부-udp-서버-연결-설정}
+## 내부 UDP 서버 연결 설정 <a id="user-content-&#xB0B4;&#xBD80;-udp-&#xC11C;&#xBC84;-&#xC5F0;&#xACB0;-&#xC124;&#xC815;"></a>
 
 ### whatap.net\_udp\_port
 
@@ -88,7 +88,7 @@ PHP 확장 모듈\(PHP Extension module\) 에서 예외 처리\(Exception\) 정�
 * Type : tcp\_port
 * remark: 재기동 필요 \(Apache 및 PHP-FPM\)
 
-## 프로파일링 옵션 {#user-content-프로파일링-옵션-1}
+## 프로파일링 옵션 <a id="user-content-&#xD504;&#xB85C;&#xD30C;&#xC77C;&#xB9C1;-&#xC635;&#xC158;-1"></a>
 
 ### whatap.profile\_step\_max\_count
 
@@ -171,7 +171,7 @@ Heavy한 스텝의 기준을 지정 합니다. 지정된 값보다 수행시간�
 * Default : \[**false**\]
 * Type : Boolean
 
-## 사용자 추적 옵션 {#user-content-사용자-추적-옵션-1}
+## 사용자 추적 옵션 <a id="user-content-&#xC0AC;&#xC6A9;&#xC790;-&#xCD94;&#xC801;-&#xC635;&#xC158;-1"></a>
 
 ### whatap.trace\_user\_enabled
 
@@ -221,7 +221,7 @@ Client IP\(Remote IP\)의 정보를 특정 HTTP 헤더의 값으로 변경하여
 * Type : String
 * remark : 재기동 필요 \(Apache 및 PHP-FPM\)
 
-## 트랜잭션 추적 옵션 {#user-content-트랜잭션-추적-옵션-1}
+## 트랜잭션 추적 옵션 <a id="user-content-&#xD2B8;&#xB79C;&#xC7AD;&#xC158;-&#xCD94;&#xC801;-&#xC635;&#xC158;-1"></a>
 
 ### whatap.trace\_active\_transaction\_slow\_time
 
@@ -279,7 +279,7 @@ SQL문에서 리터럴 부분을 추출하여 SQL문을 정규화 하는 기능�
 * Default : \[**true**\]
 * Type : Boolean
 
-## 에이전트 명명 옵션 {#user-content-에이전트-명명-옵션}
+## 에이전트 명명 옵션 <a id="user-content-&#xC5D0;&#xC774;&#xC804;&#xD2B8;-&#xBA85;&#xBA85;-&#xC635;&#xC158;"></a>
 
 ### whatap.object\_name
 
@@ -312,7 +312,7 @@ SQL문에서 리터럴 부분을 추출하여 SQL문을 정규화 하는 기능�
 * Type : String
 * remark: 재기동 필요 \(Apache 및 PHP-FPM\)
 
-## 로그 옵션 {#user-content-로그-옵션-1}
+## 로그 옵션 <a id="user-content-&#xB85C;&#xADF8;-&#xC635;&#xC158;-1"></a>
 
 ### whatap.log\_keep\_days
 
@@ -321,7 +321,7 @@ SQL문에서 리터럴 부분을 추출하여 SQL문을 정규화 하는 기능�
 * Default : \[**7**\]
 * Type : Day
 
-## 운영 설정 {#user-content-운영-설정-1}
+## 운영 설정 <a id="user-content-&#xC6B4;&#xC601;-&#xC124;&#xC815;-1"></a>
 
 ### whatap.realtime\_user\_thinktime\_max
 

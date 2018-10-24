@@ -80,7 +80,7 @@ IBM JDK 의 경우 attach 방식에서 트랜잭션 정보가 수집되지 않�
 * default: {type}-{ip2}-{ip3}-{port}
 * 마지막 요소가 {port}가 아닌 {pid}로 나올 경우 애플리케이션 서버의 서비스 포트가 인식되지 않은 것으로 애플리케이션의 마지막 항목에 표시되는 PID\(프로세스 ID\)를 참고하여 설치 문제에 대응합니다.
 
-## 에이전트 설치/실행/업데이트/중지 {#user-content-에이전트-설치-실행-업데이트-중지}
+## 에이전트 설치/실행/업데이트/중지 <a id="user-content-&#xC5D0;&#xC774;&#xC804;&#xD2B8;-&#xC124;&#xCE58;-&#xC2E4;&#xD589;-&#xC5C5;&#xB370;&#xC774;&#xD2B8;-&#xC911;&#xC9C0;"></a>
 
 와탭 APM 모니터링 서비스를 사용하기 위해서는 모니터링 대상 애플리케이션 서버에 와탭 APM 모니터링 에이전트를 설치해야 합니다.  
 와탭 APM 모니터링 에이전트 설치 방법은 whatap.io 사이트에서 압축된 에이전트 파일을 다운로드 받아 서버 임의의 위치에 압축을 풀어 실행하는 것만으로 설치가 완료됩니다.
@@ -299,13 +299,13 @@ WhaTap Agent version 0.3.9 20161115
 
 * 에이전트 삭제를 희망하는 경우, 애플리케이션 서버 재기동 이후에 삭제하도록 합니다.
 
-## 로그 \(준비 중\) {#user-content-로그-준비-중}
+## 로그 \(준비 중\) <a id="user-content-&#xB85C;&#xADF8;-&#xC900;&#xBE44;-&#xC911;"></a>
 
 ### **로그파일 종류**
 
 ### **정상 동작 확인**
 
-## 애플리케이션 서버 별 적용절차 {#user-content-애플리케이션-서버-별-적용절차}
+## 애플리케이션 서버 별 적용절차 <a id="user-content-&#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;-&#xC11C;&#xBC84;-&#xBCC4;-&#xC801;&#xC6A9;&#xC808;&#xCC28;"></a>
 
 ### **애플리케이션 서버 별 JVM 옵션 설정 위치**
 
@@ -635,7 +635,7 @@ if [ -z "${PLAY_VERSION}" ]; then
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-## 설치 에러 대응 {#user-content-설치-에러-대응}
+## 설치 에러 대응 <a id="user-content-&#xC124;&#xCE58;-&#xC5D0;&#xB7EC;-&#xB300;&#xC751;"></a>
 
 ### **방화벽 설정 확인**
 
@@ -786,7 +786,7 @@ $ sudo chmod +x *.so
 
 AIX 7에서 $WHATAP\_HOME/lib1 하위에 libsigar-ppc64-aix-7.so 파일이 존재하지 않아 오류가 발생한 경우, sigar-ppc64-aix-5.so 파일을 복제하여 sigar-ppc64-aix-7.so 파일로 복제하여 주시기 바랍니다.
 
-## FAQ {#user-content-faq}
+## FAQ <a id="user-content-faq"></a>
 
 ### **서버명을 임의로 부여하여 관리하고 싶은 경우**
 

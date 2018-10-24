@@ -1,6 +1,6 @@
 # Python
 
-## 에이전트 실행 및 모니터링 개요 {#user-content-에이전트-실행-및-모니터링-개요-2}
+## 에이전트 실행 및 모니터링 개요 <a id="user-content-&#xC5D0;&#xC774;&#xC804;&#xD2B8;-&#xC2E4;&#xD589;-&#xBC0F;-&#xBAA8;&#xB2C8;&#xD130;&#xB9C1;-&#xAC1C;&#xC694;-2"></a>
 
 와탭 Python 애플리케이션 모니터링은 Python 기반 웹 애플리케이션 서버 모니터링 서비스를 제공합니다.
 
@@ -65,7 +65,7 @@ Table 1. 패턴 옵션
 | process | app\_process\_name |
 | hostname | 호스트 명 |
 
-## 에이전트 설치 및 패키지 업데이트/제거 {#user-content-에이전트-설치-및-패키지-업데이트-제거}
+## 에이전트 설치 및 패키지 업데이트/제거 <a id="user-content-&#xC5D0;&#xC774;&#xC804;&#xD2B8;-&#xC124;&#xCE58;-&#xBC0F;-&#xD328;&#xD0A4;&#xC9C0;-&#xC5C5;&#xB370;&#xC774;&#xD2B8;-&#xC81C;&#xAC70;"></a>
 
 **설치**
 
@@ -297,7 +297,7 @@ def simple_app(environ, start_response):
     return ['Hello world!\n']
 ```
 
-## 에이전트 로그 {#user-content-에이전트-로그}
+## 에이전트 로그 <a id="user-content-&#xC5D0;&#xC774;&#xC804;&#xD2B8;-&#xB85C;&#xADF8;"></a>
 
 애플리케이션 서버가 실행되면 애플리케이션의 모니터링 정보를 수집하기 시작합니다. 로그의 위치는 $WHATAP\_HOME의 logs디렉토리에 다음과 같은 파일로 생성됩니다.
 
@@ -326,7 +326,7 @@ Config: /Users/kimjihye/workspace/whatap/python-sample/whatap/whatap.conf
 Logs: /Users/kimjihye/workspace/whatap/python-sample/whatap/logs
 ```
 
-## 설치 에러 대응 {#user-content-설치-에러-대응-3}
+## 설치 에러 대응 <a id="user-content-&#xC124;&#xCE58;-&#xC5D0;&#xB7EC;-&#xB300;&#xC751;-3"></a>
 
 **Permission denied 에러 발생 시**
 
@@ -385,11 +385,11 @@ import whatap
 ---
 ```
 
-## FAQ {#user-content-faq-3}
+## FAQ <a id="user-content-faq-3"></a>
 
-## 제약 사항 {#user-content-제약-사항-3}
+## 제약 사항 <a id="user-content-&#xC81C;&#xC57D;-&#xC0AC;&#xD56D;-3"></a>
 
-## 호환성 목록 {#user-content-호환성-목록-2}
+## 호환성 목록 <a id="user-content-&#xD638;&#xD658;&#xC131;-&#xBAA9;&#xB85D;-2"></a>
 
 **운영체제**
 

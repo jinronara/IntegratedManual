@@ -13,14 +13,14 @@ PHP 모니터링 서비스를 사용하기 위해서는 모니터링 대상 애�
 
 설정 스크립트를 통해서 트레이서는 PHP 확장 모듈\(PHP Extension module\)로 등록되고, 에이전트는 whatap-php 서비스\(Service\)로 실행됩니다.
 
-## 지원 환경 {#user-content-지원-환경}
+## 지원 환경 <a id="user-content-&#xC9C0;&#xC6D0;-&#xD658;&#xACBD;"></a>
 
 * OS : RedHat / CentOS 64bit 6.x 이상, Ubuntu 64bit 12.04 이상
 * PHP: 5.2, 5.3, 5.4, 5.5, 5.6, 7.0, 7.1, ZTS\(Zend Thread Safe\)
 * Library: mysql, mysqli, PDO, cURL, Oracle\(oci8\), Mssql
 * Network : 외부 와탭 서버 연결 포트 6600, 내부 UDP 포트 6600
 
-## 에이전트 구성 파일 {#user-content-에이전트-구성-파일-2}
+## 에이전트 구성 파일 <a id="user-content-&#xC5D0;&#xC774;&#xC804;&#xD2B8;-&#xAD6C;&#xC131;-&#xD30C;&#xC77C;-2"></a>
 
 모니터링 정보를 수집하기 위한 트레이서, 수집된 정보를 서버에 전송하기 위한 에이전트, 트레이서와 에이전트를 서버에 동적으로 적용하기 위한 설치 스크립트 파일로 구성됩니다.
 
@@ -38,7 +38,7 @@ PHP 모니터링 서비스를 구성하는 각 파일의 역할은 다음과 같
 | install.sh | 웹 애플리케이션 서버에 트레이서를 적용하기 위한 쉘 스크립트입니다. |
 | Whatap.php | \(sample.php\) PHP 소스코드에서 사용할 API 레퍼런스 클래스 \(/usr/whatap/php/lib/Whatap.php\) 및 예제 소스 파일\(sample.php\) 입니다. |
 
-## 에이전트 설치 절차 {#user-content-에이전트-설치-절차-2}
+## 에이전트 설치 절차 <a id="user-content-&#xC5D0;&#xC774;&#xC804;&#xD2B8;-&#xC124;&#xCE58;-&#xC808;&#xCC28;-2"></a>
 
 ### **프로젝트 생성**
 

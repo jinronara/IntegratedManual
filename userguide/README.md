@@ -1,6 +1,6 @@
 # 사용자 가이드
 
-## 그룹 관리 {#user-content-그룹-관리}
+## 그룹 관리 <a id="user-content-&#xADF8;&#xB8F9;-&#xAD00;&#xB9AC;"></a>
 
 **그룹 추가**
 
@@ -28,7 +28,7 @@
 
 그룹 자체를 삭제하고 싶은 경우 그룹탭의 그룹명 우측에 존재하는 더보기 버튼을 누른 뒤 그룹 삭제 버튼을 눌러 그룹을 삭제합니다.[![1700](https://github.com/jinronara/IntegratedManual/raw/master/images/1700.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1700.png)[![1710](https://github.com/jinronara/IntegratedManual/raw/master/images/1710.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1710.png)
 
-## 그룹 사용 {#user-content-그룹-사용}
+## 그룹 사용 <a id="user-content-&#xADF8;&#xB8F9;-&#xC0AC;&#xC6A9;"></a>
 
 [![1720](https://github.com/jinronara/IntegratedManual/raw/master/images/1720.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1720.png)
 
@@ -84,7 +84,7 @@
 
 기존에는 SuperAdmin이 청구의 대상이 되었었지만, 그룹에 배치하여 모니터링을 진행할 경우, 청구의 대상은 가장 높은 단계에 있는 Owner가 됩니다. 이 경우 각각의 SuperAdmin의 청구 정보를 등록하지 않아도 Owner로 등록된 한 사람이 모든 청구업무를 맡을 수 있습니다.
 
-## 그룹뷰 {#user-content-그룹뷰}
+## 그룹뷰 <a id="user-content-&#xADF8;&#xB8F9;&#xBDF0;"></a>
 
 **개요**
 
@@ -104,5 +104,5 @@
 
 [![1820](https://github.com/jinronara/IntegratedManual/raw/master/images/1820.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/1820.png)
 
-## 멀티 프로젝트 연관뷰 \(준비 중\) {#user-content-멀티-프로젝트-연관뷰-준비-중}
+## 멀티 프로젝트 연관뷰 \(준비 중\) <a id="user-content-&#xBA40;&#xD2F0;-&#xD504;&#xB85C;&#xC81D;&#xD2B8;-&#xC5F0;&#xAD00;&#xBDF0;-&#xC900;&#xBE44;-&#xC911;"></a>
 

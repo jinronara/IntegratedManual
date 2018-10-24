@@ -1,10 +1,10 @@
 # DB
 
-## 설치 환경 {#user-content-설치-환경-4}
+## 설치 환경 <a id="user-content-&#xC124;&#xCE58;-&#xD658;&#xACBD;-4"></a>
 
-## 에이전트 구성 파일 {#user-content-에이전트-구성-파일-3}
+## 에이전트 구성 파일 <a id="user-content-&#xC5D0;&#xC774;&#xC804;&#xD2B8;-&#xAD6C;&#xC131;-&#xD30C;&#xC77C;-3"></a>
 
-## 에이전트 설치 절차 {#user-content-에이전트-설치-절차-6}
+## 에이전트 설치 절차 <a id="user-content-&#xC5D0;&#xC774;&#xC804;&#xD2B8;-&#xC124;&#xCE58;-&#xC808;&#xCC28;-6"></a>
 
 **설치 개요**
 

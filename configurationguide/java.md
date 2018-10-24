@@ -251,7 +251,7 @@ InitialContext Lookup 시 DataSource 인 경우 로그를 기록하는 기능을
 * Default : \[**7**\]
 * Type : Day
 
-## 트랜잭션 프로파일링 {#user-content-트랜잭션-프로파일링}
+## 트랜잭션 프로파일링 <a id="user-content-&#xD2B8;&#xB79C;&#xC7AD;&#xC158;-&#xD504;&#xB85C;&#xD30C;&#xC77C;&#xB9C1;"></a>
 
 ### profile\_step\_normal\_count
 
@@ -949,7 +949,7 @@ HTTP Call 을 수행하는 클래스를 지정합니다.
 * Default : \[**NONE**\]
 * Type : String
 
-## 사용자 수 {#user-content-사용자-수}
+## 사용자 수 <a id="user-content-&#xC0AC;&#xC6A9;&#xC790;-&#xC218;"></a>
 
 ### trace\_user\_enabled
 
@@ -1002,7 +1002,7 @@ HTTP Header 의 특정 값으로 사용자 수를 집계하고자 하는 경우 
 * Default : \[**NONE**\]
 * Type : String
 
-## 부하량 제어 {#user-content-부하량-제어}
+## 부하량 제어 <a id="user-content-&#xBD80;&#xD558;&#xB7C9;-&#xC81C;&#xC5B4;"></a>
 
 ### throttle\_enabled
 
@@ -1103,7 +1103,7 @@ throttle\_limit을 초과하는 경우라도 처리되어야 할 URL들을 prefi
 * Default : \[**NONE**\]
 * Type : URL
 
-## 알림 설정 {#user-content-알림-설정}
+## 알림 설정 <a id="user-content-&#xC54C;&#xB9BC;-&#xC124;&#xC815;"></a>
 
 ### recursive\_max
 

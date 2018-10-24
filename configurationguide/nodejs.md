@@ -1,6 +1,6 @@
 # NodeJs
 
-## 에이전트 기능제어 {#user-content-에이전트-기능제어-1}
+## 에이전트 기능제어 <a id="user-content-&#xC5D0;&#xC774;&#xC804;&#xD2B8;-&#xAE30;&#xB2A5;&#xC81C;&#xC5B4;-1"></a>
 
 ### enabled
 
@@ -48,7 +48,7 @@
 * Default : \[**2**\]
 * Type : encrypt\_level \[1\|2\|3\]
 
-## 에이전트 네트워크 설정 {#user-content-에이전트-네트워크-설정}
+## 에이전트 네트워크 설정 <a id="user-content-&#xC5D0;&#xC774;&#xC804;&#xD2B8;-&#xB124;&#xD2B8;&#xC6CC;&#xD06C;-&#xC124;&#xC815;"></a>
 
 ### whatap\_server\_host
 
@@ -99,7 +99,7 @@
 * Default : \[**512**\]
 * Type : Int
 
-## 프로파일링 옵션 {#user-content-프로파일링-옵션}
+## 프로파일링 옵션 <a id="user-content-&#xD504;&#xB85C;&#xD30C;&#xC77C;&#xB9C1;-&#xC635;&#xC158;"></a>
 
 ### profile\_basetime
 
@@ -140,7 +140,7 @@
 * Default : \[**/**\]
 * Type : String
 
-## 사용자 추적 옵션 {#user-content-사용자-추적-옵션}
+## 사용자 추적 옵션 <a id="user-content-&#xC0AC;&#xC6A9;&#xC790;-&#xCD94;&#xC801;-&#xC635;&#xC158;"></a>
 
 ### trace\_user\_enabled
 
@@ -186,7 +186,7 @@ HTTP Header 의 특정 값으로 사용자 수를 집계하고자 하는 경우 
 * Default : \[**NONE**\]
 * Type : String
 
-## 트랜잭션 추적 옵션 {#user-content-트랜잭션-추적-옵션}
+## 트랜잭션 추적 옵션 <a id="user-content-&#xD2B8;&#xB79C;&#xC7AD;&#xC158;-&#xCD94;&#xC801;-&#xC635;&#xC158;"></a>
 
 ### trace\_background\_socket\_enabled
 
@@ -265,7 +265,7 @@ SQL 수행후 수행시간이 여기서 지정한 값을 초과하면 TOO SLOW �
 * Default : \[**30000**\]
 * Type : MiliSecond
 
-## 로그 옵션 {#user-content-로그-옵션}
+## 로그 옵션 <a id="user-content-&#xB85C;&#xADF8;-&#xC635;&#xC158;"></a>
 
 ### log\_rotation\_enabled
 
@@ -281,7 +281,7 @@ SQL 수행후 수행시간이 여기서 지정한 값을 초과하면 TOO SLOW �
 * Default : \[**7**\]
 * Type : Day
 
-## 운영 설정 {#user-content-운영-설정}
+## 운영 설정 <a id="user-content-&#xC6B4;&#xC601;-&#xC124;&#xC815;"></a>
 
 ### active\_stack\_second
 

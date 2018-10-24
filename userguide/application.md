@@ -1,6 +1,6 @@
 # 애플리케이션 모니터링
 
-## 애플리케이션 모니터링 {#user-content-애플리케이션-모니터링}
+## 애플리케이션 모니터링 <a id="user-content-&#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;-&#xBAA8;&#xB2C8;&#xD130;&#xB9C1;"></a>
 
 와탭 APM 모니터링 서비스는 SaaS\(Software as a Service\) 방식의 웹 애플리케이션 서버\(WAS, Web Application Server\) 모니터링 서비스 입니다. 사용자는 아래와 같은 서비스를 받을 수 있습니다.
 
@@ -50,7 +50,7 @@
 
 * 보고서 활용 가이드를 통해 프로젝트 단위로 정해진 날짜와 시간의 성능 데이터를 출력해 보고서로 활용할 수 있도록 가이드 합니다.
 
-### 관리 {#user-content-관리}
+### 관리 <a id="user-content-&#xAD00;&#xB9AC;"></a>
 
 와탭 APM 모니터링 서비스는 다수의 애플리케이션 서버를 프로젝트로 그룹화하여 관리합니다.[![650](https://github.com/jinronara/IntegratedManual/raw/master/images/650.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/650.png)
 
@@ -225,7 +225,7 @@ Telegram을 통하여 알림을 받고자 하는 경우 먼저 관리 &gt; 이�
 
 [![770](https://github.com/jinronara/IntegratedManual/raw/master/images/770.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/770.png)
 
-### 실시간 모니터링 {#user-content-실시간-모니터링}
+### 실시간 모니터링 <a id="user-content-&#xC2E4;&#xC2DC;&#xAC04;-&#xBAA8;&#xB2C8;&#xD130;&#xB9C1;"></a>
 
 모니터링 대상 서버로부터 실시간으로 수집되고 있는 정보를 통해 프로젝트의 성능 현황을 전체적으로 확인하기 위한 정보를 제공합니다. 즉각적인 대응이 가능하며 잠재적으로 증가 하고 있는 문제를 파악할 수 있습니다.
 
@@ -358,7 +358,7 @@ CPU 정보는 100% 를 기준으로 모든 서버가 표현됩니다. 서버가 
 
 [![940](https://github.com/jinronara/IntegratedManual/raw/master/images/940.png)](https://github.com/jinronara/IntegratedManual/blob/master/images/940.png)
 
-### 스택 분석 {#user-content-스택-분석}
+### 스택 분석 <a id="user-content-&#xC2A4;&#xD0DD;-&#xBD84;&#xC11D;"></a>
 
 10초 간격으로 수집된 Java Thread Dump를 분석하여 Cube 구간에 장시간 정체되어 있던 Stack 상의 Step\* 정보를 제공하는 것을 목적으로 Stack 전체 기준의 통계\(Unique Stack\)와 최상위 Step 기준의 통계\(Top Stack\) 제공합니다.Step
 
@@ -398,7 +398,7 @@ Stack Trace 전체의 Hash 값 기준의 산출 결과로 전체 Step이 동일�
 
 {text 힙스택 관련 내용 필요}
 
-### 사후 분석 {#user-content-사후-분석}
+### 사후 분석 <a id="user-content-&#xC0AC;&#xD6C4;-&#xBD84;&#xC11D;"></a>
 
 **Cube**
 
@@ -789,7 +789,7 @@ SQL 통계에서는 다음과 같은 정보를 조회할 수 있습니다.
 | 경고 | 서버 구동에 조금 장애가 되는 정도 |
 | 정보 | 그 외 여러 정보 |
 
-### 보고서 {#user-content-보고서}
+### 보고서 <a id="user-content-&#xBCF4;&#xACE0;&#xC11C;"></a>
 
 하루의 종합적인 정보를 통해서 한눈에 파악 하기 쉽도록 도와주는 성능 데이터를 요약해서 보고서 형태로 제공해 드리고 있습니다.
 
@@ -951,7 +951,7 @@ ex\) 7월 23일을 선택 시 8월 22일 까지 표현되고 있는 정보의 �
 | 트랜잭션/초\(TPS\) | 단위 시간당 처리된 평균 초당 트랜잭션 |
 | 시간당 평균 응답 시간 | 한 시간 동안 평균 응답 시간 |
 
-### 에이전트 관리 {#user-content-에이전트-관리}
+### 에이전트 관리 <a id="user-content-&#xC5D0;&#xC774;&#xC804;&#xD2B8;-&#xAD00;&#xB9AC;"></a>
 
 와탭 APM 모니터링 서비스는 서버 메뉴를 통해 JVM의 프로파일 정보를 제공하여, 애플리케이션 서버 관리를 위한 다양한 정보를 제공합니다.
 

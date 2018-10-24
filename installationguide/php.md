@@ -1,6 +1,6 @@
 # PHP
 
-## 에이전트 실행 및 모니터링 개요 {#user-content-에이전트-실행-및-모니터링-개요-1}
+## 에이전트 실행 및 모니터링 개요 <a id="user-content-&#xC5D0;&#xC774;&#xC804;&#xD2B8;-&#xC2E4;&#xD589;-&#xBC0F;-&#xBAA8;&#xB2C8;&#xD130;&#xB9C1;-&#xAC1C;&#xC694;-1"></a>
 
 와탭 PHP 애플리케이션 모니터링은 PHP 기반 웹 애플리케이션 서버 모니터링 서비스를 제공합니다.
 
@@ -52,7 +52,7 @@ object\_name default: {type}-{ip2}-{ip3}-{process}
 | Process | app\_process\_name |
 | hostname | 호스트 명 |
 
-## 에이전트 설치/실행/업데이트/중지 {#user-content-에이전트-설치-실행-업데이트-중지-2}
+## 에이전트 설치/실행/업데이트/중지 <a id="user-content-&#xC5D0;&#xC774;&#xC804;&#xD2B8;-&#xC124;&#xCE58;-&#xC2E4;&#xD589;-&#xC5C5;&#xB370;&#xC774;&#xD2B8;-&#xC911;&#xC9C0;-2"></a>
 
 **공통**
 
@@ -313,7 +313,7 @@ $ /usr/whatap/php/install.sh remove
 
 * /usr/whatap/php 디렉토리 삭제
 
-## 로그 {#user-content-로그}
+## 로그 <a id="user-content-&#xB85C;&#xADF8;"></a>
 
 **로그파일 종류**
 
@@ -350,7 +350,7 @@ WA001 Whatap APM started
 2017/11/27 15:49:16 [WA635] Net UDP: Listener localhost:6600
 ```
 
-## 설치 에러 대응 {#user-content-설치-에러-대응-2}
+## 설치 에러 대응 <a id="user-content-&#xC124;&#xCE58;-&#xC5D0;&#xB7EC;-&#xB300;&#xC751;-2"></a>
 
 **PHP 확장 모듈\(PHP Extension module\) 및 whatap-php 서비스\(Service\) 수동 설정**
 
@@ -572,11 +572,11 @@ whatap                 # 와탭 모듈 로드 확인
 
 PHP 확장 모듈\(PHP Extension module\) 적용을 확인 한 경우 Apache 및 PHP-FRPM 서비스\(Service\)를 재시작 합니다. 적용이 안된 경우는 정상 설치 되지 않은 것으로 whatap.so 또는 whatap.ini 파일 경로가 PHP 환경과 일치하는 지 확인합니다. ‘PHP 명령어\(CLI\) 경로 확인,’ PHP 확장 모듈\(PHP Extension module\) 경로 확인’, ‘PHP 추가 ini 설정 경로 확인’ 을 확인합니다.
 
-## FAQ {#user-content-faq-2}
+## FAQ <a id="user-content-faq-2"></a>
 
-## 제약 사항 {#user-content-제약-사항-2}
+## 제약 사항 <a id="user-content-&#xC81C;&#xC57D;-&#xC0AC;&#xD56D;-2"></a>
 
-## 호환성 목록 {#user-content-호환성-목록-1}
+## 호환성 목록 <a id="user-content-&#xD638;&#xD658;&#xC131;-&#xBAA9;&#xB85D;-1"></a>
 
 **운영체제**
 
