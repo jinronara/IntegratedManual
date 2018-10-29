@@ -36,5 +36,6 @@
   * [멀티 트랜잭션 추적](usecase/mtrace.md)
   * [오픈API - 실시간](usecase/openapi_spot.md)
   * [오픈API - 통계](usecase/openapi_stat.md)
+  * [PaaS설치](usecase/installonpaas.md)
 * [용어정의](glossary.md)
 
